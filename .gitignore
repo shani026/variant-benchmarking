@@ -1,0 +1,11 @@
+.DS_Store
+.DS_Store
+
+# Large reference genomes - keep locally, do not upload to GitHub
+Reference/
+*.fa
+*.fasta
+*.fa.gz
+*.fasta.gz
+*.fai
+*.dict
