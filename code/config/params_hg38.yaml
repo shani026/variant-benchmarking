@@ -1,0 +1,15 @@
+input: "code/config/samplesheets/samplesheet_hg38.csv"
+outdir: "benchmark-runs/nfcore/hg38"
+
+analysis: "germline"
+variant_type: "structural"
+method: "truvari,svanalyzer,rtgtools"
+
+truth_vcf: "/absolute/path/to/truth/hg38/HG002_GRCh38_v5.0q_stvar.vcf.gz"
+truth_id: "HG002"
+regions_bed: "/absolute/path/to/truth/hg38/HG002_GRCh38_v5.0q_stvar.benchmark.bed"
+
+fasta: "/absolute/path/to/references/hg38/hg38.fa"
+fai: "/absolute/path/to/references/hg38/hg38.fa.fai"
+
+igenomes_ignore: true

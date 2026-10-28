@@ -1,0 +1,450 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Simple Truvari SV Benchmark Report</title>
+<style>
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 40px;
+    color: #222;
+    line-height: 1.5;
+}
+h1, h2, h3 { color: #111; }
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 16px 0 28px 0;
+    font-size: 14px;
+}
+th, td {
+    border: 1px solid #ccc;
+    padding: 6px 8px;
+    text-align: left;
+}
+th { background: #f2f2f2; }
+img {
+    max-width: 100%;
+    border: 1px solid #ddd;
+    margin: 8px 0 28px 0;
+}
+.note {
+    background: #f7f7f7;
+    border-left: 5px solid #888;
+    padding: 12px 16px;
+    margin: 18px 0;
+}
+code {
+    background: #f0f0f0;
+    padding: 2px 4px;
+}
+</style>
+</head>
+<body>
+
+<h1>Simple Truvari Structural Variant Benchmark Report</h1>
+
+<div class="note">
+<b>Scope:</b> This report uses only existing Truvari results from
+<code>04_benchmark_results/truvari/</code>. It does not rerun Truvari,
+does not use RTGtools, does not use Wittyer, and does not include liftover.
+</div>
+
+<h2>1. Aim</h2>
+
+<p>
+The aim of this report is to summarize the existing Truvari benchmark results
+for HG002 structural variant callsets on hg19 and hg38. The report focuses on
+precision, recall, F1, true positives, false positives, false negatives,
+SVTYPE patterns, and discordant variant categories.
+</p>
+
+<h2>2. Main metrics</h2>
+
+<p>
+Precision means how many comparison calls were supported by the truth set.
+Recall means how many truth variants were recovered. F1 balances precision
+and recall. False positives are extra calls in the comparison set. False
+negatives are truth variants missed by the caller.
+</p>
+
+<table>
+<thead><tr>
+<th>Build</th>
+<th>Caller</th>
+<th>Base count</th>
+<th>Comparison count</th>
+<th>TP-base</th>
+<th>TP-comp</th>
+<th>FP</th>
+<th>FN</th>
+<th>Precision</th>
+<th>Recall</th>
+<th>F1</th>
+</tr></thead><tbody>
+<tr>
+<td>hg19</td>
+<td>DELLY</td>
+<td>522</td>
+<td></td>
+<td>27</td>
+<td>27</td>
+<td>39</td>
+<td>495</td>
+<td>0.4091</td>
+<td>0.0517</td>
+<td>0.0918</td>
+</tr>
+<tr>
+<td>hg19</td>
+<td>DRAGEN</td>
+<td>522</td>
+<td></td>
+<td>293</td>
+<td>293</td>
+<td>48</td>
+<td>229</td>
+<td>0.8592</td>
+<td>0.5613</td>
+<td>0.6790</td>
+</tr>
+<tr>
+<td>hg19</td>
+<td>Sniffles</td>
+<td>522</td>
+<td></td>
+<td>341</td>
+<td>341</td>
+<td>44</td>
+<td>181</td>
+<td>0.8857</td>
+<td>0.6533</td>
+<td>0.7519</td>
+</tr>
+<tr>
+<td>hg38</td>
+<td>DELLY</td>
+<td>565</td>
+<td></td>
+<td>342</td>
+<td>342</td>
+<td>60</td>
+<td>223</td>
+<td>0.8507</td>
+<td>0.6053</td>
+<td>0.7073</td>
+</tr>
+<tr>
+<td>hg38</td>
+<td>DRAGEN</td>
+<td>565</td>
+<td></td>
+<td>158</td>
+<td>158</td>
+<td>29</td>
+<td>407</td>
+<td>0.8449</td>
+<td>0.2796</td>
+<td>0.4202</td>
+</tr>
+<tr>
+<td>hg38</td>
+<td>Sniffles</td>
+<td>565</td>
+<td></td>
+<td>372</td>
+<td>372</td>
+<td>68</td>
+<td>193</td>
+<td>0.8455</td>
+<td>0.6584</td>
+<td>0.7403</td>
+</tr>
+</tbody></table>
+<h2>3. Plots</h2>
+<h3>Precision, recall, and F1</h3>
+<img src="plots/01_precision_recall_f1.svg" alt="Precision, recall, and F1">
+<h3>TP, FP, and FN counts</h3>
+<img src="plots/02_tp_fp_fn.svg" alt="TP, FP, and FN counts">
+<h3>FP/FN balance</h3>
+<img src="plots/03_fp_fn_balance.svg" alt="FP/FN balance">
+<h3>FP and FN by SVTYPE</h3>
+<img src="plots/04_fp_fn_by_svtype.svg" alt="FP and FN by SVTYPE">
+<h3>FP and FN by chromosome</h3>
+<img src="plots/05_fp_fn_by_chromosome.svg" alt="FP and FN by chromosome">
+<h3>SV size distribution</h3>
+<img src="plots/06_sv_size_distribution.svg" alt="SV size distribution">
+<h2>4. FP and FN by SVTYPE</h2>
+<table>
+<thead><tr>
+<th>Build</th>
+<th>Caller</th>
+<th>Role</th>
+<th>SVTYPE</th>
+<th>Count</th>
+</tr></thead><tbody>
+<tr>
+<td>hg19</td>
+<td>DELLY</td>
+<td>FP</td>
+<td>DEL</td>
+<td>16</td>
+</tr>
+<tr>
+<td>hg19</td>
+<td>DELLY</td>
+<td>FP</td>
+<td>INS</td>
+<td>23</td>
+</tr>
+<tr>
+<td>hg19</td>
+<td>DELLY</td>
+<td>FN</td>
+<td>INS</td>
+<td>337</td>
+</tr>
+<tr>
+<td>hg19</td>
+<td>DELLY</td>
+<td>FN</td>
+<td>DEL</td>
+<td>158</td>
+</tr>
+<tr>
+<td>hg19</td>
+<td>DRAGEN</td>
+<td>FP</td>
+<td>INS</td>
+<td>35</td>
+</tr>
+<tr>
+<td>hg19</td>
+<td>DRAGEN</td>
+<td>FP</td>
+<td>DEL</td>
+<td>13</td>
+</tr>
+<tr>
+<td>hg19</td>
+<td>DRAGEN</td>
+<td>FN</td>
+<td>INS</td>
+<td>165</td>
+</tr>
+<tr>
+<td>hg19</td>
+<td>DRAGEN</td>
+<td>FN</td>
+<td>DEL</td>
+<td>64</td>
+</tr>
+<tr>
+<td>hg19</td>
+<td>Sniffles</td>
+<td>FP</td>
+<td>INS</td>
+<td>24</td>
+</tr>
+<tr>
+<td>hg19</td>
+<td>Sniffles</td>
+<td>FP</td>
+<td>DEL</td>
+<td>20</td>
+</tr>
+<tr>
+<td>hg19</td>
+<td>Sniffles</td>
+<td>FN</td>
+<td>INS</td>
+<td>137</td>
+</tr>
+<tr>
+<td>hg19</td>
+<td>Sniffles</td>
+<td>FN</td>
+<td>DEL</td>
+<td>44</td>
+</tr>
+<tr>
+<td>hg38</td>
+<td>DELLY</td>
+<td>FP</td>
+<td>INS</td>
+<td>24</td>
+</tr>
+<tr>
+<td>hg38</td>
+<td>DELLY</td>
+<td>FP</td>
+<td>DEL</td>
+<td>36</td>
+</tr>
+<tr>
+<td>hg38</td>
+<td>DELLY</td>
+<td>FN</td>
+<td>INS</td>
+<td>161</td>
+</tr>
+<tr>
+<td>hg38</td>
+<td>DELLY</td>
+<td>FN</td>
+<td>DEL</td>
+<td>62</td>
+</tr>
+<tr>
+<td>hg38</td>
+<td>DRAGEN</td>
+<td>FP</td>
+<td>INS</td>
+<td>17</td>
+</tr>
+<tr>
+<td>hg38</td>
+<td>DRAGEN</td>
+<td>FP</td>
+<td>DEL</td>
+<td>12</td>
+</tr>
+<tr>
+<td>hg38</td>
+<td>DRAGEN</td>
+<td>FN</td>
+<td>INS</td>
+<td>287</td>
+</tr>
+<tr>
+<td>hg38</td>
+<td>DRAGEN</td>
+<td>FN</td>
+<td>DEL</td>
+<td>120</td>
+</tr>
+<tr>
+<td>hg38</td>
+<td>Sniffles</td>
+<td>FP</td>
+<td>INS</td>
+<td>30</td>
+</tr>
+<tr>
+<td>hg38</td>
+<td>Sniffles</td>
+<td>FP</td>
+<td>DEL</td>
+<td>38</td>
+</tr>
+<tr>
+<td>hg38</td>
+<td>Sniffles</td>
+<td>FN</td>
+<td>INS</td>
+<td>144</td>
+</tr>
+<tr>
+<td>hg38</td>
+<td>Sniffles</td>
+<td>FN</td>
+<td>DEL</td>
+<td>49</td>
+</tr>
+</tbody></table>
+<h2>5. FP and FN by chromosome</h2>
+<table>
+<thead><tr>
+<th>Build</th>
+<th>Caller</th>
+<th>Role</th>
+<th>Chromosome</th>
+<th>Count</th>
+</tr></thead><tbody>
+<tr>
+<td>hg19</td>
+<td>DELLY</td>
+<td>FP</td>
+<td>22</td>
+<td>39</td>
+</tr>
+<tr>
+<td>hg19</td>
+<td>DELLY</td>
+<td>FN</td>
+<td>22</td>
+<td>495</td>
+</tr>
+<tr>
+<td>hg19</td>
+<td>DRAGEN</td>
+<td>FP</td>
+<td>22</td>
+<td>48</td>
+</tr>
+<tr>
+<td>hg19</td>
+<td>DRAGEN</td>
+<td>FN</td>
+<td>22</td>
+<td>229</td>
+</tr>
+<tr>
+<td>hg19</td>
+<td>Sniffles</td>
+<td>FP</td>
+<td>22</td>
+<td>44</td>
+</tr>
+<tr>
+<td>hg19</td>
+<td>Sniffles</td>
+<td>FN</td>
+<td>22</td>
+<td>181</td>
+</tr>
+<tr>
+<td>hg38</td>
+<td>DELLY</td>
+<td>FP</td>
+<td>chr22</td>
+<td>60</td>
+</tr>
+<tr>
+<td>hg38</td>
+<td>DELLY</td>
+<td>FN</td>
+<td>chr22</td>
+<td>223</td>
+</tr>
+<tr>
+<td>hg38</td>
+<td>DRAGEN</td>
+<td>FP</td>
+<td>chr22</td>
+<td>29</td>
+</tr>
+<tr>
+<td>hg38</td>
+<td>DRAGEN</td>
+<td>FN</td>
+<td>chr22</td>
+<td>407</td>
+</tr>
+<tr>
+<td>hg38</td>
+<td>Sniffles</td>
+<td>FP</td>
+<td>chr22</td>
+<td>68</td>
+</tr>
+<tr>
+<td>hg38</td>
+<td>Sniffles</td>
+<td>FN</td>
+<td>chr22</td>
+<td>193</td>
+</tr>
+</tbody></table>
+</body></html>

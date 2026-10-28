@@ -1,0 +1,1171 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Chromosome 22 SV Benchmarking Report</title>
+<style>
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 40px;
+    line-height: 1.5;
+    color: #222;
+    background: #fff;
+}
+h1, h2, h3 {
+    color: #1f2d3d;
+}
+pre {
+    background: #f7f7f7;
+    border: 1px solid #ddd;
+    padding: 12px;
+    overflow-x: auto;
+    white-space: pre-wrap;
+}
+table.dataframe {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 10px 0 20px 0;
+    font-size: 14px;
+}
+table.dataframe th, table.dataframe td {
+    border: 1px solid #ccc;
+    padding: 6px 8px;
+    text-align: left;
+}
+table.dataframe th {
+    background: #efefef;
+}
+.figure {
+    margin: 25px 0;
+    text-align: center;
+}
+.figure img {
+    max-width: 100%;
+    border: 1px solid #ddd;
+}
+.caption {
+    font-size: 14px;
+    color: #444;
+    margin-top: 8px;
+}
+.note {
+    background: #f8fbff;
+    border-left: 5px solid #4a90e2;
+    padding: 12px;
+    margin: 15px 0;
+}
+.small {
+    font-size: 13px;
+    color: #555;
+}
+</style>
+</head>
+<body>
+
+<h1>Chromosome 22 Structural Variant Benchmarking Report</h1>
+
+<h2>1. Aim</h2>
+<p>
+This report summarises the chromosome 22 benchmarking workflow for HG002 structural variant calls from
+DRAGEN, Sniffles, and DELLY against the truth set in both hg19 / GRCh37 and hg38 / GRCh38.
+The report focuses on diagnosis, preprocessing, benchmark interpretation, and DUP-to-INS sensitivity analysis.
+</p>
+
+<h2>2. Key findings</h2>
+<ul><li><strong>Best original Truvari F1:</strong> hg19_sniffles (F1 = 0.752)</li>
+<li><strong>Largest DUP-to-INS F1 increase:</strong> hg19_DELLY (ΔF1 = 0.0000)</li>
+<li><strong>Smallest / most negative DUP-to-INS F1 change:</strong> hg19_DELLY (ΔF1 = 0.0000)</li>
+<li><strong>Total BND records counted separately:</strong> 192</li></ul>
+
+<div class="note">
+<strong>Main interpretation:</strong>
+The core benchmark should be interpreted as an <strong>interval-SV benchmark</strong>. BND records,
+END&lt;POS issues, and missing END / SVLEN issues were counted and visualised separately so the reader can see
+what was excluded and why.
+</div>
+
+<h2>3. Diagnosis</h2>
+<p>
+The original chr22 subsetting problem came from chromosome naming mismatch:
+</p>
+<ul>
+<li><strong>hg19 / GRCh37:</strong> chromosome label <code>22</code></li>
+<li><strong>hg38 / GRCh38:</strong> chromosome label <code>chr22</code></li>
+</ul>
+
+<h2>4. Benchmark scope</h2>
+<p>The main interval-SV benchmark includes:</p>
+<ul>
+<li>DEL</li>
+<li>DUP</li>
+<li>INS</li>
+<li>INV</li>
+</ul>
+<p>The following are handled separately and interpreted as exclusions / QC context rather than direct interval benchmark targets:</p>
+<ul>
+<li>BND</li>
+<li>UNKNOWN</li>
+<li>NA</li>
+<li>missing SVTYPE</li>
+<li>malformed interval records</li>
+</ul>
+
+<h2>5. Selected QC tables</h2>
+
+<h3>5.1 Raw chr22 record summary</h3>
+<table class="dataframe dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>build</th>
+      <th>file</th>
+      <th>total_records</th>
+      <th>DEL_DUP_INS_INV</th>
+      <th>BND</th>
+      <th>UNKNOWN_NA_missing</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>hg19</td>
+      <td>DELLY.hg19.norm_recall_HG002.merged__filt_DUPtoINS.renamed.chr22</td>
+      <td>166</td>
+      <td>119</td>
+      <td>47</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>hg19</td>
+      <td>HG002_dragen.sv.hg19.renamed.chr22</td>
+      <td>628</td>
+      <td>576</td>
+      <td>52</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>hg19</td>
+      <td>HG002_sniffles.hg19.renamed.chr22</td>
+      <td>512</td>
+      <td>512</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>hg19</td>
+      <td>truth.hg19.chr22</td>
+      <td>78767</td>
+      <td>1612</td>
+      <td>0</td>
+      <td>77155</td>
+    </tr>
+    <tr>
+      <td>hg38</td>
+      <td>HG002_delly_lr.hg38.renamed.chr22</td>
+      <td>1001</td>
+      <td>960</td>
+      <td>41</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>hg38</td>
+      <td>HG002_dragen.sv.hg38.renamed.chr22</td>
+      <td>344</td>
+      <td>299</td>
+      <td>45</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>hg38</td>
+      <td>HG002_sniffles.hg38.renamed.chr22</td>
+      <td>838</td>
+      <td>831</td>
+      <td>7</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>hg38</td>
+      <td>truth.hg38.chr22</td>
+      <td>114070</td>
+      <td>2276</td>
+      <td>0</td>
+      <td>111794</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>5.2 Benchmark-ready interval counts</h3>
+<pre>==============================
+hg19 benchmark-ready interval VCFs
+==============================
+===== 03_benchmark_inputs/hg19_interval/DELLY.hg19.norm_recall_HG002.merged__filt_DUPtoINS.renamed.chr22.interval.vcf.gz =====
+Records:      119
+SVTYPE counts:
+  55 DEL
+  52 INS
+  12 INV
+
+===== 03_benchmark_inputs/hg19_interval/HG002_dragen.sv.hg19.renamed.chr22.interval.vcf.gz =====
+Records:      576
+SVTYPE counts:
+ 340 INS
+ 236 DEL
+
+===== 03_benchmark_inputs/hg19_interval/HG002_sniffles.hg19.renamed.chr22.interval.vcf.gz =====
+Records:      512
+SVTYPE counts:
+ 299 INS
+ 213 DEL
+
+===== 03_benchmark_inputs/hg19_interval/truth.hg19.chr22.interval.vcf.gz =====
+Records:     1612
+SVTYPE counts:
+ 897 INS
+ 715 DEL
+
+==============================
+hg38 benchmark-ready interval VCFs
+==============================
+===== 03_benchmark_inputs/hg38_interval/HG002_delly_lr.hg38.renamed.chr22.interval.vcf.gz =====
+Records:      960
+SVTYPE counts:
+ 504 INS
+ 450 DEL
+   4 DUP
+   2 INV
+
+===== 03_benchmark_inputs/hg38_interval/HG002_dragen.sv.hg38.renamed.chr22.interval.vcf.gz =====
+Records:      299
+SVTYPE counts:
+ 169 INS
+ 130 DEL
+
+===== 03_benchmark_inputs/hg38_interval/HG002_sniffles.hg38.renamed.chr22.interval.vcf.gz =====
+Records:      831
+SVTYPE counts:
+ 437 INS
+ 390 DEL
+   4 DUP
+
+===== 03_benchmark_inputs/hg38_interval/truth.hg38.chr22.interval.vcf.gz =====
+Records:     2276
+SVTYPE counts:
+1245 INS
+1031 DEL
+
+</pre>
+
+<h3>5.3 BND counts</h3>
+<table class="dataframe dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>build</th>
+      <th>file</th>
+      <th>BND_count</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>hg19</td>
+      <td>DELLY.hg19.norm_recall_HG002.merged__filt_DUPtoINS.renamed.chr22</td>
+      <td>47</td>
+    </tr>
+    <tr>
+      <td>hg19</td>
+      <td>HG002_dragen.sv.hg19.renamed.chr22</td>
+      <td>52</td>
+    </tr>
+    <tr>
+      <td>hg19</td>
+      <td>HG002_sniffles.hg19.renamed.chr22</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>hg19</td>
+      <td>truth.hg19.chr22</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>hg38</td>
+      <td>HG002_delly_lr.hg38.renamed.chr22</td>
+      <td>41</td>
+    </tr>
+    <tr>
+      <td>hg38</td>
+      <td>HG002_dragen.sv.hg38.renamed.chr22</td>
+      <td>45</td>
+    </tr>
+    <tr>
+      <td>hg38</td>
+      <td>HG002_sniffles.hg38.renamed.chr22</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <td>hg38</td>
+      <td>truth.hg38.chr22</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>5.4 END &lt; POS counts</h3>
+<table class="dataframe dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>build</th>
+      <th>file</th>
+      <th>END_lt_POS_records</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>hg19</td>
+      <td>DELLY.hg19.norm_recall_HG002.merged__filt_DUPtoINS.renamed.chr22</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <td>hg19</td>
+      <td>HG002_dragen.sv.hg19.renamed.chr22</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>hg19</td>
+      <td>HG002_sniffles.hg19.renamed.chr22</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>hg19</td>
+      <td>truth.hg19.chr22</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>hg38</td>
+      <td>HG002_delly_lr.hg38.renamed.chr22</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>hg38</td>
+      <td>HG002_dragen.sv.hg38.renamed.chr22</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>hg38</td>
+      <td>HG002_sniffles.hg38.renamed.chr22</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>hg38</td>
+      <td>truth.hg38.chr22</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>5.5 Missing END / SVLEN counts</h3>
+<table class="dataframe dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>build</th>
+      <th>file</th>
+      <th>missing_END_non_INS</th>
+      <th>missing_SVLEN</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>hg19</td>
+      <td>DELLY.hg19.norm_recall_HG002.merged__filt_DUPtoINS.renamed.chr22</td>
+      <td>0</td>
+      <td>166</td>
+    </tr>
+    <tr>
+      <td>hg19</td>
+      <td>HG002_dragen.sv.hg19.renamed.chr22</td>
+      <td>52</td>
+      <td>59</td>
+    </tr>
+    <tr>
+      <td>hg19</td>
+      <td>HG002_sniffles.hg19.renamed.chr22</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>hg19</td>
+      <td>truth.hg19.chr22</td>
+      <td>77870</td>
+      <td>77155</td>
+    </tr>
+    <tr>
+      <td>hg38</td>
+      <td>HG002_delly_lr.hg38.renamed.chr22</td>
+      <td>0</td>
+      <td>497</td>
+    </tr>
+    <tr>
+      <td>hg38</td>
+      <td>HG002_dragen.sv.hg38.renamed.chr22</td>
+      <td>45</td>
+      <td>84</td>
+    </tr>
+    <tr>
+      <td>hg38</td>
+      <td>HG002_sniffles.hg38.renamed.chr22</td>
+      <td>7</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <td>hg38</td>
+      <td>truth.hg38.chr22</td>
+      <td>112825</td>
+      <td>111794</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>6. QC interpretation through plots</h2>
+<p>
+These plots explain what was counted separately and why those records matter for interpretation.
+</p>
+
+
+    <div class="figure">
+      <img src="plots_clean/bnd_counts.png" alt="BND records counted separately across raw chr22 files">
+      <div class="caption">BND records counted separately across raw chr22 files</div>
+    </div>
+    
+
+    <div class="figure">
+      <img src="plots_clean/end_lt_pos_counts.png" alt="Records with END &lt; POS">
+      <div class="caption">Records with END &lt; POS</div>
+    </div>
+    
+
+    <div class="figure">
+      <img src="plots_clean/missing_end_svlen_counts.png" alt="Missing END and Missing SVLEN counts">
+      <div class="caption">Missing END and Missing SVLEN counts</div>
+    </div>
+    
+
+<h2>7. Truvari main benchmark</h2>
+<p>
+Truvari was used as the main structural variant benchmarking tool.
+The table below shows the original benchmark summary metrics.
+</p>
+
+<table class="dataframe dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>run</th>
+      <th>TP_base</th>
+      <th>TP_comp</th>
+      <th>FP</th>
+      <th>FN</th>
+      <th>precision</th>
+      <th>recall</th>
+      <th>f1</th>
+      <th>base_cnt_evaluated</th>
+      <th>comp_cnt_evaluated</th>
+      <th>gt_concordance</th>
+      <th>build</th>
+      <th>caller</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>hg19_DELLY</td>
+      <td>27</td>
+      <td>27</td>
+      <td>39</td>
+      <td>495</td>
+      <td>0.409091</td>
+      <td>0.051724</td>
+      <td>0.091837</td>
+      <td>522</td>
+      <td>66</td>
+      <td>0.925926</td>
+      <td>hg19</td>
+      <td>DELLY</td>
+    </tr>
+    <tr>
+      <td>hg19_dragen</td>
+      <td>293</td>
+      <td>293</td>
+      <td>48</td>
+      <td>229</td>
+      <td>0.859238</td>
+      <td>0.561303</td>
+      <td>0.679027</td>
+      <td>522</td>
+      <td>341</td>
+      <td>0.771331</td>
+      <td>hg19</td>
+      <td>DRAGEN</td>
+    </tr>
+    <tr>
+      <td>hg19_sniffles</td>
+      <td>341</td>
+      <td>341</td>
+      <td>44</td>
+      <td>181</td>
+      <td>0.885714</td>
+      <td>0.653257</td>
+      <td>0.751929</td>
+      <td>522</td>
+      <td>385</td>
+      <td>0.803519</td>
+      <td>hg19</td>
+      <td>Sniffles</td>
+    </tr>
+    <tr>
+      <td>hg38_delly</td>
+      <td>342</td>
+      <td>342</td>
+      <td>60</td>
+      <td>223</td>
+      <td>0.850746</td>
+      <td>0.605310</td>
+      <td>0.707342</td>
+      <td>565</td>
+      <td>402</td>
+      <td>0.695906</td>
+      <td>hg38</td>
+      <td>DELLY</td>
+    </tr>
+    <tr>
+      <td>hg38_dragen</td>
+      <td>158</td>
+      <td>158</td>
+      <td>29</td>
+      <td>407</td>
+      <td>0.844920</td>
+      <td>0.279646</td>
+      <td>0.420213</td>
+      <td>565</td>
+      <td>187</td>
+      <td>0.860759</td>
+      <td>hg38</td>
+      <td>DRAGEN</td>
+    </tr>
+    <tr>
+      <td>hg38_sniffles</td>
+      <td>372</td>
+      <td>372</td>
+      <td>68</td>
+      <td>193</td>
+      <td>0.845455</td>
+      <td>0.658407</td>
+      <td>0.740299</td>
+      <td>565</td>
+      <td>440</td>
+      <td>0.817204</td>
+      <td>hg38</td>
+      <td>Sniffles</td>
+    </tr>
+  </tbody>
+</table>
+
+
+    <div class="figure">
+      <img src="plots_clean/truvari_original_metrics.png" alt="Original Truvari benchmark: precision, recall, and F1">
+      <div class="caption">Original Truvari benchmark: precision, recall, and F1</div>
+    </div>
+    
+
+<h3>7.1 Per-SVTYPE Truvari counts</h3>
+<table class="dataframe dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>run</th>
+      <th>result_file</th>
+      <th>SVTYPE</th>
+      <th>count</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>hg19_DELLY</td>
+      <td>tp-base</td>
+      <td>DEL</td>
+      <td>20</td>
+    </tr>
+    <tr>
+      <td>hg19_DELLY</td>
+      <td>tp-base</td>
+      <td>INS</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <td>hg19_DELLY</td>
+      <td>tp-comp</td>
+      <td>DEL</td>
+      <td>20</td>
+    </tr>
+    <tr>
+      <td>hg19_DELLY</td>
+      <td>tp-comp</td>
+      <td>INS</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <td>hg19_DELLY</td>
+      <td>fp</td>
+      <td>DEL</td>
+      <td>16</td>
+    </tr>
+    <tr>
+      <td>hg19_DELLY</td>
+      <td>fp</td>
+      <td>INS</td>
+      <td>23</td>
+    </tr>
+    <tr>
+      <td>hg19_DELLY</td>
+      <td>fn</td>
+      <td>DEL</td>
+      <td>158</td>
+    </tr>
+    <tr>
+      <td>hg19_DELLY</td>
+      <td>fn</td>
+      <td>INS</td>
+      <td>337</td>
+    </tr>
+    <tr>
+      <td>hg19_dragen</td>
+      <td>tp-base</td>
+      <td>DEL</td>
+      <td>114</td>
+    </tr>
+    <tr>
+      <td>hg19_dragen</td>
+      <td>tp-base</td>
+      <td>INS</td>
+      <td>179</td>
+    </tr>
+    <tr>
+      <td>hg19_dragen</td>
+      <td>tp-comp</td>
+      <td>DEL</td>
+      <td>114</td>
+    </tr>
+    <tr>
+      <td>hg19_dragen</td>
+      <td>tp-comp</td>
+      <td>INS</td>
+      <td>179</td>
+    </tr>
+    <tr>
+      <td>hg19_dragen</td>
+      <td>fp</td>
+      <td>DEL</td>
+      <td>13</td>
+    </tr>
+    <tr>
+      <td>hg19_dragen</td>
+      <td>fp</td>
+      <td>INS</td>
+      <td>35</td>
+    </tr>
+    <tr>
+      <td>hg19_dragen</td>
+      <td>fn</td>
+      <td>DEL</td>
+      <td>64</td>
+    </tr>
+    <tr>
+      <td>hg19_dragen</td>
+      <td>fn</td>
+      <td>INS</td>
+      <td>165</td>
+    </tr>
+    <tr>
+      <td>hg19_sniffles</td>
+      <td>tp-base</td>
+      <td>DEL</td>
+      <td>134</td>
+    </tr>
+    <tr>
+      <td>hg19_sniffles</td>
+      <td>tp-base</td>
+      <td>INS</td>
+      <td>207</td>
+    </tr>
+    <tr>
+      <td>hg19_sniffles</td>
+      <td>tp-comp</td>
+      <td>DEL</td>
+      <td>134</td>
+    </tr>
+    <tr>
+      <td>hg19_sniffles</td>
+      <td>tp-comp</td>
+      <td>INS</td>
+      <td>207</td>
+    </tr>
+    <tr>
+      <td>hg19_sniffles</td>
+      <td>fp</td>
+      <td>DEL</td>
+      <td>20</td>
+    </tr>
+    <tr>
+      <td>hg19_sniffles</td>
+      <td>fp</td>
+      <td>INS</td>
+      <td>24</td>
+    </tr>
+    <tr>
+      <td>hg19_sniffles</td>
+      <td>fn</td>
+      <td>DEL</td>
+      <td>44</td>
+    </tr>
+    <tr>
+      <td>hg19_sniffles</td>
+      <td>fn</td>
+      <td>INS</td>
+      <td>137</td>
+    </tr>
+    <tr>
+      <td>hg38_delly</td>
+      <td>tp-base</td>
+      <td>DEL</td>
+      <td>136</td>
+    </tr>
+    <tr>
+      <td>hg38_delly</td>
+      <td>tp-base</td>
+      <td>INS</td>
+      <td>206</td>
+    </tr>
+    <tr>
+      <td>hg38_delly</td>
+      <td>tp-comp</td>
+      <td>DEL</td>
+      <td>136</td>
+    </tr>
+    <tr>
+      <td>hg38_delly</td>
+      <td>tp-comp</td>
+      <td>INS</td>
+      <td>206</td>
+    </tr>
+    <tr>
+      <td>hg38_delly</td>
+      <td>fp</td>
+      <td>DEL</td>
+      <td>36</td>
+    </tr>
+    <tr>
+      <td>hg38_delly</td>
+      <td>fp</td>
+      <td>INS</td>
+      <td>24</td>
+    </tr>
+    <tr>
+      <td>hg38_delly</td>
+      <td>fn</td>
+      <td>DEL</td>
+      <td>62</td>
+    </tr>
+    <tr>
+      <td>hg38_delly</td>
+      <td>fn</td>
+      <td>INS</td>
+      <td>161</td>
+    </tr>
+    <tr>
+      <td>hg38_dragen</td>
+      <td>tp-base</td>
+      <td>DEL</td>
+      <td>78</td>
+    </tr>
+    <tr>
+      <td>hg38_dragen</td>
+      <td>tp-base</td>
+      <td>INS</td>
+      <td>80</td>
+    </tr>
+    <tr>
+      <td>hg38_dragen</td>
+      <td>tp-comp</td>
+      <td>DEL</td>
+      <td>78</td>
+    </tr>
+    <tr>
+      <td>hg38_dragen</td>
+      <td>tp-comp</td>
+      <td>INS</td>
+      <td>80</td>
+    </tr>
+    <tr>
+      <td>hg38_dragen</td>
+      <td>fp</td>
+      <td>DEL</td>
+      <td>12</td>
+    </tr>
+    <tr>
+      <td>hg38_dragen</td>
+      <td>fp</td>
+      <td>INS</td>
+      <td>17</td>
+    </tr>
+    <tr>
+      <td>hg38_dragen</td>
+      <td>fn</td>
+      <td>DEL</td>
+      <td>120</td>
+    </tr>
+    <tr>
+      <td>hg38_dragen</td>
+      <td>fn</td>
+      <td>INS</td>
+      <td>287</td>
+    </tr>
+    <tr>
+      <td>hg38_sniffles</td>
+      <td>tp-base</td>
+      <td>DEL</td>
+      <td>149</td>
+    </tr>
+    <tr>
+      <td>hg38_sniffles</td>
+      <td>tp-base</td>
+      <td>INS</td>
+      <td>223</td>
+    </tr>
+    <tr>
+      <td>hg38_sniffles</td>
+      <td>tp-comp</td>
+      <td>DEL</td>
+      <td>149</td>
+    </tr>
+    <tr>
+      <td>hg38_sniffles</td>
+      <td>tp-comp</td>
+      <td>INS</td>
+      <td>223</td>
+    </tr>
+    <tr>
+      <td>hg38_sniffles</td>
+      <td>fp</td>
+      <td>DEL</td>
+      <td>38</td>
+    </tr>
+    <tr>
+      <td>hg38_sniffles</td>
+      <td>fp</td>
+      <td>INS</td>
+      <td>30</td>
+    </tr>
+    <tr>
+      <td>hg38_sniffles</td>
+      <td>fn</td>
+      <td>DEL</td>
+      <td>49</td>
+    </tr>
+    <tr>
+      <td>hg38_sniffles</td>
+      <td>fn</td>
+      <td>INS</td>
+      <td>144</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>8. DUP-to-INS sensitivity analysis</h2>
+<p>
+Because tandem duplications may be represented either as <code>SVTYPE=DUP</code> or as inserted duplicated sequence
+represented as <code>SVTYPE=INS</code>, a sensitivity analysis was carried out.
+The main question is whether changing DUP representation to INS changes precision, recall, or F1.
+</p>
+
+<h3>8.1 DUP-to-INS converted input counts</h3>
+<pre>==============================
+hg19 DUP-to-INS converted interval VCFs
+==============================
+===== 03_benchmark_inputs/hg19_interval_dup_to_ins/DELLY.hg19.norm_recall_HG002.merged__filt_DUPtoINS.renamed.chr22.interval.dup_to_ins.vcf.gz =====
+Records:      119
+SVTYPE counts:
+  55 DEL
+  52 INS
+  12 INV
+
+===== 03_benchmark_inputs/hg19_interval_dup_to_ins/HG002_dragen.sv.hg19.renamed.chr22.interval.dup_to_ins.vcf.gz =====
+Records:      576
+SVTYPE counts:
+ 340 INS
+ 236 DEL
+
+===== 03_benchmark_inputs/hg19_interval_dup_to_ins/HG002_sniffles.hg19.renamed.chr22.interval.dup_to_ins.vcf.gz =====
+Records:      512
+SVTYPE counts:
+ 299 INS
+ 213 DEL
+
+===== 03_benchmark_inputs/hg19_interval_dup_to_ins/truth.hg19.chr22.interval.dup_to_ins.vcf.gz =====
+Records:     1612
+SVTYPE counts:
+ 897 INS
+ 715 DEL
+
+==============================
+hg38 DUP-to-INS converted interval VCFs
+==============================
+===== 03_benchmark_inputs/hg38_interval_dup_to_ins/HG002_delly_lr.hg38.renamed.chr22.interval.dup_to_ins.vcf.gz =====
+Records:      960
+SVTYPE counts:
+ 508 INS
+ 450 DEL
+   2 INV
+
+===== 03_benchmark_inputs/hg38_interval_dup_to_ins/HG002_dragen.sv.hg38.renamed.chr22.interval.dup_to_ins.vcf.gz =====
+Records:      299
+SVTYPE counts:
+ 169 INS
+ 130 DEL
+
+===== 03_benchmark_inputs/hg38_interval_dup_to_ins/HG002_sniffles.hg38.renamed.chr22.interval.dup_to_ins.vcf.gz =====
+Records:      831
+SVTYPE counts:
+ 441 INS
+ 390 DEL
+
+===== 03_benchmark_inputs/hg38_interval_dup_to_ins/truth.hg38.chr22.interval.dup_to_ins.vcf.gz =====
+Records:     2276
+SVTYPE counts:
+1245 INS
+1031 DEL
+
+</pre>
+
+<h3>8.2 Original vs DUP-to-INS comparison table</h3>
+<table class="dataframe dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>run</th>
+      <th>original_precision</th>
+      <th>dup_to_ins_precision</th>
+      <th>delta_precision</th>
+      <th>original_recall</th>
+      <th>dup_to_ins_recall</th>
+      <th>delta_recall</th>
+      <th>original_f1</th>
+      <th>dup_to_ins_f1</th>
+      <th>delta_f1</th>
+      <th>original_TP_base</th>
+      <th>dup_to_ins_TP_base</th>
+      <th>original_FP</th>
+      <th>dup_to_ins_FP</th>
+      <th>original_FN</th>
+      <th>dup_to_ins_FN</th>
+      <th>build</th>
+      <th>caller</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>hg19_DELLY</td>
+      <td>0.409091</td>
+      <td>0.409091</td>
+      <td>0.0</td>
+      <td>0.051724</td>
+      <td>0.051724</td>
+      <td>0.0</td>
+      <td>0.091837</td>
+      <td>0.091837</td>
+      <td>0.0</td>
+      <td>27</td>
+      <td>27</td>
+      <td>39</td>
+      <td>39</td>
+      <td>495</td>
+      <td>495</td>
+      <td>hg19</td>
+      <td>DELLY</td>
+    </tr>
+    <tr>
+      <td>hg19_dragen</td>
+      <td>0.859238</td>
+      <td>0.859238</td>
+      <td>0.0</td>
+      <td>0.561303</td>
+      <td>0.561303</td>
+      <td>0.0</td>
+      <td>0.679027</td>
+      <td>0.679027</td>
+      <td>0.0</td>
+      <td>293</td>
+      <td>293</td>
+      <td>48</td>
+      <td>48</td>
+      <td>229</td>
+      <td>229</td>
+      <td>hg19</td>
+      <td>DRAGEN</td>
+    </tr>
+    <tr>
+      <td>hg19_sniffles</td>
+      <td>0.885714</td>
+      <td>0.885714</td>
+      <td>0.0</td>
+      <td>0.653257</td>
+      <td>0.653257</td>
+      <td>0.0</td>
+      <td>0.751929</td>
+      <td>0.751929</td>
+      <td>0.0</td>
+      <td>341</td>
+      <td>341</td>
+      <td>44</td>
+      <td>44</td>
+      <td>181</td>
+      <td>181</td>
+      <td>hg19</td>
+      <td>Sniffles</td>
+    </tr>
+    <tr>
+      <td>hg38_delly</td>
+      <td>0.850746</td>
+      <td>0.850746</td>
+      <td>0.0</td>
+      <td>0.605310</td>
+      <td>0.605310</td>
+      <td>0.0</td>
+      <td>0.707342</td>
+      <td>0.707342</td>
+      <td>0.0</td>
+      <td>342</td>
+      <td>342</td>
+      <td>60</td>
+      <td>60</td>
+      <td>223</td>
+      <td>223</td>
+      <td>hg38</td>
+      <td>DELLY</td>
+    </tr>
+    <tr>
+      <td>hg38_dragen</td>
+      <td>0.844920</td>
+      <td>0.844920</td>
+      <td>0.0</td>
+      <td>0.279646</td>
+      <td>0.279646</td>
+      <td>0.0</td>
+      <td>0.420213</td>
+      <td>0.420213</td>
+      <td>0.0</td>
+      <td>158</td>
+      <td>158</td>
+      <td>29</td>
+      <td>29</td>
+      <td>407</td>
+      <td>407</td>
+      <td>hg38</td>
+      <td>DRAGEN</td>
+    </tr>
+    <tr>
+      <td>hg38_sniffles</td>
+      <td>0.845455</td>
+      <td>0.845455</td>
+      <td>0.0</td>
+      <td>0.658407</td>
+      <td>0.658407</td>
+      <td>0.0</td>
+      <td>0.740299</td>
+      <td>0.740299</td>
+      <td>0.0</td>
+      <td>372</td>
+      <td>372</td>
+      <td>68</td>
+      <td>68</td>
+      <td>193</td>
+      <td>193</td>
+      <td>hg38</td>
+      <td>Sniffles</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>9. Metric comparison plots</h2>
+<p>
+These plots show how the benchmark changes when DUP calls are treated as INS in the sensitivity analysis.
+</p>
+
+
+    <div class="figure">
+      <img src="plots_clean/precision_original_vs_dup_to_ins.png" alt="Precision: original vs DUP-to-INS">
+      <div class="caption">Precision: original vs DUP-to-INS</div>
+    </div>
+    
+
+    <div class="figure">
+      <img src="plots_clean/recall_original_vs_dup_to_ins.png" alt="Recall: original vs DUP-to-INS">
+      <div class="caption">Recall: original vs DUP-to-INS</div>
+    </div>
+    
+
+    <div class="figure">
+      <img src="plots_clean/f1_original_vs_dup_to_ins.png" alt="F1: original vs DUP-to-INS">
+      <div class="caption">F1: original vs DUP-to-INS</div>
+    </div>
+    
+
+    <div class="figure">
+      <img src="plots_clean/precision_recall_scatter_original_vs_dup_to_ins.png" alt="Precision vs Recall: movement from original to DUP-to-INS">
+      <div class="caption">Precision vs Recall: movement from original to DUP-to-INS</div>
+    </div>
+    
+
+    <div class="figure">
+      <img src="plots_clean/delta_f1_dup_to_ins_minus_original.png" alt="ΔF1 (DUP-to-INS minus original)">
+      <div class="caption">ΔF1 (DUP-to-INS minus original)</div>
+    </div>
+    
+
+<h2>10. Interpretation</h2>
+<p>
+The figures above should be used to interpret both performance and representation sensitivity:
+</p>
+<ul>
+<li><strong>Precision / recall / F1 plots</strong> show overall caller performance in the original benchmark.</li>
+<li><strong>Original vs DUP-to-INS plots</strong> show whether differences are due to biology / caller performance or due to representation.</li>
+<li><strong>BND plot</strong> shows the number of records that were counted separately because they are not directly comparable as interval SVs.</li>
+<li><strong>END&lt;POS and missing END / SVLEN plots</strong> show why some records needed QC handling before benchmarking.</li>
+</ul>
+
+<p>
+In practical terms:
+</p>
+<ul>
+<li>If DUP-to-INS barely changes the metrics, then the original results are stable to representation differences.</li>
+<li>If DUP-to-INS clearly improves recall or F1 for a caller, then some apparent misses were likely due to DUP vs INS representation rather than completely wrong calls.</li>
+<li>A high BND burden reminds the reader that not all structural variants fit cleanly into interval-style benchmarking.</li>
+</ul>
+
+<h2>11. Main conclusion</h2>
+<p>
+The chromosome 22 workflow was successfully debugged and benchmarked.
+The original empty chr22 subsets were caused by chromosome naming mismatch, and the later analyses showed:
+</p>
+<ul>
+<li>which variants entered the interval benchmark,</li>
+<li>which categories were handled separately,</li>
+<li>how original caller performance compared across runs, and</li>
+<li>whether DUP-to-INS conversion materially changed interpretation.</li>
+</ul>
+
+<h2>12. Limitations</h2>
+<ul>
+<li>This is a chromosome 22 subset, not a whole-genome benchmark.</li>
+<li>The main benchmark is interval-SV focused.</li>
+<li>BND and complex events require separate interpretation.</li>
+<li>Representation differences (especially DUP vs INS) can affect apparent performance.</li>
+</ul>
+
+<p class="small">
+Generated from files already present in <code>05_report/qc_tables/</code> and <code>05_report/metrics/</code>.
+</p>
+
+</body>
+</html>

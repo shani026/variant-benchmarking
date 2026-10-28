@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="620" viewBox="0 0 1100 620">
+<rect width="100%" height="100%" fill="white"/>
+<text x="550.0" y="35" text-anchor="middle" font-size="22" font-weight="bold">FP/FN balance</text>
+<text x="22" y="265.0" transform="rotate(-90 22 265.0)" text-anchor="middle" font-size="14">Number of SVs</text>
+<line x1="90" y1="70" x2="90" y2="460" stroke="#333"/>
+<line x1="90" y1="265.0" x2="1070" y2="265.0" stroke="#333"/>
+<rect x="122.7" y="249.6" width="49.0" height="15.4" fill="#F58518"/>
+<rect x="171.7" y="265.0" width="49.0" height="195.0" fill="#E45756"/>
+<text x="171.7" y="478" text-anchor="end" font-size="11" transform="rotate(-45 171.7 478)">hg19 DELLY</text>
+<rect x="286.0" y="246.1" width="49.0" height="18.9" fill="#F58518"/>
+<rect x="335.0" y="265.0" width="49.0" height="90.2" fill="#E45756"/>
+<text x="335.0" y="478" text-anchor="end" font-size="11" transform="rotate(-45 335.0 478)">hg19 DRAGEN</text>
+<rect x="449.3" y="247.7" width="49.0" height="17.3" fill="#F58518"/>
+<rect x="498.3" y="265.0" width="49.0" height="71.3" fill="#E45756"/>
+<text x="498.3" y="478" text-anchor="end" font-size="11" transform="rotate(-45 498.3 478)">hg19 Sniffles</text>
+<rect x="612.7" y="241.4" width="49.0" height="23.6" fill="#F58518"/>
+<rect x="661.7" y="265.0" width="49.0" height="87.8" fill="#E45756"/>
+<text x="661.7" y="478" text-anchor="end" font-size="11" transform="rotate(-45 661.7 478)">hg38 DELLY</text>
+<rect x="776.0" y="253.6" width="49.0" height="11.4" fill="#F58518"/>
+<rect x="825.0" y="265.0" width="49.0" height="160.3" fill="#E45756"/>
+<text x="825.0" y="478" text-anchor="end" font-size="11" transform="rotate(-45 825.0 478)">hg38 DRAGEN</text>
+<rect x="939.3" y="238.2" width="49.0" height="26.8" fill="#F58518"/>
+<rect x="988.3" y="265.0" width="49.0" height="76.0" fill="#E45756"/>
+<text x="988.3" y="478" text-anchor="end" font-size="11" transform="rotate(-45 988.3 478)">hg38 Sniffles</text>
+<rect x="90" y="575" width="14" height="14" fill="#F58518"/>
+<text x="110" y="587" font-size="13">FP above line</text>
+<rect x="250" y="575" width="14" height="14" fill="#E45756"/>
+<text x="270" y="587" font-size="13">FN below line</text>
+</svg>

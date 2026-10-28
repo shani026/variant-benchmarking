@@ -1,0 +1,10 @@
+genome: "hg38"
+sample: "HG002"
+
+samplesheet: "code/config/samplesheets/samplesheet.hg38.csv"
+
+reference: "/absolute/path/to/references/hg38/hg38.fa"
+truth_vcf: "/absolute/path/to/truth/hg38/HG002_GRCh38_v5.0q_stvar.vcf.gz"
+truth_bed: "/absolute/path/to/truth/hg38/HG002_GRCh38_v5.0q_stvar.benchmark.bed"
+
+outdir: "benchmark-runs/custom/hg38"

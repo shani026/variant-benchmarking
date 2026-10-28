@@ -1,0 +1,9 @@
+source,stage,exists,total_records,filter_pass_records,filter_nonpass_records,query_error
+Truth,raw,True,5497286,0,5497286,
+Delly,raw,True,5579,5579,0,
+DRAGEN,raw,True,29133,26216,2917,
+Sniffles,raw,True,24138,22296,1842,
+Truth,prepared,True,5057617,0,5057617,
+Delly,prepared,True,4272,4272,0,
+DRAGEN,prepared,True,29133,26216,2917,
+Sniffles,prepared,True,22352,22246,106,

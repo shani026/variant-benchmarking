@@ -1,0 +1,53 @@
+GENOMIC VARIANT LIFTOVER TOOL ANALYSIS SUMMARY
+============================================================
+
+DATASET OVERVIEW
+--------------------
+Total variants analyzed: 28,575
+Overall position match rate: 100.0%
+Overall genotype match rate: 99.6%
+
+PER-TOOL LIFT SUCCESS
+-------------------------
+  CrossMap: 28,573 lifted (100.0%)
+  bcftools: 28,575 lifted (100.0%)
+  Picard: 28,574 lifted (100.0%)
+
+PAIRWISE POSITION AGREEMENT
+------------------------------
+  CrossMap vs bcftools: 28,573/28,573 agree (100.0%)
+  CrossMap vs Picard: 28,572/28,572 agree (100.0%)
+  bcftools vs Picard: 28,574/28,574 agree (100.0%)
+
+MAPPING STATUS BREAKDOWN
+------------------------------
+mapping_status  count  pos_match_rate  gt_match_rate
+      COMPLETE  28572             1.0       0.996115
+       PARTIAL      3             1.0       0.666667
+
+STRAND FLIP & ALLELE SWAP (bcftools, all variants)
+--------------------------------------------------
+• NONE: No modification needed
+• FLIP: Strand orientation corrected
+• SWAP: REF/ALT swapped to match reference
+• SWAP_FAILED: Swap attempted but failed (ambiguous)
+• FLIP+SWAP: Both strand flip and allele swap
+
+  NONE: 28,574 (100.0%)
+  SWAP: 1 (0.0%)
+
+PROBLEMATIC REGION OVERLAP
+------------------------------
+• CUPs: Conversion-unstable positions (Ormond 2021)
+• DISCREPs: Discordant reference patches (Li 2021)
+
+  CUPs hg19: 0 (0.0%)
+  DISCREPs hg19: 225 (0.8%)
+  CUPs hg38: 0 (0.0%)
+  DISCREPs hg38: 241 (0.8%)
+
+GENERATED FILES
+--------------------
+• liftover_analysis.png - Per-tool coverage, agreement, pairwise concordance, flip/swap
+• position_differences_analysis.png - Pairwise position difference distributions
+• liftover_analysis_summary.txt - This report

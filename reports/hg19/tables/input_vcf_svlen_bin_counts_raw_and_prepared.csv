@@ -1,0 +1,64 @@
+source,stage,svlen_bin,count
+Truth,raw,NA/BND/UNKNOWN,5419308
+Truth,raw,50-99 bp,11481
+Truth,raw,1-4.9 kb,3777
+Truth,raw,500-999 bp,3074
+Truth,raw,100-499 bp,16576
+Truth,raw,<50 bp,41927
+Truth,raw,>=50 kb,106
+Truth,raw,10-49.9 kb,391
+Truth,raw,5-9.9 kb,646
+Delly,raw,100-499 bp,564
+Delly,raw,1-4.9 kb,1171
+Delly,raw,500-999 bp,929
+Delly,raw,10-49.9 kb,541
+Delly,raw,>=50 kb,2065
+Delly,raw,5-9.9 kb,307
+Delly,raw,50-99 bp,2
+DRAGEN,raw,500-999 bp,1746
+DRAGEN,raw,50-99 bp,6622
+DRAGEN,raw,NA/BND/UNKNOWN,2610
+DRAGEN,raw,<50 bp,5954
+DRAGEN,raw,100-499 bp,10045
+DRAGEN,raw,1-4.9 kb,1737
+DRAGEN,raw,5-9.9 kb,281
+DRAGEN,raw,10-49.9 kb,114
+DRAGEN,raw,>=50 kb,24
+Sniffles,raw,100-499 bp,11507
+Sniffles,raw,500-999 bp,2069
+Sniffles,raw,1-4.9 kb,2237
+Sniffles,raw,50-99 bp,7905
+Sniffles,raw,5-9.9 kb,327
+Sniffles,raw,10-49.9 kb,80
+Sniffles,raw,>=50 kb,13
+Truth,prepared,NA/BND/UNKNOWN,4986627
+Truth,prepared,50-99 bp,10550
+Truth,prepared,1-4.9 kb,2902
+Truth,prepared,500-999 bp,2754
+Truth,prepared,100-499 bp,15089
+Truth,prepared,<50 bp,38904
+Truth,prepared,>=50 kb,79
+Truth,prepared,10-49.9 kb,261
+Truth,prepared,5-9.9 kb,451
+Delly,prepared,100-499 bp,391
+Delly,prepared,500-999 bp,686
+Delly,prepared,1-4.9 kb,995
+Delly,prepared,>=50 kb,1596
+Delly,prepared,10-49.9 kb,346
+Delly,prepared,5-9.9 kb,258
+DRAGEN,prepared,500-999 bp,1746
+DRAGEN,prepared,50-99 bp,6622
+DRAGEN,prepared,NA/BND/UNKNOWN,2610
+DRAGEN,prepared,<50 bp,5954
+DRAGEN,prepared,100-499 bp,10045
+DRAGEN,prepared,1-4.9 kb,1737
+DRAGEN,prepared,5-9.9 kb,281
+DRAGEN,prepared,10-49.9 kb,114
+DRAGEN,prepared,>=50 kb,24
+Sniffles,prepared,100-499 bp,10675
+Sniffles,prepared,500-999 bp,1916
+Sniffles,prepared,1-4.9 kb,2102
+Sniffles,prepared,50-99 bp,7267
+Sniffles,prepared,5-9.9 kb,310
+Sniffles,prepared,10-49.9 kb,71
+Sniffles,prepared,>=50 kb,11

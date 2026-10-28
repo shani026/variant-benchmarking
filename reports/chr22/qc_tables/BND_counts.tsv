@@ -1,0 +1,9 @@
+build	file	BND_count
+hg19	DELLY.hg19.norm_recall_HG002.merged__filt_DUPtoINS.renamed.chr22	47
+hg19	HG002_dragen.sv.hg19.renamed.chr22	52
+hg19	HG002_sniffles.hg19.renamed.chr22	0
+hg19	truth.hg19.chr22	0
+hg38	HG002_delly_lr.hg38.renamed.chr22	41
+hg38	HG002_dragen.sv.hg38.renamed.chr22	45
+hg38	HG002_sniffles.hg38.renamed.chr22	7
+hg38	truth.hg38.chr22	0

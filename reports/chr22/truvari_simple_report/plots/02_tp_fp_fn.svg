@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="620" viewBox="0 0 1100 620">
+<rect width="100%" height="100%" fill="white"/>
+<text x="550.0" y="35" text-anchor="middle" font-size="22" font-weight="bold">Truvari TP, FP, and FN counts</text>
+<text x="22" y="265.0" transform="rotate(-90 22 265.0)" text-anchor="middle" font-size="14">Number of SVs</text>
+<line x1="90" y1="70" x2="90" y2="460" stroke="#333"/>
+<line x1="90" y1="460" x2="1070" y2="460" stroke="#333"/>
+<line x1="90" y1="460.0" x2="1070" y2="460.0" stroke="#eee"/>
+<text x="82" y="464.0" text-anchor="end" font-size="11">0</text>
+<line x1="90" y1="382.0" x2="1070" y2="382.0" stroke="#eee"/>
+<text x="82" y="386.0" text-anchor="end" font-size="11">99</text>
+<line x1="90" y1="304.0" x2="1070" y2="304.0" stroke="#eee"/>
+<text x="82" y="308.0" text-anchor="end" font-size="11">2e+02</text>
+<line x1="90" y1="226.0" x2="1070" y2="226.0" stroke="#eee"/>
+<text x="82" y="230.0" text-anchor="end" font-size="11">3e+02</text>
+<line x1="90" y1="148.0" x2="1070" y2="148.0" stroke="#eee"/>
+<text x="82" y="152.0" text-anchor="end" font-size="11">4e+02</text>
+<line x1="90" y1="70.0" x2="1070" y2="70.0" stroke="#eee"/>
+<text x="82" y="74.0" text-anchor="end" font-size="11">5e+02</text>
+<rect x="114.5" y="438.7" width="34.3" height="21.3" fill="#4C78A8"/>
+<rect x="152.6" y="429.3" width="34.3" height="30.7" fill="#F58518"/>
+<rect x="190.7" y="70.0" width="34.3" height="390.0" fill="#54A24B"/>
+<text x="171.7" y="478" text-anchor="end" font-size="11" transform="rotate(-45 171.7 478)">hg19 DELLY</text>
+<rect x="277.8" y="229.2" width="34.3" height="230.8" fill="#4C78A8"/>
+<rect x="315.9" y="422.2" width="34.3" height="37.8" fill="#F58518"/>
+<rect x="354.1" y="279.6" width="34.3" height="180.4" fill="#54A24B"/>
+<text x="335.0" y="478" text-anchor="end" font-size="11" transform="rotate(-45 335.0 478)">hg19 DRAGEN</text>
+<rect x="441.2" y="191.3" width="34.3" height="268.7" fill="#4C78A8"/>
+<rect x="479.3" y="425.3" width="34.3" height="34.7" fill="#F58518"/>
+<rect x="517.4" y="317.4" width="34.3" height="142.6" fill="#54A24B"/>
+<text x="498.3" y="478" text-anchor="end" font-size="11" transform="rotate(-45 498.3 478)">hg19 Sniffles</text>
+<rect x="604.5" y="190.5" width="34.3" height="269.5" fill="#4C78A8"/>
+<rect x="642.6" y="412.7" width="34.3" height="47.3" fill="#F58518"/>
+<rect x="680.7" y="284.3" width="34.3" height="175.7" fill="#54A24B"/>
+<text x="661.7" y="478" text-anchor="end" font-size="11" transform="rotate(-45 661.7 478)">hg38 DELLY</text>
+<rect x="767.8" y="335.5" width="34.3" height="124.5" fill="#4C78A8"/>
+<rect x="805.9" y="437.2" width="34.3" height="22.8" fill="#F58518"/>
+<rect x="844.1" y="139.3" width="34.3" height="320.7" fill="#54A24B"/>
+<text x="825.0" y="478" text-anchor="end" font-size="11" transform="rotate(-45 825.0 478)">hg38 DRAGEN</text>
+<rect x="931.2" y="166.9" width="34.3" height="293.1" fill="#4C78A8"/>
+<rect x="969.3" y="406.4" width="34.3" height="53.6" fill="#F58518"/>
+<rect x="1007.4" y="307.9" width="34.3" height="152.1" fill="#54A24B"/>
+<text x="988.3" y="478" text-anchor="end" font-size="11" transform="rotate(-45 988.3 478)">hg38 Sniffles</text>
+<rect x="90" y="568" width="14" height="14" fill="#4C78A8"/>
+<text x="110" y="580" font-size="13">TP-base</text>
+<rect x="240" y="568" width="14" height="14" fill="#F58518"/>
+<text x="260" y="580" font-size="13">FP</text>
+<rect x="390" y="568" width="14" height="14" fill="#54A24B"/>
+<text x="410" y="580" font-size="13">FN</text>
+</svg>

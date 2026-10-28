@@ -1,0 +1,71 @@
+source,stage,svlen_bin,count
+Truth,raw,NA/BND/UNKNOWN,6178857
+Truth,raw,100-499 bp,21482
+Truth,raw,<50 bp,43491
+Truth,raw,10-49.9 kb,432
+Truth,raw,500-999 bp,5454
+Truth,raw,50-99 bp,12413
+Truth,raw,1-4.9 kb,5951
+Truth,raw,5-9.9 kb,659
+Truth,raw,>=50 kb,113
+Delly,raw,100-499 bp,24810
+Delly,raw,50-99 bp,7758
+Delly,raw,1-4.9 kb,5772
+Delly,raw,<50 bp,12431
+Delly,raw,500-999 bp,9277
+Delly,raw,10-49.9 kb,334
+Delly,raw,5-9.9 kb,463
+Delly,raw,>=50 kb,170
+DRAGEN,raw,<50 bp,2277
+DRAGEN,raw,NA/BND/UNKNOWN,2926
+DRAGEN,raw,>=50 kb,32
+DRAGEN,raw,100-499 bp,5479
+DRAGEN,raw,50-99 bp,5342
+DRAGEN,raw,500-999 bp,539
+DRAGEN,raw,1-4.9 kb,593
+DRAGEN,raw,5-9.9 kb,142
+DRAGEN,raw,10-49.9 kb,62
+Sniffles,raw,50-99 bp,7319
+Sniffles,raw,<50 bp,11216
+Sniffles,raw,100-499 bp,10996
+Sniffles,raw,1-4.9 kb,2556
+Sniffles,raw,500-999 bp,2121
+Sniffles,raw,5-9.9 kb,378
+Sniffles,raw,10-49.9 kb,129
+Sniffles,raw,>=50 kb,28
+Sniffles,raw,NA/BND/UNKNOWN,53
+Truth,prepared,NA/BND/UNKNOWN,5311500
+Truth,prepared,100-499 bp,16081
+Truth,prepared,<50 bp,39457
+Truth,prepared,10-49.9 kb,280
+Truth,prepared,500-999 bp,3153
+Truth,prepared,50-99 bp,10935
+Truth,prepared,1-4.9 kb,3283
+Truth,prepared,5-9.9 kb,472
+Truth,prepared,>=50 kb,76
+Delly,prepared,100-499 bp,20492
+Delly,prepared,50-99 bp,7538
+Delly,prepared,1-4.9 kb,4883
+Delly,prepared,<50 bp,12074
+Delly,prepared,500-999 bp,6971
+Delly,prepared,10-49.9 kb,311
+Delly,prepared,5-9.9 kb,427
+Delly,prepared,>=50 kb,138
+DRAGEN,prepared,<50 bp,2277
+DRAGEN,prepared,NA/BND/UNKNOWN,2926
+DRAGEN,prepared,>=50 kb,32
+DRAGEN,prepared,100-499 bp,5479
+DRAGEN,prepared,50-99 bp,5342
+DRAGEN,prepared,500-999 bp,539
+DRAGEN,prepared,1-4.9 kb,593
+DRAGEN,prepared,5-9.9 kb,142
+DRAGEN,prepared,10-49.9 kb,62
+Sniffles,prepared,50-99 bp,7319
+Sniffles,prepared,<50 bp,11216
+Sniffles,prepared,100-499 bp,10996
+Sniffles,prepared,1-4.9 kb,2548
+Sniffles,prepared,500-999 bp,2121
+Sniffles,prepared,5-9.9 kb,374
+Sniffles,prepared,10-49.9 kb,127
+Sniffles,prepared,>=50 kb,28
+Sniffles,prepared,NA/BND/UNKNOWN,53

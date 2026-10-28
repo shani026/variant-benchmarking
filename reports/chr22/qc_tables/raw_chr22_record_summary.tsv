@@ -1,0 +1,9 @@
+build	file	total_records	DEL_DUP_INS_INV	BND	UNKNOWN_NA_missing
+hg19	DELLY.hg19.norm_recall_HG002.merged__filt_DUPtoINS.renamed.chr22	166	119	47	0
+hg19	HG002_dragen.sv.hg19.renamed.chr22	628	576	52	0
+hg19	HG002_sniffles.hg19.renamed.chr22	512	512	0	0
+hg19	truth.hg19.chr22	78767	1612	0	77155
+hg38	HG002_delly_lr.hg38.renamed.chr22	1001	960	41	0
+hg38	HG002_dragen.sv.hg38.renamed.chr22	344	299	45	0
+hg38	HG002_sniffles.hg38.renamed.chr22	838	831	7	0
+hg38	truth.hg38.chr22	114070	2276	0	111794

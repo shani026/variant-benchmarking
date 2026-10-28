@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SV Benchmarking Report — nf-core/variantbenchmarking</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600&family=Fraunces:ital,wght@0,300;0,500;0,700;1,300&display=swap');
+
+    :root {
+      --bg:        #0d1117;
+      --surface:   #161b22;
+      --border:    #30363d;
+      --accent:    #58a6ff;
+      --accent2:   #3fb950;
+      --warn:      #d29922;
+      --danger:    #f85149;
+      --muted:     #8b949e;
+      --text:      #e6edf3;
+      --subtext:   #c9d1d9;
+      --highlight: #1f2937;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 13px;
+      line-height: 1.65;
+      padding: 0 0 60px;
+    }
+
+    /* ── Header ── */
+    .header {
+      background: linear-gradient(135deg, #0d1117 0%, #161b22 60%, #1c2a3a 100%);
+      border-bottom: 1px solid var(--border);
+      padding: 36px 48px 28px;
+      position: relative;
+      overflow: hidden;
+    }
+    .header::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 30px,
+        rgba(88,166,255,.03) 30px,
+        rgba(88,166,255,.03) 31px
+      );
+      pointer-events: none;
+    }
+    .header h1 {
+      font-family: 'Fraunces', serif;
+      font-size: 26px;
+      font-weight: 700;
+      color: var(--accent);
+      letter-spacing: .5px;
+    }
+    .header .meta {
+      color: var(--muted);
+      font-size: 11px;
+      margin-top: 6px;
+    }
+    .badge {
+      display: inline-block;
+      background: rgba(88,166,255,.12);
+      color: var(--accent);
+      border: 1px solid rgba(88,166,255,.3);
+      border-radius: 4px;
+      padding: 1px 8px;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: .8px;
+      text-transform: uppercase;
+      margin-right: 6px;
+    }
+    .badge.green { background: rgba(63,185,80,.1); color: var(--accent2); border-color: rgba(63,185,80,.3); }
+    .badge.yellow { background: rgba(210,153,34,.1); color: var(--warn); border-color: rgba(210,153,34,.3); }
+    .badge.red { background: rgba(248,81,73,.1); color: var(--danger); border-color: rgba(248,81,73,.3); }
+
+    /* ── Layout ── */
+    .container { max-width: 1300px; margin: 0 auto; padding: 32px 48px; }
+
+    /* ── Section headers ── */
+    .section-label {
+      font-family: 'Fraunces', serif;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 14px;
+      padding-bottom: 6px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .section { margin-bottom: 40px; }
+
+    /* ── Metric cards ── */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px 18px;
+      transition: border-color .2s;
+    }
+    .card:hover { border-color: var(--accent); }
+    .card .val {
+      font-family: 'Fraunces', serif;
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--accent);
+      line-height: 1.1;
+    }
+    .card .val.green { color: var(--accent2); }
+    .card .val.yellow { color: var(--warn); }
+    .card .val.red { color: var(--danger); }
+    .card .lbl {
+      color: var(--muted);
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-top: 4px;
+    }
+
+    /* ── Tables ── */
+    .tbl-wrap { overflow-x: auto; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 12px;
+    }
+    th {
+      background: var(--highlight);
+      color: var(--accent);
+      text-align: left;
+      padding: 8px 12px;
+      font-size: 10px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      border-bottom: 2px solid var(--border);
+      white-space: nowrap;
+    }
+    td {
+      padding: 7px 12px;
+      border-bottom: 1px solid var(--border);
+      color: var(--subtext);
+      vertical-align: middle;
+    }
+    tr:last-child td { border-bottom: none; }
+    tr:hover td { background: rgba(88,166,255,.04); }
+    td.num { font-variant-numeric: tabular-nums; text-align: right; }
+    td.good { color: var(--accent2); }
+    td.warn { color: var(--warn); }
+    td.bad  { color: var(--danger); }
+    td.mono { font-family: 'JetBrains Mono', monospace; font-size: 11px; }
+
+    /* ── Progress bar ── */
+    .bar-cell { min-width: 120px; }
+    .bar-bg {
+      background: var(--highlight);
+      border-radius: 3px;
+      height: 6px;
+      overflow: hidden;
+      margin-top: 4px;
+    }
+    .bar-fill {
+      height: 100%;
+      border-radius: 3px;
+      background: var(--accent2);
+    }
+    .bar-fill.warn { background: var(--warn); }
+    .bar-fill.bad  { background: var(--danger); }
+
+    /* ── Caller / tool grid ── */
+    .grid-3 {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+    .panel {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 18px;
+    }
+    .panel h3 {
+      font-family: 'Fraunces', serif;
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--subtext);
+      margin-bottom: 12px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 8px;
+    }
+    .panel .kv { display: flex; justify-content: space-between; margin-bottom: 5px; }
+    .panel .kv .k { color: var(--muted); font-size: 11px; }
+    .panel .kv .v { font-size: 12px; font-variant-numeric: tabular-nums; }
+    .panel .kv .v.good { color: var(--accent2); }
+    .panel .kv .v.bad  { color: var(--danger); }
+    .panel .kv .v.warn { color: var(--warn); }
+
+    /* ── Note box ── */
+    .note {
+      background: rgba(88,166,255,.06);
+      border-left: 3px solid var(--accent);
+      border-radius: 0 6px 6px 0;
+      padding: 12px 16px;
+      color: var(--subtext);
+      font-size: 12px;
+      margin-bottom: 20px;
+    }
+    .note strong { color: var(--accent); }
+
+    /* ── Run config block ── */
+    .config-block {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px 20px;
+    }
+    .config-block .row { display: flex; gap: 12px; margin-bottom: 4px; align-items: baseline; }
+    .config-block .key { color: var(--muted); min-width: 180px; font-size: 11px; }
+    .config-block .value { color: var(--subtext); font-size: 12px; word-break: break-all; }
+
+    /* ── Placeholder chart ── */
+    .chart-placeholder {
+      background: var(--surface);
+      border: 1px dashed var(--border);
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 200px;
+      color: var(--muted);
+      font-size: 11px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      gap: 8px;
+    }
+    .chart-placeholder svg { opacity: .3; }
+
+    /* ── Divider ── */
+    hr { border: none; border-top: 1px solid var(--border); margin: 32px 0; }
+
+    @media print {
+      body { background: white; color: black; }
+      .card { border: 1px solid #ccc; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ════════════════════════════════════════════════
+     HEADER
+     ════════════════════════════════════════════════ -->
+<div class="header">
+  <div style="max-width:1300px; margin:0 auto; padding:0 48px;">
+    <div style="margin-bottom:10px;">
+      <span class="badge">nf-core/variantbenchmarking</span>
+      <span class="badge green">v1.5.0</span>
+      <span class="badge">germline · structural</span>
+    </div>
+    <h1>SV Benchmarking Report</h1>
+    <div class="meta">
+      Truth set: HG002 &nbsp;|&nbsp;
+      Reference: hg38 &nbsp;|&nbsp;
+      Callers: Delly · Sniffles · DRAGEN &nbsp;|&nbsp;
+      Benchmarks: RTGtools · SVanalyzer · Truvari &nbsp;|&nbsp;
+      Generated: <span id="ts"></span>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════════
+     MAIN CONTENT
+     ════════════════════════════════════════════════ -->
+<div class="container">
+
+  <!-- ── Run Summary ── -->
+  <div class="section">
+    <div class="section-label">Run Summary</div>
+
+    <div class="note">
+      <strong>How to use this report:</strong>
+      This template is pre-populated with <em>example placeholder values</em>.
+      Replace every <code>—</code> and numeric value with your actual pipeline output
+      (found in <code>results/hg38/</code> sub-directories).
+      Column headers match the metric names emitted by each benchmarking tool.
+    </div>
+
+    <div class="config-block">
+      <div class="row"><span class="key">Run name</span>          <span class="value">hg38_all_callers_YYYYMMDD_HHMMSS</span></div>
+      <div class="row"><span class="key">Pipeline version</span>  <span class="value">nf-core/variantbenchmarking 1.5.0</span></div>
+      <div class="row"><span class="key">Reference genome</span>  <span class="value">hg38 (GRCh38)</span></div>
+      <div class="row"><span class="key">Truth VCF</span>         <span class="value">HG002_GRCh38_v5.0q_stvar.vcf.gz (GIAB v5.0q)</span></div>
+      <div class="row"><span class="key">Benchmark BED</span>     <span class="value">HG002_GRCh38_v5.0q_stvar.benchmark.bed</span></div>
+      <div class="row"><span class="key">Variant type</span>      <span class="value">Structural variants (SVs)</span></div>
+      <div class="row"><span class="key">Callers tested</span>    <span class="value">Delly · Sniffles · DRAGEN</span></div>
+      <div class="row"><span class="key">Benchmarking tools</span><span class="value">RTGtools (bndeval) · SVanalyzer (svbenchmark) · Truvari (bench)</span></div>
+      <div class="row"><span class="key">Work directory</span>    <span class="value">work/hg38/</span></div>
+    </div>
+  </div>
+
+  <!-- ── Per-Caller Top-Line Metrics ── -->
+  <div class="section">
+    <div class="section-label">Per-Caller Summary — All benchmarking tools</div>
+
+    <div class="note">
+      Values below are <strong>mean across all three benchmarking tools</strong> (RTGtools / SVanalyzer / Truvari).
+      Expand per-tool breakdown further down.
+    </div>
+
+    <!-- DELLY -->
+    <div style="margin-bottom: 24px;">
+      <div style="font-family:'Fraunces',serif; font-size:15px; font-weight:600; color:var(--subtext); margin-bottom:10px;">
+        🔵 Delly
+      </div>
+      <div class="cards">
+        <div class="card"><div class="val green">—</div><div class="lbl">Precision (mean)</div></div>
+        <div class="card"><div class="val green">—</div><div class="lbl">Recall (mean)</div></div>
+        <div class="card"><div class="val green">—</div><div class="lbl">F1 (mean)</div></div>
+        <div class="card"><div class="val">—</div><div class="lbl">TP calls</div></div>
+        <div class="card"><div class="val yellow">—</div><div class="lbl">FP calls</div></div>
+        <div class="card"><div class="val yellow">—</div><div class="lbl">FN calls</div></div>
+      </div>
+    </div>
+
+    <!-- SNIFFLES -->
+    <div style="margin-bottom: 24px;">
+      <div style="font-family:'Fraunces',serif; font-size:15px; font-weight:600; color:var(--subtext); margin-bottom:10px;">
+        🟢 Sniffles
+      </div>
+      <div class="cards">
+        <div class="card"><div class="val green">—</div><div class="lbl">Precision (mean)</div></div>
+        <div class="card"><div class="val green">—</div><div class="lbl">Recall (mean)</div></div>
+        <div class="card"><div class="val green">—</div><div class="lbl">F1 (mean)</div></div>
+        <div class="card"><div class="val">—</div><div class="lbl">TP calls</div></div>
+        <div class="card"><div class="val yellow">—</div><div class="lbl">FP calls</div></div>
+        <div class="card"><div class="val yellow">—</div><div class="lbl">FN calls</div></div>
+      </div>
+    </div>
+
+    <!-- DRAGEN -->
+    <div style="margin-bottom: 24px;">
+      <div style="font-family:'Fraunces',serif; font-size:15px; font-weight:600; color:var(--subtext); margin-bottom:10px;">
+        🟠 DRAGEN
+      </div>
+      <div class="cards">
+        <div class="card"><div class="val green">—</div><div class="lbl">Precision (mean)</div></div>
+        <div class="card"><div class="val green">—</div><div class="lbl">Recall (mean)</div></div>
+        <div class="card"><div class="val green">—</div><div class="lbl">F1 (mean)</div></div>
+        <div class="card"><div class="val">—</div><div class="lbl">TP calls</div></div>
+        <div class="card"><div class="val yellow">—</div><div class="lbl">FP calls</div></div>
+        <div class="card"><div class="val yellow">—</div><div class="lbl">FN calls</div></div>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- ── Truvari Results ── -->
+  <div class="section">
+    <div class="section-label">Truvari — truvari bench</div>
+
+    <div class="tbl-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Caller</th>
+            <th>TP-base</th>
+            <th>TP-call</th>
+            <th>FP</th>
+            <th>FN</th>
+            <th>Precision</th>
+            <th>Recall</th>
+            <th>F1</th>
+            <th>GT concordance</th>
+            <th>Base cnt</th>
+            <th>Call cnt</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="mono">Delly</td>
+            <td class="num">—</td>
+            <td class="num">—</td>
+            <td class="num">—</td>
+            <td class="num">—</td>
+            <td class="num good">—</td>
+            <td class="num good">—</td>
+            <td class="num good">—</td>
+            <td class="num">—</td>
+            <td class="num">—</td>
+            <td class="num">—</td>
+          </tr>
+          <tr>
+            <td class="mono">Sniffles</td>
+            <td class="num">—</td>
+            <td class="num">—</td>
+            <td class="num">—</td>
+            <td class="num">—</td>
+            <td class="num good">—</td>
+            <td class="num good">—</td>
+            <td class="num good">—</td>
+            <td class="num">—</td>
+            <td class="num">—</td>
+            <td class="num">—</td>
+          </tr>
+          <tr>
+            <td class="mono">DRAGEN</td>
+            <td class="num">—</td>
+            <td class="num">—</td>
+            <td class="num">—</td>
+            <td class="num">—</td>
+            <td class="num good">—</td>
+            <td class="num good">—</td>
+            <td class="num good">—</td>
+            <td class="num">—</td>
+            <td class="num">—</td>
+            <td class="num">—</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div style="margin-top:8px; color:var(--muted); font-size:11px;">
+      Source: <code>results/hg38/SV_BENCHMARK/TRUVARI_BENCH/&lt;caller&gt;/summary.json</code>
+    </div>
+  </div>
+
+  <!-- ── SVanalyzer Results ── -->
+  <div class="section">
+    <div class="section-label">SVanalyzer — svbenchmark</div>
+
+    <div class="tbl-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Caller</th>
+            <th>TP (detected)</th>
+            <th>FP</th>
+            <th>FN (missed)</th>
+            <th>Precision</th>
+            <th>Recall</th>
+            <th>F1</th>
+            <th>Size match rate</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="mono">Delly</td>
+            <td class="num">—</td>
+            <td class="num">—</td>
+            <td class="num">—</td>
+            <td class="num good">—</td>
+            <td class="num good">—</td>
+            <td class="num good">—</td>
+            <td class="num">—</td>
+          </tr>
+          <tr>
+            <td class="mono">Sniffles</td>
+            <td class="num">—</td>
+            <td class="num">—</td>
+            <td class="num">—</td>
+            <td class="num good">—</td>
+            <td class="num good">—</td>
+            <td class="num good">—</td>
+            <td class="num">—</td>
+          </tr>
+          <tr>
+            <td class="mono">DRAGEN</td>
+            <td class="num">—</td>
+            <td class="num">—</td>
+            <td class="num">—</td>
+            <td class="num good">—</td>
+            <td class="num good">—</td>
+            <td class="num good">—</td>
+            <td class="num">—</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div style="margin-top:8px; color:var(--muted); font-size:11px;">
+      Source: <code>results/hg38/SV_BENCHMARK/SVANALYZER_SVBENCHMARK/&lt;caller&gt;/sv_benchmark_report.txt</code>
+    </div>
+  </div>
+
+  <!-- ── RTGtools Results ── -->
+  <div class="section">
+    <div class="section-label">RTGtools — bndeval</div>
+
+    <div class="tbl-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Caller</th>
+            <th>Threshold</th>
+            <th>TP</th>
+            <th>FP</th>
+            <th>FN</th>
+            <th>Precision</th>
+            <th>Recall</th>
+            <th>F-measure</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="mono">Delly</td>
+            <td class="num">—</td>
+            <td class="num">—</td>
+            <td class="num">—</td>
+            <td class="num">—</td>
+            <td class="num good">—</td>
+            <td class="num good">—</td>
+            <td class="num good">—</td>
+          </tr>
+          <tr>
+            <td class="mono">Sniffles</td>
+            <td class="num">—</td>
+            <td class="num">—</td>
+            <td class="num">—</td>
+            <td class="num">—</td>
+            <td class="num good">—</td>
+            <td class="num good">—</td>
+            <td class="num good">—</td>
+          </tr>
+          <tr>
+            <td class="mono">DRAGEN</td>
+            <td class="num">—</td>
+            <td class="num">—</td>
+            <td class="num">—</td>
+            <td class="num">—</td>
+            <td class="num good">—</td>
+            <td class="num good">—</td>
+            <td class="num good">—</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div style="margin-top:8px; color:var(--muted); font-size:11px;">
+      Source: <code>results/hg38/RTGTOOLS_BNDEVAL/&lt;caller&gt;/weighted_roc.tsv</code>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- ── SV Type Breakdown ── -->
+  <div class="section">
+    <div class="section-label">SV Type Breakdown (per caller)</div>
+
+    <div class="grid-3">
+      <!-- DELLY -->
+      <div class="panel">
+        <h3>🔵 Delly</h3>
+        <div class="kv"><span class="k">DEL (deletions)</span> <span class="v">— / —</span></div>
+        <div class="kv"><span class="k">DUP (duplications)</span> <span class="v">— / —</span></div>
+        <div class="kv"><span class="k">INV (inversions)</span> <span class="v">— / —</span></div>
+        <div class="kv"><span class="k">INS (insertions)</span> <span class="v">— / —</span></div>
+        <div class="kv"><span class="k">BND (translocations)</span> <span class="v">— / —</span></div>
+        <div style="color:var(--muted); font-size:10px; margin-top:8px;">format: TP / total called</div>
+      </div>
+      <!-- SNIFFLES -->
+      <div class="panel">
+        <h3>🟢 Sniffles</h3>
+        <div class="kv"><span class="k">DEL (deletions)</span> <span class="v">— / —</span></div>
+        <div class="kv"><span class="k">DUP (duplications)</span> <span class="v">— / —</span></div>
+        <div class="kv"><span class="k">INV (inversions)</span> <span class="v">— / —</span></div>
+        <div class="kv"><span class="k">INS (insertions)</span> <span class="v">— / —</span></div>
+        <div class="kv"><span class="k">BND (translocations)</span> <span class="v">— / —</span></div>
+        <div style="color:var(--muted); font-size:10px; margin-top:8px;">format: TP / total called</div>
+      </div>
+      <!-- DRAGEN -->
+      <div class="panel">
+        <h3>🟠 DRAGEN</h3>
+        <div class="kv"><span class="k">DEL (deletions)</span> <span class="v">— / —</span></div>
+        <div class="kv"><span class="k">DUP (duplications)</span> <span class="v">— / —</span></div>
+        <div class="kv"><span class="k">INV (inversions)</span> <span class="v">— / —</span></div>
+        <div class="kv"><span class="k">INS (insertions)</span> <span class="v">— / —</span></div>
+        <div class="kv"><span class="k">BND (translocations)</span> <span class="v">— / —</span></div>
+        <div style="color:var(--muted); font-size:10px; margin-top:8px;">format: TP / total called</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── VCF Stats (SURVIVOR / bcftools) ── -->
+  <div class="section">
+    <div class="section-label">VCF Statistics — SURVIVOR stats + bcftools stats</div>
+
+    <div class="tbl-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Caller</th>
+            <th>Total SVs called</th>
+            <th>PASS filter</th>
+            <th>SNPs</th>
+            <th>Indels</th>
+            <th>HET</th>
+            <th>HOM-ALT</th>
+            <th>Ts/Tv</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="mono">Delly</td>
+            <td class="num">—</td>
+            <td class="num">—</td>
+            <td class="num">—</td>
+            <td class="num">—</td>
+            <td class="num">—</td>
+            <td class="num">—</td>
+            <td class="num">—</td>
+          </tr>
+          <tr>
+            <td class="mono">Sniffles</td>
+            <td class="num">—</td>
+            <td class="num">—</td>
+            <td class="num">—</td>
+            <td class="num">—</td>
+            <td class="num">—</td>
+            <td class="num">—</td>
+            <td class="num">—</td>
+          </tr>
+          <tr>
+            <td class="mono">DRAGEN</td>
+            <td class="num">—</td>
+            <td class="num">—</td>
+            <td class="num">—</td>
+            <td class="num">—</td>
+            <td class="num">—</td>
+            <td class="num">—</td>
+            <td class="num">—</td>
+          </tr>
+          <tr>
+            <td class="mono" style="color:var(--muted);">Truth (HG002)</td>
+            <td class="num">—</td>
+            <td class="num">—</td>
+            <td class="num">—</td>
+            <td class="num">—</td>
+            <td class="num">—</td>
+            <td class="num">—</td>
+            <td class="num">—</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div style="margin-top:8px; color:var(--muted); font-size:11px;">
+      Source: <code>results/hg38/INPUT_VCF_STATISTICS/SURVIVOR_STATS/</code> and <code>BCFTOOLS_STATS/</code>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- ── Caller Comparison ── -->
+  <div class="section">
+    <div class="section-label">Cross-Caller Comparison (Truvari F1)</div>
+
+    <div class="chart-placeholder">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <rect x="3" y="10" width="4" height="10"/><rect x="10" y="6" width="4" height="14"/>
+        <rect x="17" y="3" width="4" height="17"/>
+      </svg>
+      Replace with bar chart (Precision / Recall / F1 per caller)
+    </div>
+
+    <div class="note" style="margin-top: 16px;">
+      <strong>Tip:</strong> To generate charts from your results, run
+      <code>multiqc results/hg38/</code> after the pipeline completes — MultiQC produces
+      interactive HTML plots for all three benchmarking tools automatically.
+    </div>
+  </div>
+
+  <!-- ── Pipeline Execution Log ── -->
+  <div class="section">
+    <div class="section-label">Pipeline Execution Log</div>
+
+    <div class="tbl-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Process</th>
+            <th>Status</th>
+            <th>Exit code</th>
+            <th>Wall time</th>
+            <th>Peak RSS</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="mono">PREPARE_REFERENCES:RTGTOOLS_FORMAT</td><td><span class="badge green">✓ done</span></td><td class="num good">0</td><td class="num">—</td><td class="num">—</td></tr>
+          <tr><td class="mono">PREPARE_VCFS_TEST:BCFTOOLS_REHEADER_QUERY (×3)</td><td><span class="badge green">✓ done</span></td><td class="num good">0</td><td class="num">—</td><td class="num">—</td></tr>
+          <tr><td class="mono">PREPARE_VCFS_TEST:BCFTOOLS_VIEW_FILTERMISSING (×3)</td><td><span class="badge green">✓ done</span></td><td class="num good">0</td><td class="num">—</td><td class="num">—</td></tr>
+          <tr><td class="mono">PREPARE_VCFS_TRUTH:BCFTOOLS_REHEADER_TRUTH</td><td><span class="badge green">✓ done</span></td><td class="num good">0</td><td class="num">—</td><td class="num">—</td></tr>
+          <tr><td class="mono">PREPARE_VCFS_TRUTH:BCFTOOLS_VIEW_FILTERMISSING</td><td><span class="badge green">✓ done</span></td><td class="num good">0</td><td class="num">—</td><td class="num">—</td></tr>
+          <tr><td class="mono">INPUT_VCF_STATISTICS:SURVIVOR_STATS (×4)</td><td><span class="badge green">✓ done</span></td><td class="num good">0</td><td class="num">—</td><td class="num">—</td></tr>
+          <tr><td class="mono">INPUT_VCF_STATISTICS:BCFTOOLS_STATS (×4)</td><td><span class="badge green">✓ done</span></td><td class="num good">0</td><td class="num">—</td><td class="num">—</td></tr>
+          <tr><td class="mono">SV_BENCHMARK:TRUVARI_BENCH (×3)</td><td><span class="badge">⏳ running</span></td><td class="num">—</td><td class="num">—</td><td class="num">—</td></tr>
+          <tr><td class="mono">SV_BENCHMARK:SVANALYZER_SVBENCHMARK (×3)</td><td><span class="badge">⏳ running</span></td><td class="num">—</td><td class="num">—</td><td class="num">—</td></tr>
+          <tr><td class="mono">RTGTOOLS_BNDEVAL (×3)</td><td><span class="badge">⏳ running</span></td><td class="num">—</td><td class="num">—</td><td class="num">—</td></tr>
+          <tr><td class="mono">WITTYER_BENCHMARK:WITTYER (×3)</td><td><span class="badge red">✗ skipped</span></td><td class="num bad">—</td><td class="num">—</td><td class="num">—</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div style="margin-top:8px; color:var(--muted); font-size:11px;">
+      Note: Wittyer excluded from <code>params_hg38.yaml</code> due to OOM on Apple Silicon (M-chip).
+      Benchmark on 24 GB RAM — RTGtools, SVanalyzer and Truvari cover equivalent SV metrics.
+    </div>
+  </div>
+
+  <!-- ── Footer ── -->
+  <hr>
+  <div style="color:var(--muted); font-size:11px; text-align:center;">
+    nf-core/variantbenchmarking 1.5.0 &nbsp;·&nbsp; Truth: GIAB HG002 v5.0q &nbsp;·&nbsp;
+    This report template was generated automatically — fill in values from <code>results/hg38/</code>.
+  </div>
+
+</div>
+
+<script>
+  document.getElementById('ts').textContent = new Date().toLocaleString();
+</script>
+</body>
+</html>

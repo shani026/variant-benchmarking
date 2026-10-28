@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="680" viewBox="0 0 1200 680">
+<rect width="1200" height="680" fill="#ffffff"/>
+<text x="30" y="34" font-family="Arial" font-size="20" font-weight="700" fill="#111827">False negatives by SVTYPE</text>
+<text x="30" y="58" font-family="Arial" font-size="13" fill="#4b5563">Shows which SV types drive missed truth calls in each original Truvari run.</text>
+<line x1="80" y1="535.0" x2="1170" y2="535.0" stroke="#e5e7eb"/>
+<text x="70" y="539.0" font-family="Arial" font-size="11" text-anchor="end" fill="#4b5563">0.0</text>
+<line x1="80" y1="446.0" x2="1170" y2="446.0" stroke="#e5e7eb"/>
+<text x="70" y="450.0" font-family="Arial" font-size="11" text-anchor="end" fill="#4b5563">67.4</text>
+<line x1="80" y1="357.0" x2="1170" y2="357.0" stroke="#e5e7eb"/>
+<text x="70" y="361.0" font-family="Arial" font-size="11" text-anchor="end" fill="#4b5563">134.8</text>
+<line x1="80" y1="268.0" x2="1170" y2="268.0" stroke="#e5e7eb"/>
+<text x="70" y="272.0" font-family="Arial" font-size="11" text-anchor="end" fill="#4b5563">202.2</text>
+<line x1="80" y1="179.0" x2="1170" y2="179.0" stroke="#e5e7eb"/>
+<text x="70" y="183.0" font-family="Arial" font-size="11" text-anchor="end" fill="#4b5563">269.6</text>
+<line x1="80" y1="90.0" x2="1170" y2="90.0" stroke="#e5e7eb"/>
+<text x="70" y="94.0" font-family="Arial" font-size="11" text-anchor="end" fill="#4b5563">337.0</text>
+<line x1="80" y1="90" x2="80" y2="535" stroke="#9ca3af"/>
+<line x1="80" y1="535" x2="1170" y2="535" stroke="#9ca3af"/>
+<rect x="138.8" y="326.4" width="30.0" height="208.6" fill="#2563eb" rx="3"><title>hg19 DELLY DEL: 158</title></rect>
+<rect x="170.8" y="90.0" width="30.0" height="445.0" fill="#16a34a" rx="3"><title>hg19 DELLY INS: 337</title></rect>
+<g transform="translate(170.8,553) rotate(35)">
+<text font-family="Arial" font-size="11" fill="#111827">
+<tspan x="0" dy="0">hg19 DELLY</tspan>
+</text></g>
+<rect x="320.5" y="450.5" width="30.0" height="84.5" fill="#2563eb" rx="3"><title>hg19 dragen DEL: 64</title></rect>
+<rect x="352.5" y="317.1" width="30.0" height="217.9" fill="#16a34a" rx="3"><title>hg19 dragen INS: 165</title></rect>
+<g transform="translate(352.5,553) rotate(35)">
+<text font-family="Arial" font-size="11" fill="#111827">
+<tspan x="0" dy="0">hg19 dragen</tspan>
+</text></g>
+<rect x="502.2" y="476.9" width="30.0" height="58.1" fill="#2563eb" rx="3"><title>hg19 sniffles DEL: 44</title></rect>
+<rect x="534.2" y="354.1" width="30.0" height="180.9" fill="#16a34a" rx="3"><title>hg19 sniffles INS: 137</title></rect>
+<g transform="translate(534.2,553) rotate(35)">
+<text font-family="Arial" font-size="11" fill="#111827">
+<tspan x="0" dy="0">hg19 sniffles</tspan>
+</text></g>
+<rect x="683.8" y="453.1" width="30.0" height="81.9" fill="#2563eb" rx="3"><title>hg38 delly DEL: 62</title></rect>
+<rect x="715.8" y="322.4" width="30.0" height="212.6" fill="#16a34a" rx="3"><title>hg38 delly INS: 161</title></rect>
+<g transform="translate(715.8,553) rotate(35)">
+<text font-family="Arial" font-size="11" fill="#111827">
+<tspan x="0" dy="0">hg38 delly</tspan>
+</text></g>
+<rect x="865.5" y="376.5" width="30.0" height="158.5" fill="#2563eb" rx="3"><title>hg38 dragen DEL: 120</title></rect>
+<rect x="897.5" y="156.0" width="30.0" height="379.0" fill="#16a34a" rx="3"><title>hg38 dragen INS: 287</title></rect>
+<g transform="translate(897.5,553) rotate(35)">
+<text font-family="Arial" font-size="11" fill="#111827">
+<tspan x="0" dy="0">hg38 dragen</tspan>
+</text></g>
+<rect x="1047.2" y="470.3" width="30.0" height="64.7" fill="#2563eb" rx="3"><title>hg38 sniffles DEL: 49</title></rect>
+<rect x="1079.2" y="344.9" width="30.0" height="190.1" fill="#16a34a" rx="3"><title>hg38 sniffles INS: 144</title></rect>
+<g transform="translate(1079.2,553) rotate(35)">
+<text font-family="Arial" font-size="11" fill="#111827">
+<tspan x="0" dy="0">hg38 sniffles</tspan>
+</text></g>
+<rect x="80" y="645" width="12" height="12" rx="2" fill="#2563eb"/>
+<text x="97" y="655" font-family="Arial" font-size="12" fill="#111827">DEL</text>
+<rect x="143" y="645" width="12" height="12" rx="2" fill="#16a34a"/>
+<text x="160" y="655" font-family="Arial" font-size="12" fill="#111827">INS</text>
+</svg>

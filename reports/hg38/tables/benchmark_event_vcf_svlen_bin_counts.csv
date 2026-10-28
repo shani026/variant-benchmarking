@@ -1,0 +1,107 @@
+method,caller,status,svlen_bin,count
+Truvari,Delly,FN,NA/BND/UNKNOWN,4695576
+Truvari,Delly,FN,<50 bp,25760
+Truvari,Delly,FN,1-4.9 kb,918
+Truvari,Delly,FN,100-499 bp,4902
+Truvari,Delly,FN,500-999 bp,991
+Truvari,Delly,FN,50-99 bp,3803
+Truvari,Delly,FN,5-9.9 kb,176
+Truvari,Delly,FN,10-49.9 kb,122
+Truvari,Delly,FN,>=50 kb,21
+Truvari,Delly,FP,NA/BND/UNKNOWN,1720
+Truvari,Delly,FP,1-4.9 kb,124
+Truvari,Delly,FP,100-499 bp,706
+Truvari,Delly,FP,500-999 bp,159
+Truvari,Delly,FP,<50 bp,533
+Truvari,Delly,FP,50-99 bp,331
+Truvari,Delly,FP,5-9.9 kb,11
+Truvari,Delly,FP,10-49.9 kb,8
+Truvari,Delly,TP_base,500-999 bp,1468
+Truvari,Delly,TP_base,<50 bp,9049
+Truvari,Delly,TP_base,50-99 bp,5564
+Truvari,Delly,TP_base,100-499 bp,8407
+Truvari,Delly,TP_base,1-4.9 kb,1541
+Truvari,Delly,TP_base,5-9.9 kb,194
+Truvari,Delly,TP_base,NA/BND/UNKNOWN,27
+Truvari,Delly,TP_base,10-49.9 kb,37
+Truvari,Delly,TP_base,>=50 kb,1
+Truvari,Delly,TP_comp,NA/BND/UNKNOWN,11404
+Truvari,Delly,TP_comp,<50 bp,4605
+Truvari,Delly,TP_comp,500-999 bp,1088
+Truvari,Delly,TP_comp,50-99 bp,2925
+Truvari,Delly,TP_comp,100-499 bp,5113
+Truvari,Delly,TP_comp,1-4.9 kb,1043
+Truvari,Delly,TP_comp,5-9.9 kb,73
+Truvari,Delly,TP_comp,10-49.9 kb,36
+Truvari,Delly,TP_comp,>=50 kb,1
+Truvari,DRAGEN,FN,NA/BND/UNKNOWN,4695354
+Truvari,DRAGEN,FN,500-999 bp,2070
+Truvari,DRAGEN,FN,<50 bp,34695
+Truvari,DRAGEN,FN,1-4.9 kb,2003
+Truvari,DRAGEN,FN,100-499 bp,9032
+Truvari,DRAGEN,FN,50-99 bp,5388
+Truvari,DRAGEN,FN,5-9.9 kb,256
+Truvari,DRAGEN,FN,10-49.9 kb,127
+Truvari,DRAGEN,FN,>=50 kb,21
+Truvari,DRAGEN,FP,100-499 bp,703
+Truvari,DRAGEN,FP,500-999 bp,64
+Truvari,DRAGEN,FP,<50 bp,1728
+Truvari,DRAGEN,FP,50-99 bp,795
+Truvari,DRAGEN,FP,NA/BND/UNKNOWN,2029
+Truvari,DRAGEN,FP,1-4.9 kb,30
+Truvari,DRAGEN,FP,10-49.9 kb,4
+Truvari,DRAGEN,FP,5-9.9 kb,4
+Truvari,DRAGEN,TP_base,50-99 bp,3979
+Truvari,DRAGEN,TP_base,1-4.9 kb,456
+Truvari,DRAGEN,TP_base,100-499 bp,4277
+Truvari,DRAGEN,TP_base,500-999 bp,389
+Truvari,DRAGEN,TP_base,NA/BND/UNKNOWN,249
+Truvari,DRAGEN,TP_base,<50 bp,114
+Truvari,DRAGEN,TP_base,5-9.9 kb,114
+Truvari,DRAGEN,TP_base,10-49.9 kb,32
+Truvari,DRAGEN,TP_base,>=50 kb,1
+Truvari,DRAGEN,TP_comp,50-99 bp,4094
+Truvari,DRAGEN,TP_comp,1-4.9 kb,461
+Truvari,DRAGEN,TP_comp,100-499 bp,4246
+Truvari,DRAGEN,TP_comp,500-999 bp,378
+Truvari,DRAGEN,TP_comp,<50 bp,221
+Truvari,DRAGEN,TP_comp,5-9.9 kb,114
+Truvari,DRAGEN,TP_comp,10-49.9 kb,30
+Truvari,DRAGEN,TP_comp,NA/BND/UNKNOWN,66
+Truvari,DRAGEN,TP_comp,>=50 kb,1
+Truvari,Sniffles,FN,NA/BND/UNKNOWN,4695603
+Truvari,Sniffles,FN,500-999 bp,932
+Truvari,Sniffles,FN,<50 bp,25085
+Truvari,Sniffles,FN,100-499 bp,4294
+Truvari,Sniffles,FN,50-99 bp,3180
+Truvari,Sniffles,FN,1-4.9 kb,793
+Truvari,Sniffles,FN,5-9.9 kb,99
+Truvari,Sniffles,FN,10-49.9 kb,103
+Truvari,Sniffles,FN,>=50 kb,20
+Truvari,Sniffles,FP,1-4.9 kb,314
+Truvari,Sniffles,FP,100-499 bp,715
+Truvari,Sniffles,FP,500-999 bp,257
+Truvari,Sniffles,FP,<50 bp,306
+Truvari,Sniffles,FP,50-99 bp,531
+Truvari,Sniffles,FP,5-9.9 kb,20
+Truvari,Sniffles,FP,NA/BND/UNKNOWN,12
+Truvari,Sniffles,FP,10-49.9 kb,13
+Truvari,Sniffles,TP_base,500-999 bp,1527
+Truvari,Sniffles,TP_base,<50 bp,9724
+Truvari,Sniffles,TP_base,50-99 bp,6187
+Truvari,Sniffles,TP_base,1-4.9 kb,1666
+Truvari,Sniffles,TP_base,100-499 bp,9015
+Truvari,Sniffles,TP_base,5-9.9 kb,271
+Truvari,Sniffles,TP_base,10-49.9 kb,56
+Truvari,Sniffles,TP_base,>=50 kb,2
+Truvari,Sniffles,TP_comp,500-999 bp,1525
+Truvari,Sniffles,TP_comp,<50 bp,9832
+Truvari,Sniffles,TP_comp,50-99 bp,6096
+Truvari,Sniffles,TP_comp,100-499 bp,8969
+Truvari,Sniffles,TP_comp,1-4.9 kb,1695
+Truvari,Sniffles,TP_comp,5-9.9 kb,273
+Truvari,Sniffles,TP_comp,10-49.9 kb,56
+Truvari,Sniffles,TP_comp,>=50 kb,2
+RTGtools,Delly,FP,<50 bp,318
+RTGtools,DRAGEN,FP,NA/BND/UNKNOWN,2095
+RTGtools,Sniffles,FP,NA/BND/UNKNOWN,12

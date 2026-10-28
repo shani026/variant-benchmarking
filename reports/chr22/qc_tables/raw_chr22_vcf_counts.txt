@@ -1,0 +1,65 @@
+==============================
+hg19 raw chr22 VCF counts
+==============================
+===== 02_chr22/hg19/DELLY.hg19.norm_recall_HG002.merged__filt_DUPtoINS.renamed.chr22.vcf.gz =====
+Records:      166
+SVTYPE counts:
+  55 DEL
+  52 INS
+  47 BND
+  12 INV
+
+===== 02_chr22/hg19/HG002_dragen.sv.hg19.renamed.chr22.vcf.gz =====
+Records:      628
+SVTYPE counts:
+ 340 INS
+ 236 DEL
+  52 BND
+
+===== 02_chr22/hg19/HG002_sniffles.hg19.renamed.chr22.vcf.gz =====
+Records:      512
+SVTYPE counts:
+ 299 INS
+ 213 DEL
+
+===== 02_chr22/hg19/truth.hg19.chr22.vcf.gz =====
+Records:    78767
+SVTYPE counts:
+77155 .
+ 897 INS
+ 715 DEL
+
+==============================
+hg38 raw chr22 VCF counts
+==============================
+===== 02_chr22/hg38/HG002_delly_lr.hg38.renamed.chr22.vcf.gz =====
+Records:     1001
+SVTYPE counts:
+ 504 INS
+ 450 DEL
+  41 BND
+   4 DUP
+   2 INV
+
+===== 02_chr22/hg38/HG002_dragen.sv.hg38.renamed.chr22.vcf.gz =====
+Records:      344
+SVTYPE counts:
+ 169 INS
+ 130 DEL
+  45 BND
+
+===== 02_chr22/hg38/HG002_sniffles.hg38.renamed.chr22.vcf.gz =====
+Records:      838
+SVTYPE counts:
+ 437 INS
+ 390 DEL
+   7 BND
+   4 DUP
+
+===== 02_chr22/hg38/truth.hg38.chr22.vcf.gz =====
+Records:   114070
+SVTYPE counts:
+111794 .
+1245 INS
+1031 DEL
+

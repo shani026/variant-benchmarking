@@ -1,0 +1,4 @@
+id,test_vcf,caller
+HG002_delly_hg19,/absolute/path/to/caller-vcfs/DELLY.hg19.norm_recall_HG002.merged__filt_DUPtoINS.renamed.vcf.gz,delly
+HG002_dragen_hg19,/absolute/path/to/caller-vcfs/HG002_dragen.sv.hg19.renamed.vcf.gz,dragen
+HG002_sniffles_hg19,/absolute/path/to/caller-vcfs/HG002_sniffles.hg19.renamed.vcf.gz,sniffles

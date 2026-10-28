@@ -1,0 +1,15 @@
+input: "code/config/samplesheets/samplesheet_hg19.csv"
+outdir: "benchmark-runs/nfcore/hg19"
+
+analysis: "germline"
+variant_type: "structural"
+method: "truvari,svanalyzer,rtgtools"
+
+truth_vcf: "/absolute/path/to/truth/hg19/HG002_GRCh37_v5.0q_stvar.vcf.gz"
+truth_id: "HG002"
+regions_bed: "/absolute/path/to/truth/hg19/HG002_GRCh37_v5.0q_stvar.benchmark.bed"
+
+fasta: "/absolute/path/to/references/hg19/hg19_nochr_fixed.fa"
+fai: "/absolute/path/to/references/hg19/hg19_nochr_fixed.fa.fai"
+
+igenomes_ignore: true

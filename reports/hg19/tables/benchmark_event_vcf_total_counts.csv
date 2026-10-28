@@ -1,0 +1,31 @@
+method,caller,status,exists,total_records,filter_pass_records,filter_nonpass_records,query_error
+Truvari,Delly,FN,True,4727118,0,4727118,
+Truvari,Delly,FP,True,1266,1266,0,
+Truvari,Delly,TP_base,True,1122,0,1122,
+Truvari,Delly,TP_comp,True,1122,1122,0,
+Truvari,DRAGEN,FN,True,4707757,0,4707757,
+Truvari,DRAGEN,FP,True,5052,4181,871,
+Truvari,DRAGEN,TP_base,True,20483,0,20483,
+Truvari,DRAGEN,TP_comp,True,20483,19431,1052,
+Truvari,Sniffles,FN,True,4710605,0,4710605,
+Truvari,Sniffles,FP,True,2059,2022,37,
+Truvari,Sniffles,TP_base,True,17635,0,17635,
+Truvari,Sniffles,TP_comp,True,17635,17617,18,
+SVbenchmark,Delly,FN,True,0,0,0,Failed to read from /Users/shaniaim/Documents/OUS/variant-benchmarking/Results/hg19/structural/HG002_delly_hg19/benchmarks/svanalyzer/HG002_delly_hg19.HG002.delly.falsenegatives.vcf.gz: unknown file type
+SVbenchmark,Delly,FP,True,0,0,0,Failed to read from /Users/shaniaim/Documents/OUS/variant-benchmarking/Results/hg19/structural/HG002_delly_hg19/benchmarks/svanalyzer/HG002_delly_hg19.HG002.delly.falsepositives.vcf.gz: unknown file type
+SVbenchmark,DRAGEN,FN,True,0,0,0,Failed to read from /Users/shaniaim/Documents/OUS/variant-benchmarking/Results/hg19/structural/HG002_dragen_hg19/benchmarks/svanalyzer/HG002_dragen_hg19.HG002.dragen.falsenegatives.vcf.gz: unknown file type
+SVbenchmark,DRAGEN,FP,True,0,0,0,Failed to read from /Users/shaniaim/Documents/OUS/variant-benchmarking/Results/hg19/structural/HG002_dragen_hg19/benchmarks/svanalyzer/HG002_dragen_hg19.HG002.dragen.falsepositives.vcf.gz: unknown file type
+SVbenchmark,Sniffles,FN,True,0,0,0,Failed to read from /Users/shaniaim/Documents/OUS/variant-benchmarking/Results/hg19/structural/HG002_sniffles_hg19/benchmarks/svanalyzer/HG002_sniffles_hg19.HG002.sniffles.falsenegatives.vcf.gz: unknown file type
+SVbenchmark,Sniffles,FP,True,0,0,0,Failed to read from /Users/shaniaim/Documents/OUS/variant-benchmarking/Results/hg19/structural/HG002_sniffles_hg19/benchmarks/svanalyzer/HG002_sniffles_hg19.HG002.sniffles.falsepositives.vcf.gz: unknown file type
+RTGtools,Delly,FN,True,0,0,0,
+RTGtools,Delly,FP,True,868,868,0,
+RTGtools,Delly,TP_base,True,0,0,0,
+RTGtools,Delly,TP_comp,True,0,0,0,
+RTGtools,DRAGEN,FN,True,0,0,0,
+RTGtools,DRAGEN,FP,True,1694,1540,154,
+RTGtools,DRAGEN,TP_base,True,0,0,0,
+RTGtools,DRAGEN,TP_comp,True,0,0,0,
+RTGtools,Sniffles,FN,True,0,0,0,
+RTGtools,Sniffles,FP,True,0,0,0,
+RTGtools,Sniffles,TP_base,True,0,0,0,
+RTGtools,Sniffles,TP_comp,True,0,0,0,

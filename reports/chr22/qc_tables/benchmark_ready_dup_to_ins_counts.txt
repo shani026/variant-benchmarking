@@ -1,0 +1,56 @@
+==============================
+hg19 DUP-to-INS converted interval VCFs
+==============================
+===== 03_benchmark_inputs/hg19_interval_dup_to_ins/DELLY.hg19.norm_recall_HG002.merged__filt_DUPtoINS.renamed.chr22.interval.dup_to_ins.vcf.gz =====
+Records:      119
+SVTYPE counts:
+  55 DEL
+  52 INS
+  12 INV
+
+===== 03_benchmark_inputs/hg19_interval_dup_to_ins/HG002_dragen.sv.hg19.renamed.chr22.interval.dup_to_ins.vcf.gz =====
+Records:      576
+SVTYPE counts:
+ 340 INS
+ 236 DEL
+
+===== 03_benchmark_inputs/hg19_interval_dup_to_ins/HG002_sniffles.hg19.renamed.chr22.interval.dup_to_ins.vcf.gz =====
+Records:      512
+SVTYPE counts:
+ 299 INS
+ 213 DEL
+
+===== 03_benchmark_inputs/hg19_interval_dup_to_ins/truth.hg19.chr22.interval.dup_to_ins.vcf.gz =====
+Records:     1612
+SVTYPE counts:
+ 897 INS
+ 715 DEL
+
+==============================
+hg38 DUP-to-INS converted interval VCFs
+==============================
+===== 03_benchmark_inputs/hg38_interval_dup_to_ins/HG002_delly_lr.hg38.renamed.chr22.interval.dup_to_ins.vcf.gz =====
+Records:      960
+SVTYPE counts:
+ 508 INS
+ 450 DEL
+   2 INV
+
+===== 03_benchmark_inputs/hg38_interval_dup_to_ins/HG002_dragen.sv.hg38.renamed.chr22.interval.dup_to_ins.vcf.gz =====
+Records:      299
+SVTYPE counts:
+ 169 INS
+ 130 DEL
+
+===== 03_benchmark_inputs/hg38_interval_dup_to_ins/HG002_sniffles.hg38.renamed.chr22.interval.dup_to_ins.vcf.gz =====
+Records:      831
+SVTYPE counts:
+ 441 INS
+ 390 DEL
+
+===== 03_benchmark_inputs/hg38_interval_dup_to_ins/truth.hg38.chr22.interval.dup_to_ins.vcf.gz =====
+Records:     2276
+SVTYPE counts:
+1245 INS
+1031 DEL
+

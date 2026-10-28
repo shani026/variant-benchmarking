@@ -1,0 +1,10 @@
+genome: "hg19"
+sample: "HG002"
+
+samplesheet: "code/config/samplesheets/samplesheet.hg19.csv"
+
+reference: "/absolute/path/to/references/hg19/hg19_nochr_fixed.fa"
+truth_vcf: "/absolute/path/to/truth/hg19/HG002_GRCh37_v5.0q_stvar.vcf.gz"
+truth_bed: "/absolute/path/to/truth/hg19/HG002_GRCh37_v5.0q_stvar.benchmark.bed"
+
+outdir: "benchmark-runs/custom/hg19"

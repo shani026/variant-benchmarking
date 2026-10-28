@@ -1,0 +1,1317 @@
+[
+  {
+    "path": "reports/chr22/final_chr22_sv_benchmark_report_clean.html",
+    "bytes": 26507,
+    "sha256": "5fb7379664a17a8d00246885ec5321e920950aeeb40249abec405d5770c4359d"
+  },
+  {
+    "path": "reports/chr22/metrics/rtg_vcfeval_dup_to_ins_summaries.txt",
+    "bytes": 2733,
+    "sha256": "b4030d7325e589585eda972b50a5b0f14adaab116a0a86b3aee22f36868de1ec"
+  },
+  {
+    "path": "reports/chr22/metrics/rtg_vcfeval_summaries.txt",
+    "bytes": 2667,
+    "sha256": "41ba2e141830e291669419d8739f4765d526d0b730847a14a012a1a5c9e8b716"
+  },
+  {
+    "path": "reports/chr22/metrics/truvari_converted_dup_to_ins_summary.tsv",
+    "bytes": 774,
+    "sha256": "12a3231e2b05d0845e1216c4bd168e69078b7950872819c7ab519aa70be1931f"
+  },
+  {
+    "path": "reports/chr22/metrics/truvari_dup_to_ins_summary.tsv",
+    "bytes": 774,
+    "sha256": "12a3231e2b05d0845e1216c4bd168e69078b7950872819c7ab519aa70be1931f"
+  },
+  {
+    "path": "reports/chr22/metrics/truvari_original_vs_converted_dup_to_ins.tsv",
+    "bytes": 1205,
+    "sha256": "f077fef4700b5d55d8692ebd3c400aac3771791ca7082d837780c539a5e7d369"
+  },
+  {
+    "path": "reports/chr22/metrics/truvari_original_vs_dup_to_ins.tsv",
+    "bytes": 1205,
+    "sha256": "f077fef4700b5d55d8692ebd3c400aac3771791ca7082d837780c539a5e7d369"
+  },
+  {
+    "path": "reports/chr22/metrics/truvari_summary.tsv",
+    "bytes": 561,
+    "sha256": "a4ed6abdb49ee940046fefdaec86085086c0b68e904cffbb89b144e7ba87f84f"
+  },
+  {
+    "path": "reports/chr22/metrics/truvari_summary_extended.tsv",
+    "bytes": 774,
+    "sha256": "12a3231e2b05d0845e1216c4bd168e69078b7950872819c7ab519aa70be1931f"
+  },
+  {
+    "path": "reports/chr22/metrics/truvari_svtype_tp_fp_fn_counts.tsv",
+    "bytes": 1243,
+    "sha256": "9919f378476f24a8c80cb74685c4f8cca92bff8c49629f94798d41425ffda0fc"
+  },
+  {
+    "path": "reports/chr22/plot_report/figures/01_raw_chr22_record_accounting.svg",
+    "bytes": 5975,
+    "sha256": "aeedb86d927b2a67a2d827198e21c7292c473cefd9e366662bba0ea151ffd790"
+  },
+  {
+    "path": "reports/chr22/plot_report/figures/02_bnd_burden.svg",
+    "bytes": 2825,
+    "sha256": "962e029fe7e959ebc770a0954ade76bdbe648a8d0e361536b9fd0bf9e2e5e007"
+  },
+  {
+    "path": "reports/chr22/plot_report/figures/03_qc_issue_burden_log.svg",
+    "bytes": 6370,
+    "sha256": "f39e39d521e9e34f2e0e6b5668b53425025ddac20dc6b8ee683335e86b6da942"
+  },
+  {
+    "path": "reports/chr22/plot_report/figures/04_original_truvari_metrics.svg",
+    "bytes": 5189,
+    "sha256": "7ff161e35ffdeaf71f2ef2f13c49c0b714d6b424b9f7af87f87259a668d60caf"
+  },
+  {
+    "path": "reports/chr22/plot_report/figures/05_fp_fn_balance.svg",
+    "bytes": 4210,
+    "sha256": "0ffa48dd2d69d59f86c0b492b622762d74767f7bc5723f88e29a6b9670b25581"
+  },
+  {
+    "path": "reports/chr22/plot_report/figures/06_fn_by_svtype.svg",
+    "bytes": 4218,
+    "sha256": "16a01fcfbcb405d2096d76aba6ab6764fdbac9f3c7f52189be7b63de2ef2a7e2"
+  },
+  {
+    "path": "reports/chr22/plot_report/figures/07_precision_original_vs_dup.svg",
+    "bytes": 4361,
+    "sha256": "ed36f8d0baeebf75cd84f03cb648bcc6448786a8ea4b81a6a0258d124b607087"
+  },
+  {
+    "path": "reports/chr22/plot_report/figures/08_recall_original_vs_dup.svg",
+    "bytes": 4355,
+    "sha256": "e2041a9794087ebe738129b75a5c51e0d7915d0a0d1ee1db9f7c64e27e8b9b67"
+  },
+  {
+    "path": "reports/chr22/plot_report/figures/09_f1_original_vs_dup.svg",
+    "bytes": 4345,
+    "sha256": "8b645388b50f4c0c66d98e56cc54c37b78f889183b0c315412a9018cc978b954"
+  },
+  {
+    "path": "reports/chr22/plot_report/figures/10_precision_recall_movement.svg",
+    "bytes": 5811,
+    "sha256": "203820de7b3f3ddb66963a744eb904283579ecc2de5c80261ebd3a905bc789fd"
+  },
+  {
+    "path": "reports/chr22/plot_report/figures/11_delta_f1_dup_minus_original.svg",
+    "bytes": 3351,
+    "sha256": "6116507a73c8d54db517e02eaf126a53db14793e2463b7ac2ceb910ec08e6950"
+  },
+  {
+    "path": "reports/chr22/plot_report/final_chr22_visual_report.html",
+    "bytes": 6334,
+    "sha256": "f261ba0a265b6a926271435afb35987a179f52b899cadb41108dafc28a6600f8"
+  },
+  {
+    "path": "reports/chr22/plots_clean/bnd_counts.png",
+    "bytes": 149292,
+    "sha256": "06a57e99d780ba5b86eb7861940629f06cd8ca43aaca00c8d51ede25a5e8b0d0"
+  },
+  {
+    "path": "reports/chr22/plots_clean/delta_f1_dup_to_ins_minus_original.png",
+    "bytes": 68129,
+    "sha256": "850e30e952b135b1256f8a5ddd45e5b3057677ab1e04d08a2cf52a4a1c59749b"
+  },
+  {
+    "path": "reports/chr22/plots_clean/end_lt_pos_counts.png",
+    "bytes": 147569,
+    "sha256": "92a25ade0d9cdf76e01be4b3b860c4e56074ad04f72b8923b46ec69089fb4601"
+  },
+  {
+    "path": "reports/chr22/plots_clean/f1_original_vs_dup_to_ins.png",
+    "bytes": 65802,
+    "sha256": "9aa163a979bc56d7d4d47de7e62d37093f3f9f01476d5f624c5812207bf7ab8a"
+  },
+  {
+    "path": "reports/chr22/plots_clean/missing_end_svlen_counts.png",
+    "bytes": 158586,
+    "sha256": "6ab1df180867fa8ffdf76c40b9d2ab4267a7be14daa3c88440f03815eb40346b"
+  },
+  {
+    "path": "reports/chr22/plots_clean/precision_original_vs_dup_to_ins.png",
+    "bytes": 69538,
+    "sha256": "9fd32405c6d9b34b9e21c878abc555f8a418c340878ce24fdcd2d0316116f94e"
+  },
+  {
+    "path": "reports/chr22/plots_clean/precision_recall_scatter_original_vs_dup_to_ins.png",
+    "bytes": 69333,
+    "sha256": "3a5ad9ccc0ef1bed443e8b31b442923950feb21ab1b31586852f8729e2c75341"
+  },
+  {
+    "path": "reports/chr22/plots_clean/recall_original_vs_dup_to_ins.png",
+    "bytes": 68904,
+    "sha256": "5dab1c4d717c78535a345f9f496f74b5f158ff9b771cbed579cde0b6cfe8f743"
+  },
+  {
+    "path": "reports/chr22/plots_clean/truvari_original_metrics.png",
+    "bytes": 69844,
+    "sha256": "b0c792a609d2ca7752fff50e7b00d84551c2b6ce86a7e060cc9a250bb3517ce7"
+  },
+  {
+    "path": "reports/chr22/qc_tables/BND_counts.tsv",
+    "bytes": 352,
+    "sha256": "ad1693bdb3f7060c69b5061232ebc480ac8ec405c5b8382b71674356e41f45ba"
+  },
+  {
+    "path": "reports/chr22/qc_tables/END_lt_POS_counts.tsv",
+    "bytes": 357,
+    "sha256": "536f6c3f3ddd3b2e0f0216ee3046b7b4500da043ca17164d01d3f9076c24ef97"
+  },
+  {
+    "path": "reports/chr22/qc_tables/benchmark_ready_dup_to_ins_counts.txt",
+    "bytes": 1581,
+    "sha256": "beb4cd9338e91fdf1b22600cb9dcb3a3b5e4d896e5817f91d30912f545eac2e5"
+  },
+  {
+    "path": "reports/chr22/qc_tables/benchmark_ready_interval_counts.txt",
+    "bytes": 1413,
+    "sha256": "6238071ee881a97c72ab8b0aec099edd814089fcefce803eabb3cbafdd35e337"
+  },
+  {
+    "path": "reports/chr22/qc_tables/missing_END_SVLEN_counts.tsv",
+    "bytes": 414,
+    "sha256": "d7c4f008d838508d8c40a71ebb1587a3fd83442f084c77f38aa44ffa56f35804"
+  },
+  {
+    "path": "reports/chr22/qc_tables/raw_chr22_record_summary.tsv",
+    "bytes": 492,
+    "sha256": "3679a38898c68f60918640ac7fb83aa6e0a2e7e6985c147021111d8529a8787d"
+  },
+  {
+    "path": "reports/chr22/qc_tables/raw_chr22_vcf_counts.txt",
+    "bytes": 1225,
+    "sha256": "028e4f5d628de9b305780773d9b2cab4cf22e256c106c6bbee8cd42db584d912"
+  },
+  {
+    "path": "reports/chr22/truvari_simple_report/plots/01_precision_recall_f1.svg",
+    "bytes": 3524,
+    "sha256": "51f81a705a3c51083c2296337cd9b34eb440cfeda15457efdcf84d2c340e1d36"
+  },
+  {
+    "path": "reports/chr22/truvari_simple_report/plots/02_tp_fp_fn.svg",
+    "bytes": 3525,
+    "sha256": "da369007e76b4326b973be61bbff517e19c91fcc2bda988f8dc07f827b7fc1d6"
+  },
+  {
+    "path": "reports/chr22/truvari_simple_report/plots/03_fp_fn_balance.svg",
+    "bytes": 2216,
+    "sha256": "d72d1a0bbd7b6bb5dbf43ffeffd8b565bda6ddb72cfcac73282738df038c3e02"
+  },
+  {
+    "path": "reports/chr22/truvari_simple_report/plots/04_fp_fn_by_svtype.svg",
+    "bytes": 4511,
+    "sha256": "f9f467203e5c0fa032aa67caf07622ef52724a71e6bf3c8abc0edce65be53ec1"
+  },
+  {
+    "path": "reports/chr22/truvari_simple_report/plots/05_fp_fn_by_chromosome.svg",
+    "bytes": 4501,
+    "sha256": "1cb745f004afe6fa4588609f5ce955cf9ff07fc96a9332a41b350e0140717566"
+  },
+  {
+    "path": "reports/chr22/truvari_simple_report/plots/06_sv_size_distribution.svg",
+    "bytes": 7773,
+    "sha256": "e383afc670c5fd07a073ab44d5b2eba03b5f2f5ab5d516f85bb22079947c4fee"
+  },
+  {
+    "path": "reports/chr22/truvari_simple_report/simple_truvari_report.html",
+    "bytes": 6689,
+    "sha256": "e051e2c2f17300d48deccd6c54b18eeb32e32a2701081a104ebce691745b7abc"
+  },
+  {
+    "path": "reports/chr22/truvari_simple_report/tables/truvari_fp_fn_chromosome_counts.csv",
+    "bytes": 475,
+    "sha256": "49d28c214a79c8eec6c871768542d668fd0cb53a1f4af197476be1299ad5aa77"
+  },
+  {
+    "path": "reports/chr22/truvari_simple_report/tables/truvari_simple_metrics.csv",
+    "bytes": 1997,
+    "sha256": "daf3122c6c6e34c9ca09f1dde87999968c985fdcfdc38ec7328c332f79281ae2"
+  },
+  {
+    "path": "reports/chr22/truvari_simple_report/tables/truvari_svtype_counts.csv",
+    "bytes": 1890,
+    "sha256": "0ec65ad3dbfac5afbe91df084833cfc464b3396fb74790eb76cbf3538a4adf7c"
+  },
+  {
+    "path": "reports/hg19/html/hg19_sv_benchmarking_full_results_report_WITH_SELF_SURVIVOR.html",
+    "bytes": 8151516,
+    "sha256": "af40054eeef2732ed40d0a42047ff175a856a65ac2a0464dd4b76f771a528736"
+  },
+  {
+    "path": "reports/hg19/multiqc_report.html",
+    "bytes": 9709927,
+    "sha256": "178a9e19369cdcfc0e39375818c4e67a7bb09e4a32038679a062dfbda05f7972"
+  },
+  {
+    "path": "reports/hg19/plots/bcftools_variant_classes_prepared_log.png",
+    "bytes": 73986,
+    "sha256": "fa83397f5029477de0e38bede513454e81c354a81cdc3efdd69b1c24c69add2e"
+  },
+  {
+    "path": "reports/hg19/plots/benchmark_f1_by_caller_tool.png",
+    "bytes": 67833,
+    "sha256": "cc31ef7838a1b30ab8ea52ae12537d327065ca5e909d9ec01f32e528ce6bc102"
+  },
+  {
+    "path": "reports/hg19/plots/benchmark_f1_by_caller_tool_zoomed.png",
+    "bytes": 76832,
+    "sha256": "2b978c4d6b6b4a945e9ca582734e6cde8b3fc2ff39108fe5796d1eee34a44156"
+  },
+  {
+    "path": "reports/hg19/plots/benchmark_fn_by_caller_tool_log.png",
+    "bytes": 74849,
+    "sha256": "3cd9a7a56089aad385bf59d5bbccfc5887682ade7da6c4b69f41713ac5172ecc"
+  },
+  {
+    "path": "reports/hg19/plots/benchmark_fp_by_caller_tool_log.png",
+    "bytes": 65503,
+    "sha256": "ae503f69323e189df0d26eac29cd32fc063110d22aab17c10fa5aed6595238d8"
+  },
+  {
+    "path": "reports/hg19/plots/benchmark_precision_by_caller_tool.png",
+    "bytes": 67674,
+    "sha256": "3cc855b0b3f01695e6894fcde736f1f25c4f7c6cfe77fcd17f0c02eae998f8e0"
+  },
+  {
+    "path": "reports/hg19/plots/benchmark_precision_recall_f1_together.png",
+    "bytes": 132513,
+    "sha256": "9edd7708c70211a43fa01fd9d868692fb7b1606767f31f113d3d9422d8956a6c"
+  },
+  {
+    "path": "reports/hg19/plots/benchmark_recall_by_caller_tool.png",
+    "bytes": 70357,
+    "sha256": "63f06fcfd13047ec5c581d56765d2a19d7f5cf79fe3cd278d28b430013b228ad"
+  },
+  {
+    "path": "reports/hg19/plots/benchmark_recall_by_caller_tool_zoomed.png",
+    "bytes": 71804,
+    "sha256": "fd7451fa95ace335c1deb581bd26be2b8b8feeb0a66e54ea64a5e4ea96553962"
+  },
+  {
+    "path": "reports/hg19/plots/benchmark_tp_base_by_caller_tool_log.png",
+    "bytes": 61519,
+    "sha256": "cf022148e23267469a461603f4fa57a2985e57ef454606bad9d3c389c584e5fb"
+  },
+  {
+    "path": "reports/hg19/plots/benchmark_tp_comp_by_caller_tool_log.png",
+    "bytes": 61219,
+    "sha256": "acf53f5a8c33a5cb041b0ebf834a1f9109c3b1246206df5d8fd8ab8e5bfd1185"
+  },
+  {
+    "path": "reports/hg19/plots/delly_precision_recall_f1_by_tool.png",
+    "bytes": 71159,
+    "sha256": "2691ea2a0653672370656c5ef0b9f52a5557b5c7e3ae251d1fe9640fe131e60c"
+  },
+  {
+    "path": "reports/hg19/plots/dragen_precision_recall_f1_by_tool.png",
+    "bytes": 71796,
+    "sha256": "92a3bf710f3f34ef491801ed32b9db2b60782466a3d1a5ac18c202b1a7cf0ac2"
+  },
+  {
+    "path": "reports/hg19/plots/event_fn_chromosome_counts_by_caller_log.png",
+    "bytes": 59583,
+    "sha256": "4eef261439e0cae3493ea42998e42503fa8fa02ed58d8066c05c25c01eeca625"
+  },
+  {
+    "path": "reports/hg19/plots/event_fn_counts_by_caller_method_log.png",
+    "bytes": 89984,
+    "sha256": "896db54f4e733d90e5380ae2b1d46e920eeff5128e6527c926d607ee2a816fef"
+  },
+  {
+    "path": "reports/hg19/plots/event_fn_svlen_counts_by_caller_log.png",
+    "bytes": 94969,
+    "sha256": "f3b9aa71174d5fb95e69553ae142cb8ff53cf6758fc4677260e729f62c6d49d8"
+  },
+  {
+    "path": "reports/hg19/plots/event_fn_svlen_counts_by_method_log.png",
+    "bytes": 94664,
+    "sha256": "ea270b3688374a92a0c8428971a3ae39325fd978bd104c8c75d2a031a131b63f"
+  },
+  {
+    "path": "reports/hg19/plots/event_fn_svtype_counts_by_caller_log.png",
+    "bytes": 55969,
+    "sha256": "5c31e38a9542be7e08f6c4d12275384231476fffe379d15baae848fcc48f81a7"
+  },
+  {
+    "path": "reports/hg19/plots/event_fn_svtype_counts_by_method_log.png",
+    "bytes": 56067,
+    "sha256": "721856371343ceb530731cc7de9bf63e27121a31cfbba4319b491b54b5ef5fe7"
+  },
+  {
+    "path": "reports/hg19/plots/event_fp_chromosome_counts_by_caller_log.png",
+    "bytes": 59792,
+    "sha256": "07769eba629a1b36e0d2bf93c9b272517cfa64777f9acc6e9138022ac5bdf088"
+  },
+  {
+    "path": "reports/hg19/plots/event_fp_counts_by_caller_method_log.png",
+    "bytes": 70252,
+    "sha256": "66a8ebaeeeb196f1813ab8a691d580727a60f24c7f65dc2264e8bc86f0a09dcd"
+  },
+  {
+    "path": "reports/hg19/plots/event_fp_svlen_counts_by_caller_log.png",
+    "bytes": 91684,
+    "sha256": "d23e9f96e00b7c6434d0ac042ac54d96c918faef911b9b192c3f6348438a9216"
+  },
+  {
+    "path": "reports/hg19/plots/event_fp_svlen_counts_by_method_log.png",
+    "bytes": 90631,
+    "sha256": "46627fd9b23dcb58bc1df497c4d4e27fcf98276ff7fe3afca07ff3c68b59afcc"
+  },
+  {
+    "path": "reports/hg19/plots/event_fp_svtype_counts_by_caller_log.png",
+    "bytes": 54327,
+    "sha256": "49d12f0a18c99776fa65c4e16362f97dd220d552f609d9c1c3f90debf711625c"
+  },
+  {
+    "path": "reports/hg19/plots/event_fp_svtype_counts_by_method_log.png",
+    "bytes": 56462,
+    "sha256": "4f25919e1d34e6bf372a3bc2c4610c40423344b94411375790dd1cd77df511e6"
+  },
+  {
+    "path": "reports/hg19/plots/event_tp_base_chromosome_counts_by_caller_log.png",
+    "bytes": 62558,
+    "sha256": "e6ce4ff2e12de17cf3f7eff81ff0fadfca59f99ea07db1ae7995aa8703031283"
+  },
+  {
+    "path": "reports/hg19/plots/event_tp_base_counts_by_caller_method_log.png",
+    "bytes": 62202,
+    "sha256": "f9af934ba71077411527bc7c1c9c5a527719eaf04ebc4c18e49496c4fd69a1bc"
+  },
+  {
+    "path": "reports/hg19/plots/event_tp_base_svlen_counts_by_caller_log.png",
+    "bytes": 96245,
+    "sha256": "e9cd4892b206cfab47ab9de0180f1ce1f8ceb697bb6a7a6878aa83f4bcbb0119"
+  },
+  {
+    "path": "reports/hg19/plots/event_tp_base_svlen_counts_by_method_log.png",
+    "bytes": 93685,
+    "sha256": "641db0a4da894ea6cf1b07c8432efd3695842c6f69bcdf76230d2310041e37e5"
+  },
+  {
+    "path": "reports/hg19/plots/event_tp_base_svtype_counts_by_caller_log.png",
+    "bytes": 58945,
+    "sha256": "65eacb937b4a7bc92a7bb409ebf8c20e6990fa557fba9f819ea0a2cff3af972a"
+  },
+  {
+    "path": "reports/hg19/plots/event_tp_base_svtype_counts_by_method_log.png",
+    "bytes": 57540,
+    "sha256": "10983ca36c78ad3d792a76087885551eff2bc2ea2e0a8a52457425a9860c5781"
+  },
+  {
+    "path": "reports/hg19/plots/event_tp_comp_chromosome_counts_by_caller_log.png",
+    "bytes": 62352,
+    "sha256": "d6762784d2cce3f4004dee4b561f34b471bdb2258ccdcc2fa15860c863545803"
+  },
+  {
+    "path": "reports/hg19/plots/event_tp_comp_counts_by_caller_method_log.png",
+    "bytes": 61992,
+    "sha256": "5a81fc394e271afc685300e3cc41c4103189706d2b8a0202bb150e07a07a1d0b"
+  },
+  {
+    "path": "reports/hg19/plots/event_tp_comp_svlen_counts_by_caller_log.png",
+    "bytes": 95873,
+    "sha256": "df1873d50181adf4d804cbb452697564034cc5c2a2c80a19f0f116d3b0b1ca52"
+  },
+  {
+    "path": "reports/hg19/plots/event_tp_comp_svlen_counts_by_method_log.png",
+    "bytes": 93129,
+    "sha256": "b69cc3403646d4c4544b7b7d43c797c19e696dd00dfc41b0a009246782ad6c6b"
+  },
+  {
+    "path": "reports/hg19/plots/event_tp_comp_svtype_counts_by_caller_log.png",
+    "bytes": 52986,
+    "sha256": "0f1bf8ead30c1a37f80244139236760d725d131cda040c9bc7499ee38542ebcc"
+  },
+  {
+    "path": "reports/hg19/plots/event_tp_comp_svtype_counts_by_method_log.png",
+    "bytes": 52110,
+    "sha256": "5db9dc4d26f2df81d8baf3a62a6da5b75cdfafc62b4de41cda0565af6b4b929d"
+  },
+  {
+    "path": "reports/hg19/plots/event_vcf_counts_by_status_method_log.png",
+    "bytes": 70543,
+    "sha256": "c8a84aaa8bf657038f76ef0b1847e97aa475aa2bf2f61012d6ab35fbf72b6ce6"
+  },
+  {
+    "path": "reports/hg19/plots/existing_bcftools-stats-subtypes-cnt.png",
+    "bytes": 113744,
+    "sha256": "566df5ef27de73e7e824e9915a15fea8e45576abebdae45e7faa994179dbf0bf"
+  },
+  {
+    "path": "reports/hg19/plots/existing_bcftools-stats-subtypes-pct.png",
+    "bytes": 108703,
+    "sha256": "fdd5a00013d22890505cdec0cfb70897acd559e3283bc0edd1e6788785fd7245"
+  },
+  {
+    "path": "reports/hg19/plots/existing_bcftools_stats_indel-lengths-log.png",
+    "bytes": 209008,
+    "sha256": "940c42544a6eaeeec87b5ea96932a0e180c8b0391db58566d2f5a9857800804d"
+  },
+  {
+    "path": "reports/hg19/plots/existing_survivor-cnt.png",
+    "bytes": 70528,
+    "sha256": "f2845b1a585363e9c94e04e17f436b2227ef3e9b06ee2e890effc649960ec63c"
+  },
+  {
+    "path": "reports/hg19/plots/existing_survivor-pct.png",
+    "bytes": 67096,
+    "sha256": "f68c9390f7d0a0e25357b8b33b4831d0723a68da129ad9fc46566f79954f1d4c"
+  },
+  {
+    "path": "reports/hg19/plots/existing_truvari-bench-pre-rec-plot.png",
+    "bytes": 103381,
+    "sha256": "3120c21aba3a2181e2ff45d1f938f22f73a4f765312fe869b217a9462f082233"
+  },
+  {
+    "path": "reports/hg19/plots/existing_upset_rtgtools_tp_fp_mqc.png",
+    "bytes": 92332,
+    "sha256": "92e03aff0f4bb653e4a6840d06b31fd492f5cc67f84d396e740ba17687607456"
+  },
+  {
+    "path": "reports/hg19/plots/existing_upset_svbenchmark_tp_fn_mqc.png",
+    "bytes": 392156,
+    "sha256": "994502f807c8bdb543c50ac3596cdcd9bc89bd444e0b54c2abe8a50513c09fd7"
+  },
+  {
+    "path": "reports/hg19/plots/existing_upset_svbenchmark_tp_fp_mqc.png",
+    "bytes": 268309,
+    "sha256": "af000012a2b054f2246477cb3c5cd776e796865a50d01162bcba06958a529725"
+  },
+  {
+    "path": "reports/hg19/plots/existing_upset_truvari_tp_fn_mqc.png",
+    "bytes": 364198,
+    "sha256": "9fc1ca7e100fb69f40378a2d6058bec3c2a86b4f6d27184946fb59b2563325bb"
+  },
+  {
+    "path": "reports/hg19/plots/existing_upset_truvari_tp_fp_mqc.png",
+    "bytes": 265194,
+    "sha256": "f5ced8e5a527260c98b80ac5900d6c29c13362243c3228709bb83b9a5a54c4b8"
+  },
+  {
+    "path": "reports/hg19/plots/existing_variant_calling_summary.png",
+    "bytes": 166020,
+    "sha256": "dec83207084a769b8c5b813f1ecfeeb5378454a0fea86ba60f3178f76446a4ec"
+  },
+  {
+    "path": "reports/hg19/plots/heatmap_f1_caller_by_tool.png",
+    "bytes": 65384,
+    "sha256": "ade1b0215f09c5ee05e3d05cebe8b55516429a7a08a8fac11dfce9e517461d3c"
+  },
+  {
+    "path": "reports/hg19/plots/heatmap_precision_caller_by_tool.png",
+    "bytes": 69863,
+    "sha256": "c5c532d78cdff7b2829b34140b7ddfe2b8389f592130047867c7e3e65cb033bb"
+  },
+  {
+    "path": "reports/hg19/plots/heatmap_recall_caller_by_tool.png",
+    "bytes": 67412,
+    "sha256": "a5fd179f3a00b7fafe8b81f02c989bf56d72bce4e2c760838a82b70148f3cbb6"
+  },
+  {
+    "path": "reports/hg19/plots/input_filter_pass_nonpass_records_log.png",
+    "bytes": 121860,
+    "sha256": "fb96f11480496d01bff24a740eebb0f2e1df12c88c29fccfff1eb5f99f8943aa"
+  },
+  {
+    "path": "reports/hg19/plots/input_total_records_raw_prepared_log.png",
+    "bytes": 101496,
+    "sha256": "1ef31af9f6fdd05bc2f085339942a4a890d14fe677dfd863f08cf001f4bc0b63"
+  },
+  {
+    "path": "reports/hg19/plots/method_difference_rtgtools_minus_svbenchmark.png",
+    "bytes": 70667,
+    "sha256": "27e0d22fcd8c142574619722917bfbc18976d94b3c358fbc1eed77671735e622"
+  },
+  {
+    "path": "reports/hg19/plots/method_difference_rtgtools_minus_truvari.png",
+    "bytes": 67622,
+    "sha256": "8f28c5e7ec72eef7a5259f84f5a6a2757281474e5265e921ad224042d53ec01f"
+  },
+  {
+    "path": "reports/hg19/plots/method_difference_svbenchmark_minus_truvari.png",
+    "bytes": 69277,
+    "sha256": "176540f3e0046aaddc86242cbabca13ebd0b73df5f314feebe9d4219eb24a12b"
+  },
+  {
+    "path": "reports/hg19/plots/prepared_vcf_chromosome_counts_log.png",
+    "bytes": 71242,
+    "sha256": "694b5cdeb003dc90c7e7833dbb8d2ca0a8d2208b86eb87d538798dd8ff6b2d82"
+  },
+  {
+    "path": "reports/hg19/plots/rtgtools_precision_recall_f1_by_caller.png",
+    "bytes": 63617,
+    "sha256": "8dc0e4887569e656a872a4cecb7d8e41618bdcd46b1d3ac76e6094f131e500ef"
+  },
+  {
+    "path": "reports/hg19/plots/scatter_precision_vs_f1.png",
+    "bytes": 70387,
+    "sha256": "86ad49b9f325277f47e668f5b11ee30a63f9bf81cd1e43f322f71ffa817fd1d5"
+  },
+  {
+    "path": "reports/hg19/plots/scatter_precision_vs_recall.png",
+    "bytes": 72508,
+    "sha256": "a8306cbb81fca889ddbd77cd28aee33abe9f88ec1eeb86e61472758b2d061ebf"
+  },
+  {
+    "path": "reports/hg19/plots/scatter_recall_vs_f1.png",
+    "bytes": 68852,
+    "sha256": "437d040b68c07b3f8096ed14a1f646f04d2905b30b6765c32f733c7f5ff47d78"
+  },
+  {
+    "path": "reports/hg19/plots/self_survivor_metrics_log.png",
+    "bytes": 62236,
+    "sha256": "7d92690b9c086426aad1578e60adf1d21045c0281ce7356bb2f6b252c0c333e8"
+  },
+  {
+    "path": "reports/hg19/plots/self_survivor_vs_nfcore_differences.png",
+    "bytes": 180760,
+    "sha256": "75c4f05f253757a3ba26a896f7802f199026aec108e070f67d58955876687023"
+  },
+  {
+    "path": "reports/hg19/plots/sniffles_precision_recall_f1_by_tool.png",
+    "bytes": 71874,
+    "sha256": "3bbb84d5a9d226c8725abb344c3b8b6bd67dd141e4aa62e93ed8c85963ce6ab2"
+  },
+  {
+    "path": "reports/hg19/plots/survivor_style_svlen_bin_counts_prepared_log.png",
+    "bytes": 104760,
+    "sha256": "91367da36d2ec29d8991f097ab32df96ab5406dbb776ba3e1881a85662a69f47"
+  },
+  {
+    "path": "reports/hg19/plots/survivor_style_svlen_fraction_prepared.png",
+    "bytes": 95751,
+    "sha256": "0264a206dae1d667a44ac9010cf7323303db961f75edb078c41f7562cfc4de5d"
+  },
+  {
+    "path": "reports/hg19/plots/survivor_style_svtype_counts_prepared_log.png",
+    "bytes": 74327,
+    "sha256": "79ff81b91495dbf7514381d223b9812bd2ac062e06e856c14f67728d6844b65f"
+  },
+  {
+    "path": "reports/hg19/plots/survivor_style_svtype_fraction_prepared.png",
+    "bytes": 75100,
+    "sha256": "2e2ad4b6eb75c21c33e4fe10ab5a56cf890f0c2fbb7a1c2a2435e003972a3428"
+  },
+  {
+    "path": "reports/hg19/plots/svbenchmark_precision_recall_f1_by_caller.png",
+    "bytes": 65057,
+    "sha256": "2c19b318687eec0a29fa2360e47edc66280328ab1d3d1dd6c3a44bc6c1c06049"
+  },
+  {
+    "path": "reports/hg19/plots/truvari_precision_recall_f1_by_caller.png",
+    "bytes": 62962,
+    "sha256": "700784dd0d2ae5ced52abd195260980d34a692a74824e2bd7d874b8bd33cc29f"
+  },
+  {
+    "path": "reports/hg19/tables/bcftools_stats_summary_parsed.csv",
+    "bytes": 612,
+    "sha256": "02b38c7c1171afdfc930a5518a3c994c04f1c463171dc9fb712fd927fa3b447c"
+  },
+  {
+    "path": "reports/hg19/tables/bcftools_stats_summary_wide.csv",
+    "bytes": 209,
+    "sha256": "d2216740a17aacad9ff548a16c8ac8696a36be82c05f8aa4b1d08c1b745d0acc"
+  },
+  {
+    "path": "reports/hg19/tables/benchmark_event_vcf_chromosome_counts.csv",
+    "bytes": 9132,
+    "sha256": "6a2d75c7829f0fc3e2c25d80d828375a4a7238d903052cd1b1a2ac3813d66a31"
+  },
+  {
+    "path": "reports/hg19/tables/benchmark_event_vcf_filter_counts.csv",
+    "bytes": 1770,
+    "sha256": "1b5074dedaf467a702e32cd3e5293f94f6abc3fd17739ad27c9b301d8dc72495"
+  },
+  {
+    "path": "reports/hg19/tables/benchmark_event_vcf_svlen_bin_counts.csv",
+    "bytes": 3355,
+    "sha256": "13122444533cb6c621225752b4e7f4b7ca8da1f42f7911df64a3646980f7ca6e"
+  },
+  {
+    "path": "reports/hg19/tables/benchmark_event_vcf_svtype_counts.csv",
+    "bytes": 1076,
+    "sha256": "29ae1b19275827bcafea2aa7b045ff62bab67e14eae868c1cb788a767f31b5de"
+  },
+  {
+    "path": "reports/hg19/tables/benchmark_event_vcf_total_counts.csv",
+    "bytes": 2462,
+    "sha256": "a507cf636e63971345c105d77a0130c7669f9a1f2d041cf10f08e0bb69c77e19"
+  },
+  {
+    "path": "reports/hg19/tables/benchmark_summary_metrics_all_tools.csv",
+    "bytes": 1456,
+    "sha256": "723cc366a49ba6ba11be60d8fd43678e337b43375ebdd2d481f6c04c646c0d39"
+  },
+  {
+    "path": "reports/hg19/tables/benchmark_tool_metric_differences.csv",
+    "bytes": 1108,
+    "sha256": "5c6a7d01acb59ce11833a5682c7f5a198d554475e07316d39d810525f3e1d6ae"
+  },
+  {
+    "path": "reports/hg19/tables/input_vcf_chromosome_counts_raw_and_prepared.csv",
+    "bytes": 4095,
+    "sha256": "68f50582210e43143c0bf83e4b2980c34c31dceb8bcfe9bb29a1c29ddbf40961"
+  },
+  {
+    "path": "reports/hg19/tables/input_vcf_filter_counts_raw_and_prepared.csv",
+    "bytes": 1522,
+    "sha256": "8362f3b7cbc6ceaf22195323fe74c913a6932d3aecfd2bfdfbad6b03152e8602"
+  },
+  {
+    "path": "reports/hg19/tables/input_vcf_svlen_bin_counts_raw_and_prepared.csv",
+    "bytes": 1791,
+    "sha256": "b6a6215e6111bcba999d4174d3b50672f0b14d43b71f2a797c2afec10b9f3701"
+  },
+  {
+    "path": "reports/hg19/tables/input_vcf_svlen_fractions_prepared.csv",
+    "bytes": 1625,
+    "sha256": "33d9005fc75cd1ce988acd22f319b5cfe4f06a33905c2632478feca7010f1dc6"
+  },
+  {
+    "path": "reports/hg19/tables/input_vcf_svtype_counts_raw_and_prepared.csv",
+    "bytes": 623,
+    "sha256": "c65cddf76591766cc647e415456e62169d50a194a4692c8c94e5e24d94a691c5"
+  },
+  {
+    "path": "reports/hg19/tables/input_vcf_svtype_fractions_prepared.csv",
+    "bytes": 624,
+    "sha256": "a27066f053f66085ef203e4ddd4fea6e249d2d9f3a3e86a1c59627e134a52d62"
+  },
+  {
+    "path": "reports/hg19/tables/input_vcf_total_record_counts_raw_and_prepared.csv",
+    "bytes": 372,
+    "sha256": "ef1c615b24b9affc20f8f590f81163fe2ba021e9b77e766f50fe9cb6aaa6158c"
+  },
+  {
+    "path": "reports/hg19/tables/mean_metrics_by_caller_across_tools.csv",
+    "bytes": 437,
+    "sha256": "c28fd3d6a75f18a353649cc1817baafcad950e84d479960a680c7aa4afca0645"
+  },
+  {
+    "path": "reports/hg19/tables/nfcore_survivor_parsed_stats.csv",
+    "bytes": 1759,
+    "sha256": "581e891d4209b048f2fcf86bb95d935854e0ab4b1a1581a16fd7eb4f71ebfcb6"
+  },
+  {
+    "path": "reports/hg19/tables/self_survivor_parsed_stats.csv",
+    "bytes": 3733,
+    "sha256": "5fbdaa4e63a7f15ac4a81095c948146f45ad39521d6d48779bf2a4458250b3e3"
+  },
+  {
+    "path": "reports/hg19/tables/self_survivor_vs_nfcore_survivor_differences.csv",
+    "bytes": 1314,
+    "sha256": "d25bd6abc5fde33a32a5c9e6465135ce8bf4784ed511892a8ad0edcf5b236e98"
+  },
+  {
+    "path": "reports/hg19/variant_benchmarking_report.html",
+    "bytes": 27955,
+    "sha256": "dfa1307842174d5082deb7a05b24e9cfe75605107d6b249cbfc7e29c27545610"
+  },
+  {
+    "path": "reports/hg38/hg38_final_sv_benchmarking_report.html",
+    "bytes": 29163,
+    "sha256": "59499d04ef817cbdacd20a9b0c85b2d72c79dace7c16ea57e26c83d18552e144"
+  },
+  {
+    "path": "reports/hg38/html/hg38_sv_benchmarking_full_results_report_WITH_SELF_SURVIVOR.html",
+    "bytes": 8620384,
+    "sha256": "4ca17ac9c5b222b94e6689b060206810b8cb79c5b7912d4ca998fc1352f41cfc"
+  },
+  {
+    "path": "reports/hg38/multiqc_report.html",
+    "bytes": 10106677,
+    "sha256": "63b47923609b668ab9e8199c8187033e5b587aee42a8d713d9335ce72df1f3cc"
+  },
+  {
+    "path": "reports/hg38/plots/bcftools_variant_classes_prepared_log.png",
+    "bytes": 68984,
+    "sha256": "4ef1977a1f697d050d4c6db6f26a32c4499b73746cebb9856c0bdbd1252e31a3"
+  },
+  {
+    "path": "reports/hg38/plots/benchmark_f1_by_caller_tool.png",
+    "bytes": 68255,
+    "sha256": "4579c98348007ef02489e786004d1bb9eb8bc1d5e7ef045d9cbe299f899cd6b9"
+  },
+  {
+    "path": "reports/hg38/plots/benchmark_f1_by_caller_tool_zoomed.png",
+    "bytes": 74594,
+    "sha256": "9dbccb73bb6ab9b972d0900e78cba9019d27e4632f5829a8cef2ae47fb3444ba"
+  },
+  {
+    "path": "reports/hg38/plots/benchmark_fn_by_caller_tool_log.png",
+    "bytes": 72623,
+    "sha256": "c4da0d7cb5f354dd828bf23d3d323c86e4ce306d41d8132e4123637ed44e9fb1"
+  },
+  {
+    "path": "reports/hg38/plots/benchmark_fp_by_caller_tool_log.png",
+    "bytes": 56499,
+    "sha256": "f149d501a0b13caf7e35a63d2cf0c4bf23ca75a10905bcad50ab84e30d8198be"
+  },
+  {
+    "path": "reports/hg38/plots/benchmark_precision_by_caller_tool.png",
+    "bytes": 65209,
+    "sha256": "4772e977c84a7b87797b28979a1781d45d59607cd0fd82191210a0aeb050902d"
+  },
+  {
+    "path": "reports/hg38/plots/benchmark_precision_recall_f1_together.png",
+    "bytes": 127743,
+    "sha256": "d4d12a194eff440bf9b8f9e90ee3d5cfa014b325649d09e78d0c0c53a9d01b4a"
+  },
+  {
+    "path": "reports/hg38/plots/benchmark_recall_by_caller_tool.png",
+    "bytes": 71930,
+    "sha256": "a578023e2223e8aeb7de079f7451d8a1f2435ceb315a9499c2a0c0bc8ff29018"
+  },
+  {
+    "path": "reports/hg38/plots/benchmark_recall_by_caller_tool_zoomed.png",
+    "bytes": 70086,
+    "sha256": "2173fad7a2a8d3ccd9c1cb0c1688154d38c8228f6087ea151f0b42c6919d446a"
+  },
+  {
+    "path": "reports/hg38/plots/benchmark_tp_base_by_caller_tool_log.png",
+    "bytes": 61415,
+    "sha256": "381adb2a0b8245353ee755054acf9067bda47ed303aa89ee1650f95ded244d0a"
+  },
+  {
+    "path": "reports/hg38/plots/benchmark_tp_comp_by_caller_tool_log.png",
+    "bytes": 61070,
+    "sha256": "05b8d5025bdbcfbb818b67ea21b8f3ea00b9d59f02cb4dd341787e2ecb6d5ef5"
+  },
+  {
+    "path": "reports/hg38/plots/delly_precision_recall_f1_by_tool.png",
+    "bytes": 68830,
+    "sha256": "ec788280167427ed1ec5ed519bbcc0a2f6d74e39e10ad081794d6b673142a766"
+  },
+  {
+    "path": "reports/hg38/plots/dragen_precision_recall_f1_by_tool.png",
+    "bytes": 69866,
+    "sha256": "3255636164c1de06652eda27ec01aca9fe1f45961af11ff0b0ffaf5fea58d1bf"
+  },
+  {
+    "path": "reports/hg38/plots/event_fn_chromosome_counts_by_caller_log.png",
+    "bytes": 60326,
+    "sha256": "8e1640533adc78f364abf6cf4c452ebcf4982393ac60723a4cc7cf3cd67a5dba"
+  },
+  {
+    "path": "reports/hg38/plots/event_fn_counts_by_caller_method_log.png",
+    "bytes": 85381,
+    "sha256": "c66da5f3c1582c749922c63492df288322f1c56d578e3bced234b6f647c36a2c"
+  },
+  {
+    "path": "reports/hg38/plots/event_fn_svlen_counts_by_caller_log.png",
+    "bytes": 92041,
+    "sha256": "2487ea09033c48fabd3d3a3957ffa72cecd16ad3c0b591bbb9c61499c3b0ee46"
+  },
+  {
+    "path": "reports/hg38/plots/event_fn_svlen_counts_by_method_log.png",
+    "bytes": 92071,
+    "sha256": "2e376980f31732ac5b84054abe8b973f3aa918b5120c27fcc6313e6ec76d6804"
+  },
+  {
+    "path": "reports/hg38/plots/event_fn_svtype_counts_by_caller_log.png",
+    "bytes": 53337,
+    "sha256": "24dc32dc8e46e686bd467f02b6092a4582bb0cd0a6c96e02e11f37ea096eb6fe"
+  },
+  {
+    "path": "reports/hg38/plots/event_fn_svtype_counts_by_method_log.png",
+    "bytes": 53384,
+    "sha256": "9e12fc1057c3f1f5e8a3e07df5c1cb09f02ecefc48a6918634294de37a092998"
+  },
+  {
+    "path": "reports/hg38/plots/event_fp_chromosome_counts_by_caller_log.png",
+    "bytes": 60274,
+    "sha256": "4c22fac28893bdd9b89796ece9f540c9b2227608de13ef9de3c6a24da84b1019"
+  },
+  {
+    "path": "reports/hg38/plots/event_fp_counts_by_caller_method_log.png",
+    "bytes": 64167,
+    "sha256": "cbb293f8c60f1f9ebe15a03d8b5cb88f0fd741bfe7857e226e172faa3c5d9e93"
+  },
+  {
+    "path": "reports/hg38/plots/event_fp_svlen_counts_by_caller_log.png",
+    "bytes": 88682,
+    "sha256": "418b558a3fe92ecf5b3fe69a36152b575f839b5cf75789d6fb6b55f3e35f505d"
+  },
+  {
+    "path": "reports/hg38/plots/event_fp_svlen_counts_by_method_log.png",
+    "bytes": 89474,
+    "sha256": "12c6d413e5dfb806eaa3b301052d93856121eaf6efb4102ea038f557bd27d98e"
+  },
+  {
+    "path": "reports/hg38/plots/event_fp_svtype_counts_by_caller_log.png",
+    "bytes": 52241,
+    "sha256": "62337e9b27319855f92080824f2a62258984a416252762d764beb4c0b20d2772"
+  },
+  {
+    "path": "reports/hg38/plots/event_fp_svtype_counts_by_method_log.png",
+    "bytes": 53337,
+    "sha256": "a39c3cc08464f4d3cefe4496cee1a435e5e7a87b74594eee8f015d2b9f1de2b2"
+  },
+  {
+    "path": "reports/hg38/plots/event_tp_base_chromosome_counts_by_caller_log.png",
+    "bytes": 63268,
+    "sha256": "0117717822470c21117cddfa270c02c7080628a5867105c9b27285522fdec492"
+  },
+  {
+    "path": "reports/hg38/plots/event_tp_base_counts_by_caller_method_log.png",
+    "bytes": 62507,
+    "sha256": "30bce96121bd124c764d264dfe8919982f65ed8578aa7070c7836eda18a83e02"
+  },
+  {
+    "path": "reports/hg38/plots/event_tp_base_svlen_counts_by_caller_log.png",
+    "bytes": 93349,
+    "sha256": "9a113bc316be13b31e1387571d5f41c988fa058f46e2000f66b4477ccfe5af12"
+  },
+  {
+    "path": "reports/hg38/plots/event_tp_base_svlen_counts_by_method_log.png",
+    "bytes": 90701,
+    "sha256": "0be1209eda30a3c5df13e463bcc5f52bad4c297a854f0f00c9460fa0c09bbb6d"
+  },
+  {
+    "path": "reports/hg38/plots/event_tp_base_svtype_counts_by_caller_log.png",
+    "bytes": 56227,
+    "sha256": "583331a04620d07ee8b0e4ea1dc503026b904b582a4cb8e59551b99b2e244d33"
+  },
+  {
+    "path": "reports/hg38/plots/event_tp_base_svtype_counts_by_method_log.png",
+    "bytes": 53737,
+    "sha256": "25b79828193bd73fbb92e27edea8c938b00c0705bed40b0175c5943947a41eb7"
+  },
+  {
+    "path": "reports/hg38/plots/event_tp_comp_chromosome_counts_by_caller_log.png",
+    "bytes": 63017,
+    "sha256": "c61f718b24f392bd7ed83204810db1dbd4f62f0edd59d5a1d6b64cd05a4fc326"
+  },
+  {
+    "path": "reports/hg38/plots/event_tp_comp_counts_by_caller_method_log.png",
+    "bytes": 62150,
+    "sha256": "6132f9824b9743e7089d97e1dcc3a82bd29d881e86eca04a3205c7cafa456bb5"
+  },
+  {
+    "path": "reports/hg38/plots/event_tp_comp_svlen_counts_by_caller_log.png",
+    "bytes": 93244,
+    "sha256": "0049eb6422b89ab481efab97dafe4f49248f50e95055e40e783ca6f93a440fba"
+  },
+  {
+    "path": "reports/hg38/plots/event_tp_comp_svlen_counts_by_method_log.png",
+    "bytes": 90226,
+    "sha256": "11cfb0a06514cd2fdd6b019755de1a5d1310ed94e7e40dec05ba063cf224c0d0"
+  },
+  {
+    "path": "reports/hg38/plots/event_tp_comp_svtype_counts_by_caller_log.png",
+    "bytes": 50002,
+    "sha256": "3e7605ce755881603c053b97604e10511e3153b7bc88e20dffeee948424db7fd"
+  },
+  {
+    "path": "reports/hg38/plots/event_tp_comp_svtype_counts_by_method_log.png",
+    "bytes": 49321,
+    "sha256": "d2cd2ba2cba39c9c92a2317ee73227e022fa708b55f1ae9c7cb2de9c8bd27f81"
+  },
+  {
+    "path": "reports/hg38/plots/event_vcf_counts_by_status_method_log.png",
+    "bytes": 68367,
+    "sha256": "af44fc5986d7a3cfcf7a4a46e120b0c51df30f706f6ae997d42a95e59ed2664a"
+  },
+  {
+    "path": "reports/hg38/plots/existing_bcftools-stats-subtypes-cnt.png",
+    "bytes": 117919,
+    "sha256": "673fefe62e5c61a88376d03506959a10d547e3906511d1ea96940ec644c0ffe3"
+  },
+  {
+    "path": "reports/hg38/plots/existing_bcftools-stats-subtypes-pct.png",
+    "bytes": 111528,
+    "sha256": "e9579b8cf5469ca9dab87ab87b892929ed20dc4dca58c50b5afaf97d10207ed9"
+  },
+  {
+    "path": "reports/hg38/plots/existing_bcftools_stats_indel-lengths-log.png",
+    "bytes": 248825,
+    "sha256": "cf1bceef450a41cb9204e4c4536682bd390fd198afda1fc23d938d4e3b41924c"
+  },
+  {
+    "path": "reports/hg38/plots/existing_survivor-cnt.png",
+    "bytes": 73569,
+    "sha256": "1daf2e9c6523f831b67648c548a63d723cbbafa71486ea2f06acb320a5c4229f"
+  },
+  {
+    "path": "reports/hg38/plots/existing_survivor-pct.png",
+    "bytes": 70502,
+    "sha256": "3b4884fe390ca7703b785282f50bd6262b85848cdb03896b07b7cbb4790a2357"
+  },
+  {
+    "path": "reports/hg38/plots/existing_truvari-bench-pre-rec-plot.png",
+    "bytes": 103635,
+    "sha256": "b0705fd7c19e953fda1a84bf6129e6e7a23bb12fc8e8147885d034e75e09036d"
+  },
+  {
+    "path": "reports/hg38/plots/existing_upset_rtgtools_tp_fp_mqc.png",
+    "bytes": 116144,
+    "sha256": "d74848266ad20a557ef82b62d6708962efea4ed5cc15c25e65d914c59eff5e8b"
+  },
+  {
+    "path": "reports/hg38/plots/existing_upset_svbenchmark_tp_fn_mqc.png",
+    "bytes": 429707,
+    "sha256": "7c0a7f40ce3d8b32339196bf6f732a743725ab6be2ea5e7287fada771d233b1d"
+  },
+  {
+    "path": "reports/hg38/plots/existing_upset_svbenchmark_tp_fp_mqc.png",
+    "bytes": 277298,
+    "sha256": "f9480d8c2f01208e54aa41062455372e7ff6be9f1c897edec3f096a7943bf38d"
+  },
+  {
+    "path": "reports/hg38/plots/existing_upset_truvari_tp_fn_mqc.png",
+    "bytes": 386364,
+    "sha256": "27ad9e37e9556626af98f976803835eec4b474230914e400f8c542cb24e80f66"
+  },
+  {
+    "path": "reports/hg38/plots/existing_upset_truvari_tp_fp_mqc.png",
+    "bytes": 305712,
+    "sha256": "c7ef00befd11744581b245eaaa09492de9a4eaef3228c7954533a407af0f2c48"
+  },
+  {
+    "path": "reports/hg38/plots/existing_variant_calling_summary.png",
+    "bytes": 168699,
+    "sha256": "9dd311fd09805d4aeb79c0af0e988098bcd3a8aa774b019eeeea2b065ea5236b"
+  },
+  {
+    "path": "reports/hg38/plots/heatmap_f1_caller_by_tool.png",
+    "bytes": 67619,
+    "sha256": "2031d27341fe67491683b536853ce017ba04ab0793c273fcd6a08f76d1c97f53"
+  },
+  {
+    "path": "reports/hg38/plots/heatmap_precision_caller_by_tool.png",
+    "bytes": 65810,
+    "sha256": "4d31579513f870c6bc38f2d71c3b8abf5972329a2f2ecc49186a87a729e26590"
+  },
+  {
+    "path": "reports/hg38/plots/heatmap_recall_caller_by_tool.png",
+    "bytes": 70563,
+    "sha256": "77494d39158658177fa767de0d1a1a2585762bc48f8631d391f39dcffdc83c44"
+  },
+  {
+    "path": "reports/hg38/plots/input_pass_nonpass_records_log.png",
+    "bytes": 115568,
+    "sha256": "136bbe01ace8015fc4811e5a8082d8e1c7f01b6f9aa5b1438670df93dc3cf455"
+  },
+  {
+    "path": "reports/hg38/plots/input_total_records_raw_prepared_log.png",
+    "bytes": 112204,
+    "sha256": "ec606c20ae1d6d6c1d4e514bbf91bc2042f92f55bd226409c0ae992a990353d8"
+  },
+  {
+    "path": "reports/hg38/plots/method_difference_rtgtools_minus_svbenchmark.png",
+    "bytes": 68567,
+    "sha256": "3af1303a863e2ec959e5974f440d408115c408f3fcb8512c8db10273b80733bf"
+  },
+  {
+    "path": "reports/hg38/plots/method_difference_rtgtools_minus_truvari.png",
+    "bytes": 65485,
+    "sha256": "decea0164af7fa84aa05a878f4e1eed0e19a00e5fa0d4af0f13f49dc474d5010"
+  },
+  {
+    "path": "reports/hg38/plots/method_difference_svbenchmark_minus_truvari.png",
+    "bytes": 67301,
+    "sha256": "d5a55a4beeca3b542ce0256fe7e4bf0fabd47da6e72a2ab4d51dfbc96f1c81d0"
+  },
+  {
+    "path": "reports/hg38/plots/prepared_vcf_chromosome_counts_log.png",
+    "bytes": 278187,
+    "sha256": "e5a36e0c6b427a8db4aacac7657a425870c3ecdba7849220eb2e4cf0e7a2e63d"
+  },
+  {
+    "path": "reports/hg38/plots/rtgtools_precision_recall_f1_by_caller.png",
+    "bytes": 61052,
+    "sha256": "ea4becb8431164c5bca052aeea4d2e6c2ecf92a081c500cc3a6516fee0f0d227"
+  },
+  {
+    "path": "reports/hg38/plots/scatter_precision_vs_f1.png",
+    "bytes": 75510,
+    "sha256": "70c352271a287b2cb068c26bf4522ab64ad06eb93e8a43579444db7d0c6d3ed8"
+  },
+  {
+    "path": "reports/hg38/plots/scatter_precision_vs_recall.png",
+    "bytes": 78079,
+    "sha256": "b292c71b79219dc6f7cef6a4401f40bed762c2d3044239605ff777506de69a1a"
+  },
+  {
+    "path": "reports/hg38/plots/scatter_recall_vs_f1.png",
+    "bytes": 75454,
+    "sha256": "66d87280bfc2a6eb27d5f9770fa844efce55c99cb9d0fafdd57daf28b4b8dc09"
+  },
+  {
+    "path": "reports/hg38/plots/self_survivor_metrics_log.png",
+    "bytes": 58823,
+    "sha256": "bc2a3d63291dbea832a49efde97312f7a4d807b8aacd89158d22c4229bf28bcd"
+  },
+  {
+    "path": "reports/hg38/plots/self_survivor_parsed_statistics_log.png",
+    "bytes": 62605,
+    "sha256": "445c29e44d7eb300b56431f004e803ebb1b63e333a19ff120ca7f8ba6a3247a2"
+  },
+  {
+    "path": "reports/hg38/plots/self_survivor_vs_nfcore_differences.png",
+    "bytes": 179819,
+    "sha256": "52f0914ad8e8fb045ea9388e62bb1966296f039a6d8f8acd1cb5deec0a4d1856"
+  },
+  {
+    "path": "reports/hg38/plots/sniffles_precision_recall_f1_by_tool.png",
+    "bytes": 69277,
+    "sha256": "64084fd6371f384fd4d7b4f504a041f457fc0459a6adf8a424e2a285a9a3bbe8"
+  },
+  {
+    "path": "reports/hg38/plots/survivor_style_svlen_bin_counts_prepared_log.png",
+    "bytes": 100890,
+    "sha256": "95eafe0b09c98cf520c432a1b34074898a1faffb1a0463395b2615dad1018fb8"
+  },
+  {
+    "path": "reports/hg38/plots/survivor_style_svlen_fraction_prepared.png",
+    "bytes": 92646,
+    "sha256": "6f3e83acf8918c43dee83d9532add552e4e109c8dcec20943afed310ae1d6b4e"
+  },
+  {
+    "path": "reports/hg38/plots/survivor_style_svtype_counts_prepared_log.png",
+    "bytes": 71722,
+    "sha256": "ad7b699e84fa3734c3b5f47c0e7eeb96d5e011ba3a0915825f5de26fb03cf9c5"
+  },
+  {
+    "path": "reports/hg38/plots/survivor_style_svtype_fraction_prepared.png",
+    "bytes": 72594,
+    "sha256": "25bae574234fc75f9e4712251feba706d266692d77becc81bc6bc833ee9afd0f"
+  },
+  {
+    "path": "reports/hg38/plots/svbenchmark_precision_recall_f1_by_caller.png",
+    "bytes": 62625,
+    "sha256": "34916cccf4925c5e7a7fd5ed2854ad2515fecd4e528616f5b07b3821822a665e"
+  },
+  {
+    "path": "reports/hg38/plots/truvari_precision_recall_f1_by_caller.png",
+    "bytes": 60274,
+    "sha256": "5e44b019e72ac45f12f04c5759aa712365bf347c646bbfe904d7bc3f6581a938"
+  },
+  {
+    "path": "reports/hg38/tables/bcftools_stats_summary_parsed.csv",
+    "bytes": 4683,
+    "sha256": "0768f54bec62f19d5f3ecb9975fa7274bfea8b48aa6259d855c2bf28c51d4564"
+  },
+  {
+    "path": "reports/hg38/tables/bcftools_stats_summary_wide.csv",
+    "bytes": 215,
+    "sha256": "c4bdcefafd73a6922d33ff681a2346dc4bc08100d6d4fd0c0fc17bf37d6f7fef"
+  },
+  {
+    "path": "reports/hg38/tables/benchmark_event_vcf_chromosome_counts.csv",
+    "bytes": 10540,
+    "sha256": "4532677691ea1baef79c79050130fc7e7c0708f0db45181d6852c0c0f3096201"
+  },
+  {
+    "path": "reports/hg38/tables/benchmark_event_vcf_filter_counts.csv",
+    "bytes": 1707,
+    "sha256": "cebd2c368198a5e16aa4c1f071599f2d3862d66a9b9a574a93fd47d4e9ce3ba7"
+  },
+  {
+    "path": "reports/hg38/tables/benchmark_event_vcf_svlen_bin_counts.csv",
+    "bytes": 3745,
+    "sha256": "17df4656bf9d4fd690184de729768b30886b89a251632589a2ba2bc4525e722d"
+  },
+  {
+    "path": "reports/hg38/tables/benchmark_event_vcf_svtype_counts.csv",
+    "bytes": 1251,
+    "sha256": "bd56b71df7505a72199f25ea32edbafb74ef7129cfd52ea56a746c7f45b18182"
+  },
+  {
+    "path": "reports/hg38/tables/benchmark_event_vcf_total_counts.csv",
+    "bytes": 7237,
+    "sha256": "823c6b3977ea0101ee21c4c5b6bd0fe2de13c7c80d7478da5425007a054f039c"
+  },
+  {
+    "path": "reports/hg38/tables/benchmark_summary_metrics_all_tools.csv",
+    "bytes": 1457,
+    "sha256": "9c39e041b6ea2d4e0c1dc93f3ded879d2c69cd015cf82278f3382d7a01f261ff"
+  },
+  {
+    "path": "reports/hg38/tables/benchmark_tool_metric_differences.csv",
+    "bytes": 1106,
+    "sha256": "7eea493951f64f674bc7ff3a5b37b5d34b2fb3a26ca3800149aeaf46b3dc198f"
+  },
+  {
+    "path": "reports/hg38/tables/input_vcf_chromosome_counts_raw_and_prepared.csv",
+    "bytes": 32284,
+    "sha256": "a42bab48e8821ed98624e73c916387950f13c8df7226bbfd79ffc5bcbc2854aa"
+  },
+  {
+    "path": "reports/hg38/tables/input_vcf_filter_counts_raw_and_prepared.csv",
+    "bytes": 1853,
+    "sha256": "5a6e62761a78b2aa9ea7103ad2b065468e392cbec2afc1aeb9e57bfe94d1194e"
+  },
+  {
+    "path": "reports/hg38/tables/input_vcf_svlen_bin_counts_raw_and_prepared.csv",
+    "bytes": 1997,
+    "sha256": "eb519497bd0c29cff3c607216f55aeab61c8be45a86bc784aa613b63b39ee378"
+  },
+  {
+    "path": "reports/hg38/tables/input_vcf_svlen_fractions_prepared.csv",
+    "bytes": 1838,
+    "sha256": "171ac5c470bf6d919c45bda592169665e3c470f8ca34250ba7ba30ecbc9a0c4f"
+  },
+  {
+    "path": "reports/hg38/tables/input_vcf_svtype_counts_raw_and_prepared.csv",
+    "bytes": 799,
+    "sha256": "4c2d263904b29701689dc806897576a24ca08cd221a752b6b4878ff736c1cc63"
+  },
+  {
+    "path": "reports/hg38/tables/input_vcf_svtype_fractions_prepared.csv",
+    "bytes": 812,
+    "sha256": "3ab4ac3bc6e5a4f3439d749f15d5eec505fd6a238b03300c954c76c4cc724cee"
+  },
+  {
+    "path": "reports/hg38/tables/input_vcf_total_record_counts_raw_and_prepared.csv",
+    "bytes": 1398,
+    "sha256": "5eb7d554cdc22b0fd36585e7dcfbbce83c0892d5005ba228ccb7a5707d810afe"
+  },
+  {
+    "path": "reports/hg38/tables/mean_metrics_by_caller_across_tools.csv",
+    "bytes": 417,
+    "sha256": "d223c773f719894f4c0c0fa947c60e7bece5d041c13e8d1dd414ffe79c55f806"
+  },
+  {
+    "path": "reports/hg38/tables/methods_validation_file_checklist.csv",
+    "bytes": 5085,
+    "sha256": "c84e9034a5ee9981a19142a76401b2f35def965306456dfba9ee06cf1c08db59"
+  },
+  {
+    "path": "reports/hg38/tables/nfcore_survivor_parsed_numeric_stats.csv",
+    "bytes": 4587,
+    "sha256": "12dbdb7d5a8f51c0c5ab15e831e05de449469bd28bfe49fe6a3d6b4613bdc66b"
+  },
+  {
+    "path": "reports/hg38/tables/nfcore_survivor_parsed_simple_counts.csv",
+    "bytes": 4259,
+    "sha256": "749a024964d79589dbced31ecb5519b9bf7dda0a6dcaeade51320734d261fdf5"
+  },
+  {
+    "path": "reports/hg38/tables/nfcore_survivor_parsed_stats.csv",
+    "bytes": 7757,
+    "sha256": "5022b6d287c3d00a6d7ddb4454fad3f7db8a8d39da170709c7b09a855d20ebb0"
+  },
+  {
+    "path": "reports/hg38/tables/run_parameters_from_latest_params_json.csv",
+    "bytes": 1885,
+    "sha256": "ee51dfe032ac7fd7b1f12377191ee5377b99c6450b2674dcbaf8306453937355"
+  },
+  {
+    "path": "reports/hg38/tables/self_survivor_parsed_numeric_stats.csv",
+    "bytes": 1,
+    "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+  },
+  {
+    "path": "reports/hg38/tables/self_survivor_parsed_simple_counts.csv",
+    "bytes": 1,
+    "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+  },
+  {
+    "path": "reports/hg38/tables/self_survivor_parsed_stats.csv",
+    "bytes": 84702,
+    "sha256": "b6b4d2ef6efa32459c69045f54ce4da85352ee7e88a4dafab008e1cedf041281"
+  },
+  {
+    "path": "reports/hg38/tables/self_survivor_vs_nfcore_survivor_differences.csv",
+    "bytes": 1339,
+    "sha256": "3739b420b34176f4ddb6389a23d5753402771442f16c0313d90ebfb22c336055"
+  },
+  {
+    "path": "reports/other/clinvar-chr1.report.html",
+    "bytes": 1789203,
+    "sha256": "efc8421f46c4e4a5c6d9dfb1a7bb7c56ff76d41126484aee180773b572b7a1d9"
+  },
+  {
+    "path": "reports/other/liftover_analysis_summary.txt",
+    "bytes": 1724,
+    "sha256": "60944bbc06b1a7f24502b7e73dedd4e94ac8f68ef922db31a3332923d86d0fa4"
+  },
+  {
+    "path": "reports/other/variant_prioritization_summary.txt",
+    "bytes": 5749,
+    "sha256": "d9c5944bfb0639ba1130b2d89522bc5483912190cd12ca121446b764284cfbd3"
+  },
+  {
+    "path": "final-results/chr22/rtg_vcfeval_dup_to_ins_summaries.txt",
+    "bytes": 2733,
+    "sha256": "b4030d7325e589585eda972b50a5b0f14adaab116a0a86b3aee22f36868de1ec"
+  },
+  {
+    "path": "final-results/chr22/rtg_vcfeval_summaries.txt",
+    "bytes": 2667,
+    "sha256": "41ba2e141830e291669419d8739f4765d526d0b730847a14a012a1a5c9e8b716"
+  },
+  {
+    "path": "final-results/chr22/truvari_converted_dup_to_ins_summary.tsv",
+    "bytes": 774,
+    "sha256": "12a3231e2b05d0845e1216c4bd168e69078b7950872819c7ab519aa70be1931f"
+  },
+  {
+    "path": "final-results/chr22/truvari_dup_to_ins_summary.tsv",
+    "bytes": 774,
+    "sha256": "12a3231e2b05d0845e1216c4bd168e69078b7950872819c7ab519aa70be1931f"
+  },
+  {
+    "path": "final-results/chr22/truvari_original_vs_converted_dup_to_ins.tsv",
+    "bytes": 1205,
+    "sha256": "f077fef4700b5d55d8692ebd3c400aac3771791ca7082d837780c539a5e7d369"
+  },
+  {
+    "path": "final-results/chr22/truvari_original_vs_dup_to_ins.tsv",
+    "bytes": 1205,
+    "sha256": "f077fef4700b5d55d8692ebd3c400aac3771791ca7082d837780c539a5e7d369"
+  },
+  {
+    "path": "final-results/chr22/truvari_summary.tsv",
+    "bytes": 561,
+    "sha256": "a4ed6abdb49ee940046fefdaec86085086c0b68e904cffbb89b144e7ba87f84f"
+  },
+  {
+    "path": "final-results/chr22/truvari_summary_extended.tsv",
+    "bytes": 774,
+    "sha256": "12a3231e2b05d0845e1216c4bd168e69078b7950872819c7ab519aa70be1931f"
+  },
+  {
+    "path": "final-results/chr22/truvari_svtype_tp_fp_fn_counts.tsv",
+    "bytes": 1243,
+    "sha256": "9919f378476f24a8c80cb74685c4f8cca92bff8c49629f94798d41425ffda0fc"
+  },
+  {
+    "path": "final-results/hg19/benchmark_summary_metrics_all_tools.csv",
+    "bytes": 1456,
+    "sha256": "723cc366a49ba6ba11be60d8fd43678e337b43375ebdd2d481f6c04c646c0d39"
+  },
+  {
+    "path": "final-results/hg19/benchmark_tool_metric_differences.csv",
+    "bytes": 1108,
+    "sha256": "5c6a7d01acb59ce11833a5682c7f5a198d554475e07316d39d810525f3e1d6ae"
+  },
+  {
+    "path": "final-results/hg19/mean_metrics_by_caller_across_tools.csv",
+    "bytes": 437,
+    "sha256": "c28fd3d6a75f18a353649cc1817baafcad950e84d479960a680c7aa4afca0645"
+  },
+  {
+    "path": "final-results/hg38/benchmark_summary_metrics_all_tools.csv",
+    "bytes": 1457,
+    "sha256": "9c39e041b6ea2d4e0c1dc93f3ded879d2c69cd015cf82278f3382d7a01f261ff"
+  },
+  {
+    "path": "final-results/hg38/benchmark_tool_metric_differences.csv",
+    "bytes": 1106,
+    "sha256": "7eea493951f64f674bc7ff3a5b37b5d34b2fb3a26ca3800149aeaf46b3dc198f"
+  },
+  {
+    "path": "final-results/hg38/mean_metrics_by_caller_across_tools.csv",
+    "bytes": 417,
+    "sha256": "d223c773f719894f4c0c0fa947c60e7bece5d041c13e8d1dd414ffe79c55f806"
+  }
+]

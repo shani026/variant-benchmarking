@@ -1,0 +1,4 @@
+id,test_vcf,caller
+HG002_delly_hg38,/absolute/path/to/caller-vcfs/HG002_delly_lr.hg38.renamed.vcf.gz,delly
+HG002_dragen_hg38,/absolute/path/to/caller-vcfs/HG002_dragen.sv.hg38.renamed.vcf.gz,dragen
+HG002_sniffles_hg38,/absolute/path/to/caller-vcfs/HG002_sniffles.hg38.renamed.vcf.gz,sniffles

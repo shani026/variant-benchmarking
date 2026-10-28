@@ -1,0 +1,10 @@
+method,caller,tool,source_file,threshold,tp_base,tp_comp,fp,fn,precision,recall,f1,caller_tool
+Truvari,Delly,HG002_delly_hg38,HG002_delly_hg38.HG002.delly.summary.json,,26288,26288,3592,4732269,0.8797858099062918,0.0055243637934777,0.0109797831735073,Delly · Truvari
+Truvari,DRAGEN,HG002_dragen_hg38,HG002_dragen_hg38.HG002.dragen.summary.json,,9611,9611,5357,4748946,0.642103153393907,0.0020197299307332,0.0040267936168764,DRAGEN · Truvari
+Truvari,Sniffles,HG002_sniffles_hg38,HG002_sniffles_hg38.HG002.sniffles.summary.json,,28448,28448,2168,4730109,0.9291873530180298,0.0059782829122357,0.0118801304525854,Sniffles · Truvari
+SVbenchmark,Delly,HG002_delly_hg38,HG002_delly_hg38.HG002.delly.report,,35636,35636,952,4757906,0.9682,0.0074,0.0147550459033778,Delly · SVbenchmark
+SVbenchmark,DRAGEN,HG002_dragen_hg38,HG002_dragen_hg38.HG002.dragen.report,,11620,11620,5372,4781922,0.642,0.0024,0.0048299512618468,DRAGEN · SVbenchmark
+SVbenchmark,Sniffles,HG002_sniffles_hg38,HG002_sniffles_hg38.HG002.sniffles.report,,37270,37270,539,4756272,0.9824,0.0078,0.0154279880115708,Sniffles · SVbenchmark
+RTGtools,Delly,HG002_delly_hg38,HG002_delly_hg38.HG002.delly.summary.txt,,0,0,0,0,0.0,0.0,0.0,Delly · RTGtools
+RTGtools,DRAGEN,HG002_dragen_hg38,HG002_dragen_hg38.HG002.dragen.summary.txt,,0,0,0,0,0.0,0.0,0.0,DRAGEN · RTGtools
+RTGtools,Sniffles,HG002_sniffles_hg38,HG002_sniffles_hg38.HG002.sniffles.summary.txt,,0,0,0,0,0.0,0.0,0.0,Sniffles · RTGtools

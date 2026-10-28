@@ -1,0 +1,9 @@
+source,stage,vcf,exists,total_records,pass_records,nonpass_records,query_error
+Truth,raw,/Users/shaniaim/Documents/OUS/variant-benchmarking/Truth_vcfs/hg38/HG002_GRCh38_v5.0q_stvar.vcf.gz,True,6268852,0,6268852,
+Delly,raw,/Users/shaniaim/Documents/OUS/variant-benchmarking/caller_vcfs/HG002_delly_lr.hg38.renamed.vcf.gz,True,61015,36833,24182,
+DRAGEN,raw,/Users/shaniaim/Documents/OUS/variant-benchmarking/caller_vcfs/HG002_dragen.sv.hg38.renamed.vcf.gz,True,17392,14659,2733,
+Sniffles,raw,/Users/shaniaim/Documents/OUS/variant-benchmarking/caller_vcfs/HG002_sniffles.hg38.renamed.vcf.gz,True,34796,34796,0,
+Truth,prepared,/Users/shaniaim/Documents/OUS/variant-benchmarking/Results/hg38/structural/HG002/preprocess/HG002_GRCh38_v5.0q_stvar.reheader.filtermissing.vcf.gz,True,5385237,0,5385237,
+Delly,prepared,/Users/shaniaim/Documents/OUS/variant-benchmarking/Results/hg38/structural/HG002_delly_hg38/preprocess/HG002_delly_lr.hg38.renamed.reheader.filtermissing.vcf.gz,True,52834,36417,16417,
+DRAGEN,prepared,/Users/shaniaim/Documents/OUS/variant-benchmarking/Results/hg38/structural/HG002_dragen_hg38/preprocess/HG002_dragen.sv.hg38.renamed.reheader.filtermissing.vcf.gz,True,17392,14659,2733,
+Sniffles,prepared,/Users/shaniaim/Documents/OUS/variant-benchmarking/Results/hg38/structural/HG002_sniffles_hg38/preprocess/HG002_sniffles.hg38.renamed.reheader.filtermissing.vcf.gz,True,34782,34782,0,

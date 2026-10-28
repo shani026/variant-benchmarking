@@ -1,0 +1,29 @@
+04_benchmark_results/rtg/vcfeval_dup_to_ins/hg38_dragen/summary.txt
+Threshold  True-pos-baseline  True-pos-call  False-pos  False-neg  Precision  Sensitivity  F-measure
+----------------------------------------------------------------------------------------------------
+    6.000                102            102         58        971     0.6375       0.0951     0.1655
+     None                102            102         59        971     0.6335       0.0951     0.1653
+04_benchmark_results/rtg/vcfeval_dup_to_ins/hg38_sniffles/summary.txt
+Threshold  True-pos-baseline  True-pos-call  False-pos  False-neg  Precision  Sensitivity  F-measure
+----------------------------------------------------------------------------------------------------
+    0.000                358            358        215        715     0.6248       0.3336     0.4350
+     None                358            358        215        715     0.6248       0.3336     0.4350
+04_benchmark_results/rtg/vcfeval_dup_to_ins/hg19_DELLY/summary.txt
+Threshold  True-pos-baseline  True-pos-call  False-pos  False-neg  Precision  Sensitivity  F-measure
+----------------------------------------------------------------------------------------------------
+     None                  0              0          0       1015        NaN       0.0000        NaN
+04_benchmark_results/rtg/vcfeval_dup_to_ins/hg19_dragen/summary.txt
+Threshold  True-pos-baseline  True-pos-call  False-pos  False-neg  Precision  Sensitivity  F-measure
+----------------------------------------------------------------------------------------------------
+    5.000                230            230        186        785     0.5529       0.2266     0.3215
+     None                230            230        186        785     0.5529       0.2266     0.3215
+04_benchmark_results/rtg/vcfeval_dup_to_ins/hg19_sniffles/summary.txt
+Threshold  True-pos-baseline  True-pos-call  False-pos  False-neg  Precision  Sensitivity  F-measure
+----------------------------------------------------------------------------------------------------
+    2.000                  0              0        344       1015     0.0000       0.0000     0.0000
+     None                  0              0        344       1015     0.0000       0.0000     0.0000
+04_benchmark_results/rtg/vcfeval_dup_to_ins/hg38_delly/summary.txt
+Threshold  True-pos-baseline  True-pos-call  False-pos  False-neg  Precision  Sensitivity  F-measure
+----------------------------------------------------------------------------------------------------
+  129.000                267            266        212        806     0.5565       0.2488     0.3439
+     None                271            270        263        802     0.5066       0.2526     0.3371

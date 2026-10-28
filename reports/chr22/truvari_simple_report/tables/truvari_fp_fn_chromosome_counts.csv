@@ -1,0 +1,13 @@
+run,build,caller,role,chrom,count
+hg19_DELLY,hg19,DELLY,FP,22,39
+hg19_DELLY,hg19,DELLY,FN,22,495
+hg19_dragen,hg19,DRAGEN,FP,22,48
+hg19_dragen,hg19,DRAGEN,FN,22,229
+hg19_sniffles,hg19,Sniffles,FP,22,44
+hg19_sniffles,hg19,Sniffles,FN,22,181
+hg38_delly,hg38,DELLY,FP,chr22,60
+hg38_delly,hg38,DELLY,FN,chr22,223
+hg38_dragen,hg38,DRAGEN,FP,chr22,29
+hg38_dragen,hg38,DRAGEN,FN,chr22,407
+hg38_sniffles,hg38,Sniffles,FP,chr22,68
+hg38_sniffles,hg38,Sniffles,FN,chr22,193

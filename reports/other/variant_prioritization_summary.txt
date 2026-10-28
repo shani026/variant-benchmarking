@@ -1,0 +1,148 @@
+Variant Prioritization Summary - Clinical Evidence-Driven Analysis
+======================================================================
+
+DATASET OVERVIEW:
+--------------------
+Total discordant variants analyzed: 28,575
+Variants included in Excel output: 7,668
+
+VARIANT PRIORITIZATION:
+-------------------------
+Priority category distribution:
+  CONCORDANT: 17,585 (61.5%)
+  LOW: 10,961 (38.4%)
+  MODERATE: 18 (0.1%)
+  CRITICAL: 11 (0.0%)
+
+CLINICAL SIGNIFICANCE TRANSITIONS:
+----------------------------------------
+Stable annotations: 22,445 variants
+  Stable PATHOGENIC: 534
+  Stable BENIGN: 6,703
+  Stable VUS: 8,378
+  Stable RISK: 2
+  Stable OTHER: 1
+  Stable NONE: 6,827
+
+Clinical significance transitions (hg19→hg38): 6,130 variants
+  VUS→PATHOGENIC: 10 variants (critical)
+  PATHOGENIC→VUS: 16 variants (critical)
+  BENIGN→NONE: 5 variants
+  BENIGN→VUS: 60 variants
+  NONE→BENIGN: 1,961 variants
+  NONE→PATHOGENIC: 146 variants
+  NONE→VUS: 3,884 variants
+  VUS→BENIGN: 48 variants
+
+IMPACT LEVEL TRANSITIONS:
+------------------------------
+Variants with stable impact: 28,571 (100.0%)
+Impact level transitions (hg19→hg38): 4 variants
+  →MODIFIER: 1 variants
+  HIGH→MODIFIER: 1 variants
+  LOW→MODIFIER: 1 variants
+  MODERATE→MODIFIER: 1 variants
+
+CLINICAL DATA COVERAGE:
+-------------------------
+Total variants with clinical annotations: 21,748 (76.1%)
+
+Variants with pathogenicity predictions: 14,646 (51.3%)
+
+Clinical evidence distribution by build:
+Category        hg19     hg38    
+--------------------------------
+PATHOGENIC      550      690     
+BENIGN          6768     8712    
+VUS             8436     12338   
+RISK            2        2       
+DRUG_RESPONSE   0        0       
+PROTECTIVE      0        0       
+OTHER           1        1       
+NONE            12818    6832    
+--------------------------------
+Total           28575    28575   
+
+FUNCTIONAL DISCORDANCES:
+-------------------------
+Gene annotation changes: 163 variants
+Impact level changes: 3 variants
+
+KEY CLINICAL SIGNIFICANCE TRANSITIONS:
+----------------------------------------
+Transition matrix (rows=hg19, columns=hg38):
+              PATHOGENIC      BENIGN         VUS        NONE
+PATHOGENIC           534           0          16           0
+BENIGN                 0        6703          60           5
+VUS                   10          48        8378           0
+NONE                 146        1961        3884        6827
+
+CROSSBUILD VARIANT COMPARISON:
+-----------------------------------
+CRITICAL VARIANTS:
+• HGVS nomenclature mismatches on priority transcript (clinician #1 priority)
+• Major clinical significance changes (PATHOGENIC↔BENIGN)
+MODERATE PRIORITY VARIANTS:
+• Priority transcript unavailable in one build
+• Pathogenic↔VUS clinical significance changes
+• Serious functional consequence differences
+LOW PRIORITY VARIANTS:
+• VUS↔Benign clinical significance changes
+• Pathogenicity prediction consensus changes
+• Gene symbol or impact level differences
+• Technical liftover issues
+CONCORDANT VARIANTS:
+• Perfect MANE transcript match with identical HGVS nomenclature
+• Consistent clinical annotations
+• No review required
+
+VARIANT DISCREPANCY SCORING METHODOLOGY:
+---------------------------------------------
+PRIORITY TRANSCRIPT-BASED PRIORITIZATION:
+HGVS concordance on priority transcript drives prioritization.
+MANE-first transcript selection ensures clinical standard compliance.
+VUS and missing data de-prioritized (less clinically actionable).
+
+PRIORITY CATEGORIES (4-Category System):
+• CRITICAL: HGVS mismatches on priority transcript (100+ points)
+            OR major clinical significance changes (Pathogenic↔Benign)
+• MODERATE: Priority transcript unavailable OR moderate clinical changes (60-99 points)
+• LOW: Minor changes and prediction differences (20-59 points)
+• CONCORDANT: Perfect priority transcript match with identical HGVS (0 points)
+
+PRIORITY TRANSCRIPT-BASED SCORING WEIGHTS:
+• HGVS nomenclature mismatch (HGVSc): +100 points (CRITICAL)
+• Pathogenic↔Benign clinical changes: +90 points (CRITICAL)
+• HGVS protein mismatch (HGVSp): +50 points (CRITICAL)
+• Priority transcript unavailable: +60 points (MODERATE)
+• Pathogenic↔VUS changes: +40 points (MODERATE)
+• Serious functional differences: +35 points (MODERATE)
+• VUS↔Benign changes: +25 points (LOW)
+• Gene/impact changes: +15 points each (LOW)
+• Pathogenicity consensus flip (P↔B): +35 points (LOW-MODERATE)
+• Pathogenicity consensus shift (±uncertain): +20 points (LOW)
+• Individual predictor changes (stable consensus): +10 points (LOW)
+• Missing clinical data: +5 points (minimal penalty)
+
+TRANSCRIPT SELECTION STRATEGY:
+• MANE Select transcripts (highest priority)
+• MANE Plus Clinical transcripts (fallback)
+• Canonical transcripts (when MANE unavailable)
+• First available matching transcript (last resort)
+• Same transcript used for comparison in both builds
+
+CLINICAL EVIDENCE OVERRIDE:
+• 90% score reduction for benign variants (LOW/MODIFIER + benign evidence)
+• 2x score boost for pathogenic variants (HIGH impact or pathogenic evidence)
+• Maintains clinical context while prioritizing HGVS concordance
+
+RATIONALE:
+HGVS nomenclature consistency is the top clinical priority for variant interpretation.
+Priority transcript approach ensures same transcript compared between builds.
+VUS-related changes de-prioritized as they are less clinically actionable.
+This approach focuses clinical review on variants most likely to affect patient care.
+
+DATA PROCESSING NOTES:
+• Priority transcript selected using MANE-first hierarchy
+• Clinical significance normalized to standard categories
+• Bounded scoring prevents category inflation

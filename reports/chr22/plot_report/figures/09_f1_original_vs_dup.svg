@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="680" viewBox="0 0 1200 680">
+<rect width="1200" height="680" fill="#ffffff"/>
+<text x="30" y="34" font-family="Arial" font-size="20" font-weight="700" fill="#111827">F1: original vs DUP-to-INS</text>
+<text x="30" y="58" font-family="Arial" font-size="13" fill="#4b5563">Representation sensitivity check: F1 before and after DUP calls are treated as INS.</text>
+<line x1="80" y1="535.0" x2="1170" y2="535.0" stroke="#e5e7eb"/>
+<text x="70" y="539.0" font-family="Arial" font-size="11" text-anchor="end" fill="#4b5563">0.0</text>
+<line x1="80" y1="446.0" x2="1170" y2="446.0" stroke="#e5e7eb"/>
+<text x="70" y="450.0" font-family="Arial" font-size="11" text-anchor="end" fill="#4b5563">0.2</text>
+<line x1="80" y1="357.0" x2="1170" y2="357.0" stroke="#e5e7eb"/>
+<text x="70" y="361.0" font-family="Arial" font-size="11" text-anchor="end" fill="#4b5563">0.4</text>
+<line x1="80" y1="268.0" x2="1170" y2="268.0" stroke="#e5e7eb"/>
+<text x="70" y="272.0" font-family="Arial" font-size="11" text-anchor="end" fill="#4b5563">0.6</text>
+<line x1="80" y1="179.0" x2="1170" y2="179.0" stroke="#e5e7eb"/>
+<text x="70" y="183.0" font-family="Arial" font-size="11" text-anchor="end" fill="#4b5563">0.8</text>
+<line x1="80" y1="90.0" x2="1170" y2="90.0" stroke="#e5e7eb"/>
+<text x="70" y="94.0" font-family="Arial" font-size="11" text-anchor="end" fill="#4b5563">1.0</text>
+<line x1="80" y1="90" x2="80" y2="535" stroke="#9ca3af"/>
+<line x1="80" y1="535" x2="1170" y2="535" stroke="#9ca3af"/>
+<rect x="138.8" y="200.4" width="30.0" height="334.6" fill="#2563eb" rx="3"><title>hg19 sniffles Original: 0.7519</title></rect>
+<rect x="170.8" y="200.4" width="30.0" height="334.6" fill="#16a34a" rx="3"><title>hg19 sniffles DUP-to-INS: 0.7519</title></rect>
+<g transform="translate(170.8,553) rotate(35)">
+<text font-family="Arial" font-size="11" fill="#111827">
+<tspan x="0" dy="0">hg19 sniffles</tspan>
+</text></g>
+<rect x="320.5" y="232.8" width="30.0" height="302.2" fill="#2563eb" rx="3"><title>hg19 dragen Original: 0.679</title></rect>
+<rect x="352.5" y="232.8" width="30.0" height="302.2" fill="#16a34a" rx="3"><title>hg19 dragen DUP-to-INS: 0.679</title></rect>
+<g transform="translate(352.5,553) rotate(35)">
+<text font-family="Arial" font-size="11" fill="#111827">
+<tspan x="0" dy="0">hg19 dragen</tspan>
+</text></g>
+<rect x="502.2" y="494.1" width="30.0" height="40.9" fill="#2563eb" rx="3"><title>hg19 DELLY Original: 0.09184</title></rect>
+<rect x="534.2" y="494.1" width="30.0" height="40.9" fill="#16a34a" rx="3"><title>hg19 DELLY DUP-to-INS: 0.09184</title></rect>
+<g transform="translate(534.2,553) rotate(35)">
+<text font-family="Arial" font-size="11" fill="#111827">
+<tspan x="0" dy="0">hg19 DELLY</tspan>
+</text></g>
+<rect x="683.8" y="205.6" width="30.0" height="329.4" fill="#2563eb" rx="3"><title>hg38 sniffles Original: 0.7403</title></rect>
+<rect x="715.8" y="205.6" width="30.0" height="329.4" fill="#16a34a" rx="3"><title>hg38 sniffles DUP-to-INS: 0.7403</title></rect>
+<g transform="translate(715.8,553) rotate(35)">
+<text font-family="Arial" font-size="11" fill="#111827">
+<tspan x="0" dy="0">hg38 sniffles</tspan>
+</text></g>
+<rect x="865.5" y="348.0" width="30.0" height="187.0" fill="#2563eb" rx="3"><title>hg38 dragen Original: 0.4202</title></rect>
+<rect x="897.5" y="348.0" width="30.0" height="187.0" fill="#16a34a" rx="3"><title>hg38 dragen DUP-to-INS: 0.4202</title></rect>
+<g transform="translate(897.5,553) rotate(35)">
+<text font-family="Arial" font-size="11" fill="#111827">
+<tspan x="0" dy="0">hg38 dragen</tspan>
+</text></g>
+<rect x="1047.2" y="220.2" width="30.0" height="314.8" fill="#2563eb" rx="3"><title>hg38 delly Original: 0.7073</title></rect>
+<rect x="1079.2" y="220.2" width="30.0" height="314.8" fill="#16a34a" rx="3"><title>hg38 delly DUP-to-INS: 0.7073</title></rect>
+<g transform="translate(1079.2,553) rotate(35)">
+<text font-family="Arial" font-size="11" fill="#111827">
+<tspan x="0" dy="0">hg38 delly</tspan>
+</text></g>
+<rect x="80" y="645" width="12" height="12" rx="2" fill="#2563eb"/>
+<text x="97" y="655" font-family="Arial" font-size="12" fill="#111827">Original</text>
+<rect x="178" y="645" width="12" height="12" rx="2" fill="#16a34a"/>
+<text x="195" y="655" font-family="Arial" font-size="12" fill="#111827">DUP-to-INS</text>
+</svg>

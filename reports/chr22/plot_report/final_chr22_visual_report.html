@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>chr22 SV benchmark visual report</title>
+<style>
+body { font-family: Arial, Helvetica, sans-serif; margin: 36px; color: #111827; background: #fff; line-height: 1.45; }
+h1 { font-size: 30px; margin-bottom: 8px; }
+h2 { font-size: 22px; margin-top: 34px; border-bottom: 2px solid #e5e7eb; padding-bottom: 5px; }
+.lead { color: #374151; max-width: 1100px; }
+.grid { display: grid; grid-template-columns: 1fr; gap: 26px; }
+.figure { margin: 22px 0 34px 0; }
+.figure img { width: 100%; max-width: 1250px; border: 1px solid #e5e7eb; border-radius: 8px; background: white; }
+.figure p { font-size: 14px; color: #374151; margin: 8px 0 0 2px; max-width: 1050px; }
+table { border-collapse: collapse; width: 100%; max-width: 1100px; margin: 15px 0 30px 0; font-size: 14px; }
+th, td { border: 1px solid #d1d5db; padding: 7px 9px; text-align: left; }
+th { background: #f3f4f6; }
+.note { background: #f9fafb; border-left: 5px solid #2563eb; padding: 12px 16px; margin: 18px 0; max-width: 1100px; }
+</style>
+</head>
+<body>
+<h1>Chromosome 22 SV benchmark — visual report</h1>
+<p class="lead">Plot-focused report for the chr22 HG002 structural variant benchmark. This version removes long logs, tool previews, references, and conclusion sections. It keeps only minimal metric tables plus figures that show benchmark behaviour and representation sensitivity.</p>
+
+<h2>Diagnosis and benchmark accounting</h2>
+<div class="note"><strong>Scope:</strong> interval-SV benchmark = DEL, DUP, INS, INV. BND, unknown/missing SVTYPE, and malformed interval fields are visualised separately.</div>
+<section class="figure"><img src="figures/01_raw_chr22_record_accounting.svg" alt="Raw VCF accounting: shows how much of each chr22 file is interval-style SV, BND, or unknown/missing."><p>Raw VCF accounting: shows how much of each chr22 file is interval-style SV, BND, or unknown/missing.</p></section>
+<section class="figure"><img src="figures/02_bnd_burden.svg" alt="BND burden: these were counted separately because breakend-style records are not directly comparable to interval DEL/DUP/INS/INV calls."><p>BND burden: these were counted separately because breakend-style records are not directly comparable to interval DEL/DUP/INS/INV calls.</p></section>
+<section class="figure"><img src="figures/03_qc_issue_burden_log.svg" alt="QC issue burden: log-scaled view of missing END, missing SVLEN, and END &lt; POS records."><p>QC issue burden: log-scaled view of missing END, missing SVLEN, and END &lt; POS records.</p></section>
+
+<h2>Original benchmark performance</h2>
+<section class="figure"><img src="figures/04_original_truvari_metrics.svg" alt="Original Truvari precision, recall, and F1 across builds and callers."><p>Original Truvari precision, recall, and F1 across builds and callers.</p></section>
+<section class="figure"><img src="figures/05_fp_fn_balance.svg" alt="FP/FN balance: highlights whether low F1 is mainly caused by false positives or false negatives."><p>FP/FN balance: highlights whether low F1 is mainly caused by false positives or false negatives.</p></section>
+<section class="figure"><img src="figures/06_fn_by_svtype.svg" alt="FN by SVTYPE: shows which variant type drives missed truth calls."><p>FN by SVTYPE: shows which variant type drives missed truth calls.</p></section>
+<h3>Minimal original metric table</h3>
+
+<table>
+<thead><tr><th>Run</th><th>Precision</th><th>Recall</th><th>F1</th><th>TP</th><th>FP</th><th>FN</th></tr></thead>
+<tbody><tr><td>hg19 sniffles</td><td>0.886</td><td>0.653</td><td>0.752</td><td>341</td><td>44</td><td>181</td></tr>
+<tr><td>hg19 dragen</td><td>0.859</td><td>0.561</td><td>0.679</td><td>293</td><td>48</td><td>229</td></tr>
+<tr><td>hg19 DELLY</td><td>0.409</td><td>0.052</td><td>0.092</td><td>27</td><td>39</td><td>495</td></tr>
+<tr><td>hg38 sniffles</td><td>0.845</td><td>0.658</td><td>0.740</td><td>372</td><td>68</td><td>193</td></tr>
+<tr><td>hg38 dragen</td><td>0.845</td><td>0.280</td><td>0.420</td><td>158</td><td>29</td><td>407</td></tr>
+<tr><td>hg38 delly</td><td>0.851</td><td>0.605</td><td>0.707</td><td>342</td><td>60</td><td>223</td></tr>
+</tbody>
+</table>
+
+
+<h2>DUP-to-INS sensitivity</h2>
+<div class="note"><strong>Question:</strong> do apparent misses change when DUP records are represented as INS? This tests representation sensitivity, not a new primary benchmark.</div>
+<section class="figure"><img src="figures/07_precision_original_vs_dup.svg" alt="Precision before and after DUP-to-INS conversion."><p>Precision before and after DUP-to-INS conversion.</p></section>
+<section class="figure"><img src="figures/08_recall_original_vs_dup.svg" alt="Recall before and after DUP-to-INS conversion."><p>Recall before and after DUP-to-INS conversion.</p></section>
+<section class="figure"><img src="figures/09_f1_original_vs_dup.svg" alt="F1 before and after DUP-to-INS conversion."><p>F1 before and after DUP-to-INS conversion.</p></section>
+<section class="figure"><img src="figures/10_precision_recall_movement.svg" alt="Precision-recall movement: arrows show whether each run moves after DUP-to-INS conversion."><p>Precision-recall movement: arrows show whether each run moves after DUP-to-INS conversion.</p></section>
+<section class="figure"><img src="figures/11_delta_f1_dup_minus_original.svg" alt="ΔF1 from DUP-to-INS conversion: positive means DUP-to-INS improved F1."><p>ΔF1 from DUP-to-INS conversion: positive means DUP-to-INS improved F1.</p></section>
+<h3>Minimal DUP-to-INS metric table</h3>
+
+<table>
+<thead><tr><th>Run</th><th>Original F1</th><th>DUP-to-INS F1</th><th>ΔF1</th><th>Original recall</th><th>DUP-to-INS recall</th></tr></thead>
+<tbody><tr><td>hg19 sniffles</td><td>0.752</td><td>0.752</td><td>0.0000</td><td>0.653</td><td>0.653</td></tr>
+<tr><td>hg19 dragen</td><td>0.679</td><td>0.679</td><td>0.0000</td><td>0.561</td><td>0.561</td></tr>
+<tr><td>hg19 DELLY</td><td>0.092</td><td>0.092</td><td>0.0000</td><td>0.052</td><td>0.052</td></tr>
+<tr><td>hg38 sniffles</td><td>0.740</td><td>0.740</td><td>0.0000</td><td>0.658</td><td>0.658</td></tr>
+<tr><td>hg38 dragen</td><td>0.420</td><td>0.420</td><td>0.0000</td><td>0.280</td><td>0.280</td></tr>
+<tr><td>hg38 delly</td><td>0.707</td><td>0.707</td><td>0.0000</td><td>0.605</td><td>0.605</td></tr>
+</tbody>
+</table>
+
+</body>
+</html>
